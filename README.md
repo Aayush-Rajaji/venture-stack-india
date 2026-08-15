@@ -59,7 +59,7 @@ python3 -m http.server -d docs 8000
   <br>
   <strong>Aayush Rajaji</strong>
   <br>
-  Founder &amp; CBO @ <a href="https://aigyde.com">AIGyde</a> · Co-Founder @ <a href="https://github.com/Aayush-Rajaji">FounderTube</a>
+  Founder &amp; CBO @ <a href="https://aigyde.com">AIGyde</a> · Founder @ <strong>Greston Global</strong> · Co-Founder @ <a href="https://github.com/Aayush-Rajaji">FounderTube</a>
   <br>
   <a href="https://github.com/Aayush-Rajaji">GitHub (@Aayush-Rajaji)</a> · <a href="https://www.linkedin.com/in/aayushrajaji/">LinkedIn</a>
 </div>
