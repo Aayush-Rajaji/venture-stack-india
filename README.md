@@ -6,7 +6,7 @@
 
 Every central & state government scheme for Indian founders + a 10-section AI-readable company knowledge stack + 19 execution prompts + 10 actionable worksheets + 3D walkable India map.
 
-[**Live Platform**](https://aayush-rajaji.github.io/venture-stack-india/) · [**Scheme Finder**](https://aayush-rajaji.github.io/venture-stack-india/finder.html) · [**Explore 3D Map**](https://aayush-rajaji.github.io/venture-stack-india/walkable-map.html) · [**All 69 Schemes**](https://aayush-rajaji.github.io/venture-stack-india/directory.html) · [**Compare**](https://aayush-rajaji.github.io/venture-stack-india/compare.html) · [**Startup Stack**](https://aayush-rajaji.github.io/venture-stack-india/stack.html) · [**Prompt Library**](https://aayush-rajaji.github.io/venture-stack-india/prompts/index.html)
+[**💻 Web Terminal App**](https://aayush-rajaji.github.io/venture-stack-india/docs/app.html) · [**🧮 Runway Simulator**](https://aayush-rajaji.github.io/venture-stack-india/docs/calculator.html) · [**🏛️ Home Platform**](https://aayush-rajaji.github.io/venture-stack-india/docs/index.html) · [**🧭 Scheme Finder**](https://aayush-rajaji.github.io/venture-stack-india/docs/finder.html) · [**🗺️ 3D Map**](https://aayush-rajaji.github.io/venture-stack-india/docs/walkable-map.html) · [**📋 All 69 Schemes**](https://aayush-rajaji.github.io/venture-stack-india/docs/directory.html)
 
 [![Use this template](https://img.shields.io/badge/Use%20this%20template-238636?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Aayush-Rajaji/venture-stack-india/generate)
 
