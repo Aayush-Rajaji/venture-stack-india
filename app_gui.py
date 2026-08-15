@@ -105,7 +105,7 @@ class StartupIndiaApp(ctk.CTk):
         super().__init__()
 
         self.current_theme = "dark"
-        self.title("Startup India OS — Desktop Intelligence Terminal")
+        self.title("Bharat Startup OS — Desktop Intelligence Terminal")
         self.geometry("1280x850")
         self.minsize(1100, 720)
 
@@ -142,10 +142,10 @@ class StartupIndiaApp(ctk.CTk):
             self.active_tab_fn()
 
     def _start_local_http_server(self):
+        import functools
         def serve():
             try:
-                os.chdir(DOCS_DIR)
-                handler = http.server.SimpleHTTPRequestHandler
+                handler = functools.partial(http.server.SimpleHTTPRequestHandler, directory=DOCS_DIR)
                 with socketserver.TCPServer(("", self.local_server_port), handler) as httpd:
                     httpd.serve_forever()
             except Exception:
@@ -169,7 +169,7 @@ class StartupIndiaApp(ctk.CTk):
         brand_frame.grid(row=0, column=0, padx=20, pady=12, sticky="w")
 
         brand_lbl = ctk.CTkLabel(
-            brand_frame, text="🇮🇳 Startup India OS",
+            brand_frame, text="🇮🇳 Bharat Startup OS",
             font=ctk.CTkFont(family="Newsreader", size=22, weight="bold"),
             text_color=self.colors["text"]
         )

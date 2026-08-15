@@ -1,14 +1,14 @@
 <div align="center">
 
-# Startup India OS 🇮🇳⚡
+# Bharat Startup OS 🇮🇳⚡
 
-**The Unified Operating System & Government Schemes Intelligence Engine for Indian Startups.**
+**The Unified Operating System & Government Schemes Intelligence Engine for Indian Founders.**
 
 Every central & state government scheme for Indian founders + a 10-section AI-readable company knowledge stack + 19 execution prompts + 10 actionable worksheets + 3D walkable India map.
 
-[**Live Platform**](https://aayush-rajaji.github.io/startup-india-os/) · [**Scheme Finder**](https://aayush-rajaji.github.io/startup-india-os/finder.html) · [**Explore 3D Map**](https://aayush-rajaji.github.io/startup-india-os/walkable-map.html) · [**All 69 Schemes**](https://aayush-rajaji.github.io/startup-india-os/directory.html) · [**Compare**](https://aayush-rajaji.github.io/startup-india-os/compare.html) · [**Startup Stack**](https://aayush-rajaji.github.io/startup-india-os/stack.html) · [**Prompt Library**](https://aayush-rajaji.github.io/startup-india-os/prompts/index.html)
+[**Live Platform**](https://aayush-rajaji.github.io/bharat-startup-os/) · [**Scheme Finder**](https://aayush-rajaji.github.io/bharat-startup-os/finder.html) · [**Explore 3D Map**](https://aayush-rajaji.github.io/bharat-startup-os/walkable-map.html) · [**All 69 Schemes**](https://aayush-rajaji.github.io/bharat-startup-os/directory.html) · [**Compare**](https://aayush-rajaji.github.io/bharat-startup-os/compare.html) · [**Startup Stack**](https://aayush-rajaji.github.io/bharat-startup-os/stack.html) · [**Prompt Library**](https://aayush-rajaji.github.io/bharat-startup-os/prompts/index.html)
 
-[![Use this template](https://img.shields.io/badge/Use%20this%20template-238636?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Aayush-Rajaji/startup-india-os/generate)
+[![Use this template](https://img.shields.io/badge/Use%20this%20template-238636?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Aayush-Rajaji/bharat-startup-os/generate)
 
 ![Live on GitHub Pages](https://img.shields.io/badge/live-aayush--rajaji.github.io-1f3864?style=flat-square&logo=githubpages&logoColor=white)
 ![Node ≥ 18](https://img.shields.io/badge/node-%E2%89%A5%2018-5FA04E?style=flat-square&logo=nodedotjs&logoColor=white)
@@ -38,8 +38,8 @@ Every central & state government scheme for Indian founders + a 10-section AI-re
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/Aayush-Rajaji/startup-india-os.git
-cd startup-india-os
+git clone https://github.com/Aayush-Rajaji/bharat-startup-os.git
+cd bharat-startup-os
 
 # 2. Build the documentation site into docs/
 node build.mjs

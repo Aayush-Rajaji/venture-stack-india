@@ -25,9 +25,9 @@ const PDF_NAME = "Startup-Schemes-Playbook-June-2026.pdf";
 const CONFIG = existsSync(join(ROOT, "site.config.json"))
   ? JSON.parse(readFileSync(join(ROOT, "site.config.json"), "utf8"))
   : {};
-const SITE_NAME = CONFIG.siteName || "Startup India OS";
-const TAGLINE = CONFIG.tagline || "The Unified Operating System & Government Schemes Intelligence Engine for Indian Startups.";
-const SITE_BASE = CONFIG.siteBase || "https://aayush-rajaji.github.io/startup-india-os/";
+const SITE_NAME = CONFIG.siteName || "Bharat Startup OS";
+const TAGLINE = CONFIG.tagline || "The Unified Operating System & Government Schemes Intelligence Engine for Indian Founders.";
+const SITE_BASE = CONFIG.siteBase || "https://aayush-rajaji.github.io/bharat-startup-os/";
 const PATH_PREFIX = CONFIG.pathPrefix ?? "/startup-india-os/";
 const REPO_URL = CONFIG.repo || "https://github.com/Aayush-Rajaji/startup-india-os";
 
@@ -375,7 +375,7 @@ ${extraHead}
   <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span class="hb" aria-hidden="true"><span class="hb-t"></span><span class="hb-m"></span><span class="hb-b"></span></span></button>
   <a class="brand" href="${root}index.html">
     <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 64 64" width="20" height="20"><rect x="6" y="14" width="52" height="9" rx="4.5" fill="#e2621b"/><rect x="6" y="27.5" width="52" height="9" rx="4.5" fill="#ffffff"/><rect x="6" y="41" width="52" height="9" rx="4.5" fill="#359a4c"/></svg></span>
-    <span class="brand-name">Startup India <span class="thin">OS</span></span>
+    <span class="brand-name">Bharat Startup <span class="thin">OS</span></span>
   </a>
   <span class="topbar-spacer"></span>
   <button class="searchbtn" data-search-open type="button" aria-label="Search OS">
@@ -410,7 +410,7 @@ ${immersive ? "" : `
       </div>
     </div>
   </div>
-  <div class="footer-note">Unified Indian Startup Operating System &amp; Scheme Intelligence Engine. Open knowledge resource under MIT License.</div>
+  <div class="footer-note">Unified Bharat Startup Operating System &amp; Scheme Intelligence Engine. Open knowledge resource under MIT License.</div>
   <div class="f-links">
     <a href="${root}about.html">About &amp; Disclaimer</a>
     <a href="${root}assets/${PDF_NAME}" download>Source PDF</a>
@@ -436,7 +436,7 @@ ${immersive ? "" : `<button class="to-top" id="to-top" aria-label="Back to top">
 }
 
 /* Reset output */
-rmSync(OUT, { recursive: true, force: true });
+try { rmSync(OUT, { recursive: true, force: true }); } catch (e) {}
 mkdirSync(OUT, { recursive: true });
 mkdirSync(join(OUT, "assets"), { recursive: true });
 mkdirSync(join(OUT, "schemes"), { recursive: true });
@@ -459,7 +459,7 @@ const write = (rel, html) => {
   const heroHTML = `
   <div class="hero">
     <div class="kicker">Unified Operating System · 2026 Edition</div>
-    <h1>Startup India <span class="thin">OS</span></h1>
+    <h1>Bharat Startup <span class="thin">OS</span></h1>
     <p class="lede">Every Central Government scheme, state grant, and incubator directory — fused with an AI-native company knowledge stack, 19 execution prompts, and 10 actionable worksheets.</p>
     <div class="hero-actions">
       <a class="btn btn-primary" href="finder.html">🧭 Run Scheme Finder (5 Qs)</a>

@@ -1,8 +1,8 @@
 {
-  "name": "startup-india-os",
+  "name": "bharat-startup-os",
   "version": "2.0.0",
   "private": true,
-  "description": "Unified Indian Startup Operating System & Government Schemes Intelligence Engine.",
+  "description": "Unified Bharat Startup Operating System & Government Schemes Intelligence Engine.",
   "type": "module",
   "engines": {
     "node": ">=18"
