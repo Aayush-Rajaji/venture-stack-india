@@ -1,0 +1,724 @@
+<!doctype html>
+<html lang="en" data-root="">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI basics — for a founder who has only ever used a chat window · Startup India OS</title>
+<meta name="description" content="The Unified Operating System &amp; Government Schemes Intelligence Engine for Indian Founders.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#1f3864">
+<meta property="og:title" content="AI basics — for a founder who has only ever used a chat window · Startup India OS">
+<meta property="og:description" content="The Unified Operating System &amp; Government Schemes Intelligence Engine for Indian Founders.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Startup India OS">
+<meta property="og:image" content="https://aayush-rajaji.github.io/startup-india-os/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+<!-- Claude Typography: Newsreader Editorial Display + Plus Jakarta Sans & Inter Body -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..800;1,6..72,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script>(function(){var t;try{t=localStorage.getItem("playbook-theme")}catch(e){}
+if(t!=="light"&&t!=="dark"){t=window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}
+document.documentElement.setAttribute("data-theme",t);
+try{if(localStorage.getItem("rail-collapsed")==="1")document.documentElement.classList.add("rail-collapsed")}catch(e){}})();</script>
+
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/site.css">
+
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span class="hb" aria-hidden="true"><span class="hb-t"></span><span class="hb-m"></span><span class="hb-b"></span></span></button>
+  <a class="brand" href="index.html">
+    <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 64 64" width="20" height="20"><rect x="6" y="14" width="52" height="9" rx="4.5" fill="#e2621b"/><rect x="6" y="27.5" width="52" height="9" rx="4.5" fill="#ffffff"/><rect x="6" y="41" width="52" height="9" rx="4.5" fill="#359a4c"/></svg></span>
+    <span class="brand-name">Startup India <span class="thin">OS</span></span>
+  </a>
+  <span class="topbar-spacer"></span>
+  <button class="searchbtn" data-search-open type="button" aria-label="Search OS">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><span class="searchbtn-label">Search schemes, prompts, stack…</span><kbd>⌘K</kbd>
+  </button>
+  <a class="icon-btn" href="https://github.com/Aayush-Rajaji/startup-india-os" target="_blank" rel="noopener" aria-label="GitHub Repo"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2Z"/></svg></a>
+  <button class="icon-btn theme-toggle" id="theme-toggle" type="button" aria-label="Toggle theme">
+    <span class="sun"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></span><span class="moon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></span>
+  </button>
+</header>
+<div class="scrim" id="scrim"></div>
+
+<div class="layout">
+
+  <nav class="sidebar" id="sidebar" aria-label="Site navigation">
+    
+    <div class="sidebar-group ">
+      <div class="sidebar-title">🏛️ Government Schemes</div>
+      <div class="sidebar-links">
+        <a class="nav-link " href="index.html">Playbook Overview</a>
+<a class="nav-link " href="finder.html">🧭 Scheme Finder (5 Qs)</a>
+<a class="nav-link " href="directory.html">📋 All 69 Central Schemes</a>
+<a class="nav-link " href="compare.html">⚖️ Compare Schemes</a>
+<a class="nav-link " href="walkable-map.html">🗺️ 3D Walkable India Map</a>
+<a class="nav-link " href="state-schemes.html">🏢 320+ State/UT Schemes</a>
+<a class="nav-link " href="incubators.html">🔬 220+ Incubators Map</a>
+<a class="nav-link " href="lifecycle.html">🌱 Lifecycle Map</a>
+<a class="nav-link " href="needs.html">🎯 What Do You Need?</a>
+<a class="nav-link " href="psu.html">🏭 PSU &amp; Regulators</a>
+<a class="nav-link " href="states.html">🌐 State Portals</a>
+<a class="nav-link " href="news.html">📰 Ecosystem News</a>
+<a class="nav-link " href="glossary.html">📖 Glossary &amp; Terms</a>
+<a class="nav-link " href="about.html">ℹ️ About &amp; Method</a>
+      </div>
+    </div>
+
+    <div class="sidebar-group ">
+      <div class="sidebar-title">⚡ Founder Operating Stack</div>
+      <div class="sidebar-links">
+        <a class="nav-link " href="stack.html">Stack Architecture</a>
+<a class="nav-link " href="quickstart.html">🚀 Quickstart (15 Min)</a>
+<a class="nav-link " href="stack/context.html">📄 Company One-Pager</a>
+<a class="nav-link " href="stack/01-company.html">01 · Company</a>
+<a class="nav-link " href="stack/02-customer.html">02 · Customer</a>
+<a class="nav-link " href="stack/03-market.html">03 · Market</a>
+<a class="nav-link " href="stack/04-product.html">04 · Product</a>
+<a class="nav-link " href="stack/05-gtm.html">05 · GTM &amp; Distribution</a>
+<a class="nav-link " href="stack/06-operations.html">06 · Operations</a>
+<a class="nav-link " href="stack/07-money.html">07 · Unit Economics</a>
+<a class="nav-link " href="stack/08-capital.html">08 · Capital &amp; Grants</a>
+<a class="nav-link " href="stack/09-brand.html">09 · Brand &amp; Voice</a>
+<a class="nav-link " href="stack/10-pulse.html">10 · Weekly Pulse</a>
+      </div>
+    </div>
+
+    <div class="sidebar-group ">
+      <div class="sidebar-title">🤖 AI Execution Prompts</div>
+      <div class="sidebar-links">
+        <a class="nav-link " href="prompts/index.html">Prompt Library (19)</a>
+<a class="nav-link " href="prompts/00-bootstrap-the-stack.html">00 · Bootstrap Stack</a>
+<a class="nav-link " href="prompts/02-gap-scan.html">02 · Gap Scan</a>
+<a class="nav-link " href="prompts/03-customer-and-problem.html">03 · Customer &amp; Problem</a>
+<a class="nav-link " href="prompts/05-competitive-intelligence.html">05 · Competitor Intel</a>
+<a class="nav-link " href="prompts/07-unit-economics.html">07 · Unit Econ Stress-Test</a>
+<a class="nav-link " href="prompts/08-list-of-100.html">08 · List of 100</a>
+<a class="nav-link " href="prompts/10-pitch-deck.html">10 · Pitch Deck Drafter</a>
+<a class="nav-link " href="prompts/11-fundraise-readiness.html">11 · Diligence Readiness</a>
+<a class="nav-link " href="prompts/12-weekly-recap.html">12 · Weekly Pulse Recap</a>
+<a class="nav-link " href="prompts/13-mentor-review.html">13 · Investor Red-Team</a>
+      </div>
+    </div>
+
+    <div class="sidebar-group ">
+      <div class="sidebar-title">📝 Worksheets & Tools</div>
+      <div class="sidebar-links">
+        <a class="nav-link " href="worksheets/index.html">All 10 Worksheets</a>
+<a class="nav-link " href="worksheets/startup-prep.html">Startup Prep Worksheet</a>
+<a class="nav-link " href="worksheets/customer-interview.html">Customer Interview Script</a>
+<a class="nav-link " href="worksheets/competitor-profile.html">Competitor Teardown</a>
+<a class="nav-link " href="worksheets/experiment.html">2-Week Experiment</a>
+<a class="nav-link " href="worksheets/one-pager.html">Executive One-Pager</a>
+<a class="nav-link " href="worksheets/weekly-recap.html">Weekly Pulse Template</a>
+      </div>
+    </div>
+
+    <div class="sidebar-group open">
+      <div class="sidebar-title">📚 Guides & Method</div>
+      <div class="sidebar-links">
+        <a class="nav-link " href="method.html">The Method Explained</a>
+<a class="nav-link " href="knowledge-base.html">Building the Knowledge Base</a>
+<a class="nav-link " href="front-matter.html">Front-Matter Schema</a>
+<a class="nav-link active" href="ai-basics.html">AI Fundamentals</a>
+<a class="nav-link " href="safety.html">Safety &amp; Privacy Rules</a>
+<a class="nav-link " href="for-coaches.html">For Startup Coaches</a>
+      </div>
+    </div>
+
+    <div class="sidebar-group ">
+      <div class="sidebar-title">📊 Venture Studio & Resources</div>
+      <div class="sidebar-links">
+        <a class="nav-link " href="rubric.html">1-5 Maturity Rubric</a>
+<a class="nav-link " href="for-portfolios.html">Portfolio Governance</a>
+<a class="nav-link " href="infographics.html">🎨 30 Infographics Gallery</a>
+<a class="nav-link " href="resources.html">📑 650+ Curated Resources</a>
+      </div>
+    </div>
+    <div class="sidebar-group">
+      <div class="sidebar-title">Downloads &amp; Links</div>
+      <a class="nav-link" href="assets/Startup-Schemes-Playbook-June-2026.pdf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4m4-5 5 5 5-5m-5 5V3"/></svg> Playbook PDF (107p)</a>
+      <a class="nav-link" href="https://github.com/Aayush-Rajaji/startup-india-os" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2Z"/></svg> GitHub Repository</a>
+    </div>
+  </nav>
+<main id="main" class="content ">
+
+  <nav class="crumbs"><a href="index.html">Home</a> / <span>AI basics — for a founder who has only ever used a chat window</span></nav>
+  <div class="page-head">
+    <h1>AI basics — for a founder who has only ever used a chat window</h1>
+  </div>
+  <div class="doc-body">
+    <h1 id="ai-basics-for-a-founder-who-has-only-ever-used-a-chat-window">AI basics — for a founder who has only ever used a chat window</h1>
+<p>This page is for someone who pays for an AI, types questions into it the way they would type into a search box, and has never pointed one at their own files. After reading it you will know what &quot;an AI that can read your folder&quot; actually means, how to direct it, how to check it, what it cannot see, and enough of the vocabulary to run the rest of this repo without a developer.</p>
+<p>---</p>
+<h2 id="what-actually-changed">What actually changed</h2>
+<p>The chat window you have been using cannot see anything. You paste text in, it answers, it forgets. Every question starts from nothing, so every answer is general — competent, fluent, and about companies in general rather than about yours.</p>
+<p>The change is that the same model can now be pointed at a folder on your computer. It opens the files. It runs real commands. It writes files back. It can tell you what it changed and why. Your pitch deck, your supplier quotes, your call transcripts and your half-finished plan stop being things you paste in one at a time and become the material it works from.</p>
+<p>What this asks of you is not technical. You write a clear instruction, you read what came back, and you decide whether it is right. That is briefing and checking — the same two things you do with a new hire, a designer or an accountant. The syntax is the AI&#39;s problem.</p>
+<p>The difference is easier to see side by side than to describe.</p>
+<div class="diagram-wrap"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="100%" height="800" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="cvf-title cvf-desc">
+  <title id="cvf-title">A chat window compared with an AI pointed at your folder</title>
+  <desc id="cvf-desc">Two columns side by side. The left column, headed "A chat window", is a browser tab with nothing attached to it, and lists four limits: it sees only what you paste, so you re-explain the business every time; it forgets when the chat closes, so yesterday's decisions are gone; it cannot open your files, so the deck and the model stay shut; and it answers in general terms, giving advice that would fit any company. The list stops there because there is nothing else it can reach. The right column, headed "An AI pointed at your folder", is a desktop app or terminal with folder access, and is deliberately longer, listing five things it can do: it reads the files itself, opening the deck, the plan and the call notes; it writes back into them, so corrections land in the file rather than the chat; it cites where each fact came from, writing the source file and page beside the claim; it starts already knowing the business, so there is no re-briefing; and it gets better every time you add something, because every real event goes back into the folder. A strip along the bottom states that the chat answers about startups while the other one answers about yours.</desc>
+
+  <rect x="0" y="0" width="1200" height="800" rx="16" fill="var(--dg-bg, #EEF4F6)"/>
+
+  <text x="48" y="60" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="30" font-weight="700" fill="var(--dg-text, #10222C)">A chat window, and an AI pointed at your folder</text>
+  <text x="48" y="94" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" fill="var(--dg-muted, #3F5560)">Same model in both columns. The difference is what it can reach.</text>
+
+  <!-- left column -->
+  <text x="48" y="146" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="21" font-weight="600" fill="var(--dg-muted, #3F5560)">A chat window</text>
+  <text x="48" y="170" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="15" fill="var(--dg-muted, #3F5560)">A browser tab with nothing attached to it.</text>
+  <line x1="48" y1="186" x2="544" y2="186" stroke="var(--dg-border-strong, #75878F)" stroke-width="1.5"/>
+
+  <rect x="48" y="206" width="496" height="84" rx="12" fill="var(--dg-surface, #FFFFFF)" stroke="var(--dg-border, #C1D1D8)" stroke-width="1.5"/>
+  <circle cx="90" cy="248" r="15" fill="none" stroke="var(--dg-danger, #C62C49)" stroke-width="1.5"/>
+  <path d="M 84,242 L 96,254 M 96,242 L 84,254" stroke="var(--dg-danger, #C62C49)" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="128" y="244" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="21" font-weight="600" fill="var(--dg-text, #10222C)">Sees only what you paste</text>
+  <text x="128" y="272" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" fill="var(--dg-muted, #3F5560)">You re-explain the business every time.</text>
+
+  <rect x="48" y="304" width="496" height="84" rx="12" fill="var(--dg-surface, #FFFFFF)" stroke="var(--dg-border, #C1D1D8)" stroke-width="1.5"/>
+  <circle cx="90" cy="346" r="15" fill="none" stroke="var(--dg-danger, #C62C49)" stroke-width="1.5"/>
+  <path d="M 84,340 L 96,352 M 96,340 L 84,352" stroke="var(--dg-danger, #C62C49)" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="128" y="342" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="21" font-weight="600" fill="var(--dg-text, #10222C)">Forgets when the chat closes</text>
+  <text x="128" y="370" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" fill="var(--dg-muted, #3F5560)">Yesterday's decisions are gone.</text>
+
+  <rect x="48" y="402" width="496" height="84" rx="12" fill="var(--dg-surface, #FFFFFF)" stroke="var(--dg-border, #C1D1D8)" stroke-width="1.5"/>
+  <circle cx="90" cy="444" r="15" fill="none" stroke="var(--dg-danger, #C62C49)" stroke-width="1.5"/>
+  <path d="M 84,438 L 96,450 M 96,438 L 84,450" stroke="var(--dg-danger, #C62C49)" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="128" y="440" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="21" font-weight="600" fill="var(--dg-text, #10222C)">Cannot open your files</text>
+  <text x="128" y="468" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" fill="var(--dg-muted, #3F5560)">The deck and the model stay shut.</text>
+
+  <rect x="48" y="500" width="496" height="84" rx="12" fill="var(--dg-surface, #FFFFFF)" stroke="var(--dg-border, #C1D1D8)" stroke-width="1.5"/>
+  <circle cx="90" cy="542" r="15" fill="none" stroke="var(--dg-danger, #C62C49)" stroke-width="1.5"/>
+  <path d="M 84,536 L 96,548 M 96,536 L 84,548" stroke="var(--dg-danger, #C62C49)" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="128" y="538" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="21" font-weight="600" fill="var(--dg-text, #10222C)">Answers in general terms</text>
+  <text x="128" y="566" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" fill="var(--dg-muted, #3F5560)">Advice that would fit any company.</text>
+
+  <text x="48" y="624" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="15" fill="var(--dg-muted, #3F5560)">The list stops here — there is nothing<tspan x="48" dy="22">else in your business it can reach.</tspan></text>
+
+  <!-- right column -->
+  <text x="592" y="146" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="21" font-weight="600" fill="var(--dg-primary, #0B5A86)">An AI pointed at your folder</text>
+  <text x="592" y="170" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="15" fill="var(--dg-muted, #3F5560)">A desktop app or terminal with folder access.</text>
+  <line x1="592" y1="186" x2="1152" y2="186" stroke="var(--dg-border-strong, #75878F)" stroke-width="1.5"/>
+
+  <rect x="592" y="206" width="560" height="84" rx="12" fill="var(--dg-surface, #FFFFFF)" stroke="var(--dg-border, #C1D1D8)" stroke-width="1.5"/>
+  <circle cx="634" cy="248" r="15" fill="none" stroke="var(--dg-success, #0C7A63)" stroke-width="1.5"/>
+  <polyline points="627,248 632,254 641,242" fill="none" stroke="var(--dg-success, #0C7A63)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="672" y="244" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="21" font-weight="600" fill="var(--dg-text, #10222C)">Reads the files itself</text>
+  <text x="672" y="272" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" fill="var(--dg-muted, #3F5560)">Opens the deck, the plan, the call notes.</text>
+
+  <rect x="592" y="304" width="560" height="84" rx="12" fill="var(--dg-surface, #FFFFFF)" stroke="var(--dg-border, #C1D1D8)" stroke-width="1.5"/>
+  <circle cx="634" cy="346" r="15" fill="none" stroke="var(--dg-success, #0C7A63)" stroke-width="1.5"/>
+  <polyline points="627,346 632,352 641,340" fill="none" stroke="var(--dg-success, #0C7A63)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="672" y="342" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="21" font-weight="600" fill="var(--dg-text, #10222C)">Writes back into them</text>
+  <text x="672" y="370" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" fill="var(--dg-muted, #3F5560)">Corrections land in the file, not the chat.</text>
+
+  <rect x="592" y="402" width="560" height="84" rx="12" fill="var(--dg-surface, #FFFFFF)" stroke="var(--dg-border, #C1D1D8)" stroke-width="1.5"/>
+  <circle cx="634" cy="444" r="15" fill="none" stroke="var(--dg-success, #0C7A63)" stroke-width="1.5"/>
+  <polyline points="627,444 632,450 641,438" fill="none" stroke="var(--dg-success, #0C7A63)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="672" y="440" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="21" font-weight="600" fill="var(--dg-text, #10222C)">Cites where each fact came from</text>
+  <text x="672" y="468" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" fill="var(--dg-muted, #3F5560)">Writes the file and page beside the claim.</text>
+
+  <rect x="592" y="500" width="560" height="84" rx="12" fill="var(--dg-surface, #FFFFFF)" stroke="var(--dg-border, #C1D1D8)" stroke-width="1.5"/>
+  <circle cx="634" cy="542" r="15" fill="none" stroke="var(--dg-success, #0C7A63)" stroke-width="1.5"/>
+  <polyline points="627,542 632,548 641,536" fill="none" stroke="var(--dg-success, #0C7A63)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="672" y="538" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="21" font-weight="600" fill="var(--dg-text, #10222C)">Starts already knowing the business</text>
+  <text x="672" y="566" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" fill="var(--dg-muted, #3F5560)">No re-briefing. No warm-up questions.</text>
+
+  <rect x="592" y="598" width="560" height="84" rx="12" fill="var(--dg-surface, #FFFFFF)" stroke="var(--dg-border, #C1D1D8)" stroke-width="1.5"/>
+  <circle cx="634" cy="640" r="15" fill="none" stroke="var(--dg-success, #0C7A63)" stroke-width="1.5"/>
+  <polyline points="627,640 632,646 641,634" fill="none" stroke="var(--dg-success, #0C7A63)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="672" y="636" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="21" font-weight="600" fill="var(--dg-text, #10222C)">Gets better every time you add</text>
+  <text x="672" y="664" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" fill="var(--dg-muted, #3F5560)">Every real event goes back into the folder.</text>
+
+  <!-- footer -->
+  <rect x="48" y="712" width="1104" height="64" rx="12" fill="var(--dg-surface, #FFFFFF)" stroke="var(--dg-primary, #0B5A86)" stroke-width="2"/>
+  <text x="600" y="750" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" fill="var(--dg-text, #10222C)">The chat answers about startups. The other one answers about yours.</text>
+</svg>
+</div>
+<h2 id="the-loop-everything-runs-on">The loop everything runs on</h2>
+<p>Every piece of work in this repo — bootstrapping the stack, writing a recap, building a one-pager — runs the same four steps.</p>
+<div class="table-wrap"><table><thead><tr><th>Step</th><th>What happens</th><th>What you do</th></tr></thead><tbody><tr><td><strong>Brief</strong></td><td>You say what you want, and what &quot;done&quot; looks like</td><td>Be specific about the output and the source material. Name the folder.</td></tr><tr><td><strong>Plan</strong></td><td>It says what it intends to do, in order, before doing it</td><td>Read it. Correct it. This is the cheapest place to catch a wrong assumption.</td></tr><tr><td><strong>Build</strong></td><td>It writes files, runs commands, shows the output</td><td>Watch. Approve individual actions rather than batches.</td></tr><tr><td><strong>Review</strong></td><td>It summarises what changed; you open the files</td><td>Read every line that will leave the folder. Open the source for every number.</td></tr></tbody></table></div>
+<p>You approve every step. The loop only fails in one way, and it is always the same way: the founder stops reading at the review step because the last six outputs were fine.</p>
+<p>Repeat the loop rather than trying to get a large task right in one instruction. Four small passes you checked beat one large pass you skimmed.</p>
+<div class="diagram-wrap"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" width="100%" height="640" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="loop-title loop-desc">
+  <title id="loop-title">The four-step working loop: brief, plan, build, review</title>
+  <desc id="loop-desc">Four numbered steps run left to right, with a bar above each showing who owns it. Step one, brief, is yours: say what you want, what done looks like, and point at the files. Step two, plan, is the AI's: it writes the steps back to you first, and you change them or say go. Step three, build, is also the AI's: it does the work and shows what changed, file by file. Step four, review, is yours again: you read it, check the numbers, and either keep it or send it back. An arrow runs from review all the way back to brief, because what you learn in review becomes the next brief. A note along the bottom says you approve every step — the AI stops between steps and waits, and nothing is published, sent or committed without you.</desc>
+
+  <rect x="0" y="0" width="1200" height="640" rx="16" fill="var(--dg-bg, #EEF4F6)"/>
+
+  <text x="48" y="58" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="30" font-weight="700" fill="var(--dg-text, #10222C)">The working loop</text>
+  <text x="48" y="90" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" fill="var(--dg-muted, #3F5560)">Four steps, in order. You open it and you close it.</text>
+
+  <!-- owner bars -->
+  <rect x="48" y="126" width="246" height="34" rx="8" fill="var(--dg-surface, #FFFFFF)" stroke="var(--dg-secondary, #0C7A63)" stroke-width="1.5"/>
+  <text x="171" y="148" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="15" font-weight="600" fill="var(--dg-secondary, #0C7A63)">You write it</text>
+
+  <rect x="334" y="126" width="532" height="34" rx="8" fill="var(--dg-surface, #FFFFFF)" stroke="var(--dg-primary, #0B5A86)" stroke-width="1.5"/>
+  <text x="600" y="148" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="15" font-weight="600" fill="var(--dg-primary, #0B5A86)">The AI does it</text>
+
+  <rect x="906" y="126" width="246" height="34" rx="8" fill="var(--dg-surface, #FFFFFF)" stroke="var(--dg-secondary, #0C7A63)" stroke-width="1.5"/>
+  <text x="1029" y="148" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="15" font-weight="600" fill="var(--dg-secondary, #0C7A63)">You check it</text>
+
+  <line x1="171" y1="160" x2="171" y2="190" stroke="var(--dg-border-strong, #75878F)" stroke-width="1.5"/>
+  <line x1="457" y1="160" x2="457" y2="190" stroke="var(--dg-border-strong, #75878F)" stroke-width="1.5"/>
+  <line x1="743" y1="160" x2="743" y2="190" stroke="var(--dg-border-strong, #75878F)" stroke-width="1.5"/>
+  <line x1="1029" y1="160" x2="1029" y2="190" stroke="var(--dg-border-strong, #75878F)" stroke-width="1.5"/>
+
+  <!-- step 1 -->
+  <rect x="48" y="190" width="246" height="182" rx="12" fill="var(--dg-surface, #FFFFFF)" stroke="var(--dg-border, #C1D1D8)" stroke-width="1.5"/>
+  <circle cx="86" cy="232" r="18" fill="none" stroke="var(--dg-secondary, #0C7A63)" stroke-width="1.5"/>
+  <text x="86" y="238" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" font-weight="700" fill="var(--dg-secondary, #0C7A63)">1</text>
+  <text x="118" y="240" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="21" font-weight="600" fill="var(--dg-text, #10222C)">Brief</text>
+  <line x1="68" y1="270" x2="274" y2="270" stroke="var(--dg-border, #C1D1D8)" stroke-width="1.5"/>
+  <text x="68" y="302" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" fill="var(--dg-muted, #3F5560)">Say what you want and<tspan x="68" dy="24">what done looks like.</tspan><tspan x="68" dy="24">Point at the files.</tspan></text>
+
+  <path d="M 300,281 H 322" stroke="var(--dg-border-strong, #75878F)" stroke-width="2"/>
+  <path d="M 330,281 L 320,275 L 320,287 Z" fill="var(--dg-border-strong, #75878F)"/>
+
+  <!-- step 2 -->
+  <rect x="334" y="190" width="246" height="182" rx="12" fill="var(--dg-surface, #FFFFFF)" stroke="var(--dg-border, #C1D1D8)" stroke-width="1.5"/>
+  <circle cx="372" cy="232" r="18" fill="none" stroke="var(--dg-primary, #0B5A86)" stroke-width="1.5"/>
+  <text x="372" y="238" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" font-weight="700" fill="var(--dg-primary, #0B5A86)">2</text>
+  <text x="404" y="240" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="21" font-weight="600" fill="var(--dg-text, #10222C)">Plan</text>
+  <line x1="354" y1="270" x2="560" y2="270" stroke="var(--dg-border, #C1D1D8)" stroke-width="1.5"/>
+  <text x="354" y="302" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" fill="var(--dg-muted, #3F5560)">It writes the steps<tspan x="354" dy="24">back to you first. You</tspan><tspan x="354" dy="24">change them, or say go.</tspan></text>
+
+  <path d="M 586,281 H 608" stroke="var(--dg-border-strong, #75878F)" stroke-width="2"/>
+  <path d="M 616,281 L 606,275 L 606,287 Z" fill="var(--dg-border-strong, #75878F)"/>
+
+  <!-- step 3 -->
+  <rect x="620" y="190" width="246" height="182" rx="12" fill="var(--dg-surface, #FFFFFF)" stroke="var(--dg-border, #C1D1D8)" stroke-width="1.5"/>
+  <circle cx="658" cy="232" r="18" fill="none" stroke="var(--dg-primary, #0B5A86)" stroke-width="1.5"/>
+  <text x="658" y="238" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" font-weight="700" fill="var(--dg-primary, #0B5A86)">3</text>
+  <text x="690" y="240" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="21" font-weight="600" fill="var(--dg-text, #10222C)">Build</text>
+  <line x1="640" y1="270" x2="846" y2="270" stroke="var(--dg-border, #C1D1D8)" stroke-width="1.5"/>
+  <text x="640" y="302" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" fill="var(--dg-muted, #3F5560)">It does the work and<tspan x="640" dy="24">shows what changed,</tspan><tspan x="640" dy="24">file by file.</tspan></text>
+
+  <path d="M 872,281 H 894" stroke="var(--dg-border-strong, #75878F)" stroke-width="2"/>
+  <path d="M 902,281 L 892,275 L 892,287 Z" fill="var(--dg-border-strong, #75878F)"/>
+
+  <!-- step 4 -->
+  <rect x="906" y="190" width="246" height="182" rx="12" fill="var(--dg-surface, #FFFFFF)" stroke="var(--dg-border, #C1D1D8)" stroke-width="1.5"/>
+  <circle cx="944" cy="232" r="18" fill="none" stroke="var(--dg-secondary, #0C7A63)" stroke-width="1.5"/>
+  <text x="944" y="238" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" font-weight="700" fill="var(--dg-secondary, #0C7A63)">4</text>
+  <text x="976" y="240" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="21" font-weight="600" fill="var(--dg-text, #10222C)">Review</text>
+  <line x1="926" y1="270" x2="1132" y2="270" stroke="var(--dg-border, #C1D1D8)" stroke-width="1.5"/>
+  <text x="926" y="302" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" fill="var(--dg-muted, #3F5560)">You read it, check the<tspan x="926" dy="24">numbers, keep it or</tspan><tspan x="926" dy="24">send it back.</tspan></text>
+
+  <!-- return arrow -->
+  <path d="M 1029,372 V 436 Q 1029,452 1013,452 H 187 Q 171,452 171,436 V 386" fill="none" stroke="var(--dg-secondary, #0C7A63)" stroke-width="2"/>
+  <path d="M 171,372 L 165,386 L 177,386 Z" fill="var(--dg-secondary, #0C7A63)"/>
+  <text x="600" y="482" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" fill="var(--dg-muted, #3F5560)">What you learn in review becomes the next brief.</text>
+
+  <!-- callout -->
+  <rect x="48" y="512" width="1104" height="80" rx="12" fill="var(--dg-surface, #FFFFFF)" stroke="var(--dg-primary, #0B5A86)" stroke-width="2"/>
+  <circle cx="92" cy="552" r="18" fill="none" stroke="var(--dg-success, #0C7A63)" stroke-width="1.5"/>
+  <polyline points="84,552 90,559 101,545" fill="none" stroke="var(--dg-success, #0C7A63)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="132" y="546" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="21" font-weight="600" fill="var(--dg-text, #10222C)">You approve every step.</text>
+  <text x="132" y="574" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" fill="var(--dg-muted, #3F5560)">The AI stops between steps and waits. Nothing is published, sent or committed without you.</text>
+</svg>
+</div>
+<h2 id="the-terminal-in-plain-language">The terminal, in plain language</h2>
+<p>A terminal is a text window. You type one line, press enter, and something happens — a folder is listed, a file is copied, a tool starts. Whatever happened prints back as text underneath. That is the whole idea.</p>
+<p>It looks severe because it has no buttons and no icons, and because most of what you have seen of it was somebody else&#39;s screen during an incident. In practice it is a receipt printer: everything that happened is written down, in order, which is exactly the property you want when an AI is working in your files.</p>
+<p><strong>You will not memorise commands, and you will rarely type them.</strong> The agentic tool types them. Your job is to read the line it proposes, understand roughly what it is about to do, and approve or refuse. Anything that mentions deleting, or a path outside your folder, deserves a second look. Most of the rest is reading, listing or writing inside the folder you scoped.</p>
+<p>This section exists so the screen is not a mystery, not so you become fluent. Knowing that a blinking cursor means &quot;waiting for you&quot; and a wall of scrolling text means &quot;working&quot; removes most of the discomfort.</p>
+<h2 id="what-makes-an-editor-agentic">What makes an editor &quot;agentic&quot;</h2>
+<p>An editor — sometimes called an IDE — is a window that shows your folder on the left and the contents of a file on the right. On its own it is a text editor with a file tree, no more remarkable than a word processor.</p>
+<p>An agentic one adds a chat panel wired into that folder. Four things separate it from the chat window you already pay for:</p>
+<ul class="doc-list">
+<li>It <strong>reads</strong> files in the folder without you pasting them</li>
+<li>It <strong>writes</strong> files back, creating and editing them</li>
+<li>It <strong>runs</strong> commands, and shows you the output</li>
+<li>It <strong>explains</strong> what it changed, file by file, line by line</li>
+</ul>
+<p>If a tool does those four, it will run this repo. If it only does the first, it is a chat window with an upload button, and you will spend your evenings copying text back and forth.</p>
+<h2 id="the-lanes-are-interchangeable">The lanes are interchangeable</h2>
+<p>Each major model comes paired with an agentic tool from the same maker. The pairings look like this:</p>
+<div class="table-wrap"><table><thead><tr><th>Model family</th><th>Paired agentic tool</th></tr></thead><tbody><tr><td>Anthropic&#39;s Claude</td><td>Claude Code in a terminal; the Claude desktop app for a folder without a terminal</td></tr><tr><td>OpenAI&#39;s GPT</td><td>Codex, as an app and in a terminal</td></tr><tr><td>Google&#39;s Gemini</td><td>Gemini CLI in a terminal</td></tr></tbody></table></div>
+<p>Separately, editor-based tools such as Cursor and Windsurf let you choose which model sits behind them.</p>
+<p><strong>Pick the one you already pay for.</strong> The four-step loop is identical in all of them, the prompts in this repo are plain English and run anywhere, and the differences people argue about online will not decide whether your stack gets built. Choosing a lane should take ten minutes, not a week.</p>
+<h2 id="tiers-and-the-effort-dial">Tiers, and the effort dial</h2>
+<p>Within a lane, models come in tiers. They share the same skills. What differs is how deeply the model reasons and how fast it answers — a small tier is quick and cheap and perfectly good at extraction and formatting; a large tier is slower and better where being wrong costs you something.</p>
+<p>Separately from the tier, most tools let you ask for more thinking on a single question. Telling it to think carefully before answering, or turning on an extended-reasoning setting, buys depth on that one task without changing your subscription.</p>
+<div class="table-wrap"><table><thead><tr><th>Task</th><th>Tier</th><th>Thinking</th></tr></thead><tbody><tr><td>Renaming files, extracting text, reformatting a table</td><td>Small</td><td>Low</td></tr><tr><td>Drafting a document from material already in the stack</td><td>Middle</td><td>Low to medium</td></tr><tr><td>A decision you will act on — pricing, positioning, what to say to an investor</td><td>Top</td><td>High</td></tr><tr><td>Anything producing a number you will repeat in public</td><td>Any</td><td>High, and demand the source</td></tr></tbody></table></div>
+<p>Spend the thinking where the decision matters. Running everything at maximum effort is slow and expensive. Running a pricing decision at minimum effort is worse.</p>
+<h2 id="connectors-and-the-standard-behind-them">Connectors, and the standard behind them</h2>
+<p>Your business does not live only in a folder. It is also in your mail, your drive, your calendar, your task tracker and — once you follow the quickstart — a repository.</p>
+<p>The Model Context Protocol is a single standard for plugging those into an AI tool: one adapter shape, instead of custom wiring per tool per vendor. In practice a connector shows up in your tool as something you switch on, authorise once, and then refer to in plain English — <em>find the supplier thread from March and summarise what was agreed</em>.</p>
+<p>Three habits, and they are not optional:</p>
+<ul class="doc-list">
+<li><strong>Read-only first.</strong> Grant reading before you grant writing or sending. A misfired draft email is a bad first week.</li>
+<li><strong>Scoped.</strong> Connect the mailbox or the drive folder the task needs, not the whole account.</li>
+<li><strong>With permission.</strong> Yours, and your company&#39;s. Personal data, and anything under a confidentiality obligation, stays out until the policy question has an answer — see <a href="safety.md">safety.md</a>.</li>
+</ul>
+<p>Setting one up, and the rule that keeps connector-found material citable, is covered in <a href="getting-material-in.md">getting-material-in.md</a>.</p>
+<p>Put together, the pieces you are assembling are few.</p>
+<div class="diagram-wrap"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 776" width="100%" height="776" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="kit-title kit-desc">
+  <title id="kit-title">The folder at the centre, and the five parts around it</title>
+  <desc id="kit-desc">A hub and spoke layout. At the centre is the folder itself — ten sections, one index, plain markdown — which is the knowledge base everything else serves. Five parts connect to it. A paid subscription, because free tiers cannot open a folder on your own computer. An app with file access, meaning a desktop app or a terminal pointed at one folder. Version history, so that every change is recorded and any step can be undone. Connectors, so mail and drive get pulled in without you copying files by hand. And the prompt library, the tasks you run again and again, written down once. The two parts drawn with a solid edge — a paid subscription and an app with file access — are enough to start; the other three come later. A note at the foot repeats that you do not need all five on day one.</desc>
+
+  <rect x="0" y="0" width="1200" height="776" rx="16" fill="var(--dg-bg, #EEF4F6)"/>
+
+  <text x="48" y="58" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="30" font-weight="700" fill="var(--dg-text, #10222C)">What you actually need</text>
+  <text x="48" y="90" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" fill="var(--dg-muted, #3F5560)">One folder at the centre. Five parts around it.</text>
+  <text x="48" y="118" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="15" fill="var(--dg-muted, #3F5560)">The two drawn with a solid edge are enough to start. The other three come later.</text>
+
+  <!-- spokes -->
+  <line x1="392" y1="214" x2="440" y2="258" stroke="var(--dg-border-strong, #75878F)" stroke-width="1.5"/>
+  <line x1="392" y1="386" x2="440" y2="326" stroke="var(--dg-border-strong, #75878F)" stroke-width="1.5"/>
+  <line x1="808" y1="214" x2="760" y2="258" stroke="var(--dg-border-strong, #75878F)" stroke-width="1.5"/>
+  <line x1="808" y1="386" x2="760" y2="326" stroke="var(--dg-border-strong, #75878F)" stroke-width="1.5"/>
+  <line x1="600" y1="386" x2="600" y2="486" stroke="var(--dg-border-strong, #75878F)" stroke-width="1.5"/>
+  <circle cx="440" cy="258" r="4" fill="var(--dg-border-strong, #75878F)"/>
+  <circle cx="440" cy="326" r="4" fill="var(--dg-border-strong, #75878F)"/>
+  <circle cx="760" cy="258" r="4" fill="var(--dg-border-strong, #75878F)"/>
+  <circle cx="760" cy="326" r="4" fill="var(--dg-border-strong, #75878F)"/>
+  <circle cx="600" cy="386" r="4" fill="var(--dg-border-strong, #75878F)"/>
+
+  <!-- hub -->
+  <rect x="440" y="186" width="320" height="200" rx="12" fill="var(--dg-surface, #FFFFFF)" stroke="var(--dg-primary, #0B5A86)" stroke-width="2"/>
+  <path d="M 546,218 h 40 l 12 14 h -52 z" fill="var(--dg-primary, #0B5A86)"/>
+  <rect x="546" y="230" width="108" height="52" rx="6" fill="none" stroke="var(--dg-primary, #0B5A86)" stroke-width="2"/>
+  <text x="600" y="316" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="21" font-weight="600" fill="var(--dg-text, #10222C)">The folder itself</text>
+  <text x="600" y="344" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" fill="var(--dg-muted, #3F5560)">Ten sections, one index,<tspan x="600" dy="24">plain markdown.</tspan></text>
+
+  <!-- part: paid subscription -->
+  <rect x="48" y="140" width="344" height="148" rx="12" fill="var(--dg-surface, #FFFFFF)" stroke="var(--dg-primary, #0B5A86)" stroke-width="2"/>
+  <circle cx="78" cy="195" r="7" fill="var(--dg-primary, #0B5A86)"/>
+  <text x="100" y="202" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="21" font-weight="600" fill="var(--dg-text, #10222C)">A paid subscription</text>
+  <text x="72" y="240" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" fill="var(--dg-muted, #3F5560)">Free tiers cannot open a folder<tspan x="72" dy="24">on your own computer.</tspan></text>
+
+  <!-- part: app with file access -->
+  <rect x="48" y="312" width="344" height="148" rx="12" fill="var(--dg-surface, #FFFFFF)" stroke="var(--dg-primary, #0B5A86)" stroke-width="2"/>
+  <circle cx="78" cy="367" r="7" fill="var(--dg-primary, #0B5A86)"/>
+  <text x="100" y="374" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="21" font-weight="600" fill="var(--dg-text, #10222C)">An app with file access</text>
+  <text x="72" y="412" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" fill="var(--dg-muted, #3F5560)">A desktop app or a terminal,<tspan x="72" dy="24">pointed at one folder.</tspan></text>
+
+  <!-- part: version history -->
+  <rect x="808" y="140" width="344" height="148" rx="12" fill="var(--dg-surface, #FFFFFF)" stroke="var(--dg-border, #C1D1D8)" stroke-width="1.5"/>
+  <circle cx="838" cy="195" r="7" fill="none" stroke="var(--dg-muted, #3F5560)" stroke-width="1.5"/>
+  <text x="860" y="202" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="21" font-weight="600" fill="var(--dg-text, #10222C)">Version history</text>
+  <text x="832" y="240" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" fill="var(--dg-muted, #3F5560)">Every change recorded, so any<tspan x="832" dy="24">step can be undone.</tspan></text>
+
+  <!-- part: connectors -->
+  <rect x="808" y="312" width="344" height="148" rx="12" fill="var(--dg-surface, #FFFFFF)" stroke="var(--dg-border, #C1D1D8)" stroke-width="1.5"/>
+  <circle cx="838" cy="367" r="7" fill="none" stroke="var(--dg-muted, #3F5560)" stroke-width="1.5"/>
+  <text x="860" y="374" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="21" font-weight="600" fill="var(--dg-text, #10222C)">Connectors</text>
+  <text x="832" y="412" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" fill="var(--dg-muted, #3F5560)">Mail and drive, pulled in without<tspan x="832" dy="24">copying files by hand.</tspan></text>
+
+  <!-- part: prompt library -->
+  <rect x="428" y="486" width="344" height="148" rx="12" fill="var(--dg-surface, #FFFFFF)" stroke="var(--dg-border, #C1D1D8)" stroke-width="1.5"/>
+  <circle cx="458" cy="541" r="7" fill="none" stroke="var(--dg-muted, #3F5560)" stroke-width="1.5"/>
+  <text x="480" y="548" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="21" font-weight="600" fill="var(--dg-text, #10222C)">The prompt library</text>
+  <text x="452" y="586" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" fill="var(--dg-muted, #3F5560)">The tasks you run again and<tspan x="452" dy="24">again, written down once.</tspan></text>
+
+  <!-- footer -->
+  <rect x="48" y="662" width="1104" height="72" rx="12" fill="var(--dg-surface, #FFFFFF)" stroke="var(--dg-primary, #0B5A86)" stroke-width="2"/>
+  <text x="600" y="694" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" font-weight="600" fill="var(--dg-text, #10222C)">You do not need all five on day one.</text>
+  <text x="600" y="718" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" fill="var(--dg-muted, #3F5560)">A paid subscription and an app that can see your files is enough to start.</text>
+</svg>
+</div>
+<h2 id="what-it-genuinely-cannot-see">What it genuinely cannot see</h2>
+<p>This is where founders get burned, so it is worth being blunt. The failure is never that the AI refuses. It answers anyway, fluently, in your own vocabulary, and the gap is invisible in the output.</p>
+<div class="table-wrap"><table><thead><tr><th>It cannot see</th><th>Why</th><th>Do this instead</th></tr></thead><tbody><tr><td>Numbers that exist only as pixels in a chart</td><td>Text extraction reads the caption and the axis labels, never the plotted values</td><td>Export the chart as an image and ask it to read the picture, or type the underlying numbers into a text file</td></tr><tr><td>The formula behind a spreadsheet cell</td><td>It sees the displayed value, not the calculation that produced it</td><td>Paste the formula in, or export a version of the sheet with formulas shown</td></tr><tr><td>Anything behind a login</td><td>Bank portals, your CRM, analytics dashboards, paid research</td><td>Export what you need, or connect it deliberately through a connector</td></tr><tr><td>A file you did not put in the folder</td><td>No access is not the same as no answer</td><td>Put it in the folder, and ask it what it could not find</td></tr><tr><td>Everything you know and never wrote down</td><td>The verbal supplier agreement, why you dropped the second product, what the customer actually meant</td><td>Write it down. This is most of the value of building a stack.</td></tr></tbody></table></div>
+<p>The last row is the expensive one. A stack assembled only from documents describes the company you have written up, not the company you are running. That difference is usually why a plausible-looking plan does not survive contact with your own operations.</p>
+<div class="diagram-wrap"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 768" width="100%" height="768" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="blind-title blind-desc">
+  <title id="blind-title">Five things an AI pointed at your folder still cannot see</title>
+  <desc id="blind-desc">Six cards in a grid. The first five are blind spots, each with a one-line fix. One: numbers that are only pixels in a chart — it reads text, and a chart is a picture to it, not a table; the fix is to export the chart as an image and ask it to read the picture. Two: the formula behind a spreadsheet cell — it sees the answer in the cell but not the sum behind it; the fix is to paste in the formula, not just the answer. Three: anything behind a login — your bank, your dashboard and your mail are all shut to it; the fix is to save the page yourself, then put the file in the folder. Four: a file that is not in the folder — if it sits on your desktop or in a mail thread it is not there; the fix is to move the file into the folder. Five: what you know but never wrote down, such as the supplier's real terms or why a customer actually left; the fix is to say it out loud and let it write it down for you. The sixth card gives the test for all five: ask which files it opened before you trust the answer, and if the answer has no source, treat it as a guess.</desc>
+
+  <rect x="0" y="0" width="1200" height="768" rx="16" fill="var(--dg-bg, #EEF4F6)"/>
+
+  <text x="48" y="58" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="30" font-weight="700" fill="var(--dg-text, #10222C)">What it cannot see</text>
+  <text x="48" y="90" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" fill="var(--dg-muted, #3F5560)">Five blind spots, and the fix for each one.</text>
+
+  <!-- card 1 -->
+  <rect x="48" y="132" width="346" height="278" rx="12" fill="var(--dg-surface, #FFFFFF)" stroke="var(--dg-border, #C1D1D8)" stroke-width="1.5"/>
+  <circle cx="85" cy="169" r="14" fill="none" stroke="var(--dg-accent, #C62C49)" stroke-width="1.5"/>
+  <text x="85" y="174" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="15" font-weight="700" fill="var(--dg-accent, #C62C49)">1</text>
+  <text x="72" y="214" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="21" font-weight="600" fill="var(--dg-text, #10222C)">Numbers that are only<tspan x="72" dy="24">pixels in a chart</tspan></text>
+  <line x1="72" y1="258" x2="370" y2="258" stroke="var(--dg-border, #C1D1D8)" stroke-width="1.5"/>
+  <text x="72" y="288" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" fill="var(--dg-muted, #3F5560)">It reads text. A chart is a<tspan x="72" dy="24">picture to it, not a table.</tspan></text>
+  <rect x="64" y="330" width="314" height="62" rx="8" fill="var(--dg-bg, #EEF4F6)"/>
+  <text x="80" y="356" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="15" fill="var(--dg-primary, #0B5A86)">Fix — export the chart as an image<tspan x="80" dy="22">and ask it to read the picture.</tspan></text>
+
+  <!-- card 2 -->
+  <rect x="427" y="132" width="346" height="278" rx="12" fill="var(--dg-surface, #FFFFFF)" stroke="var(--dg-border, #C1D1D8)" stroke-width="1.5"/>
+  <circle cx="464" cy="169" r="14" fill="none" stroke="var(--dg-accent, #C62C49)" stroke-width="1.5"/>
+  <text x="464" y="174" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="15" font-weight="700" fill="var(--dg-accent, #C62C49)">2</text>
+  <text x="451" y="214" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="21" font-weight="600" fill="var(--dg-text, #10222C)">The formula behind a<tspan x="451" dy="24">spreadsheet cell</tspan></text>
+  <line x1="451" y1="258" x2="749" y2="258" stroke="var(--dg-border, #C1D1D8)" stroke-width="1.5"/>
+  <text x="451" y="288" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" fill="var(--dg-muted, #3F5560)">It sees the answer in the<tspan x="451" dy="24">cell, not the sum behind it.</tspan></text>
+  <rect x="443" y="330" width="314" height="62" rx="8" fill="var(--dg-bg, #EEF4F6)"/>
+  <text x="459" y="356" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="15" fill="var(--dg-primary, #0B5A86)">Fix — paste in the formula, not<tspan x="459" dy="22">just the answer it produced.</tspan></text>
+
+  <!-- card 3 -->
+  <rect x="806" y="132" width="346" height="278" rx="12" fill="var(--dg-surface, #FFFFFF)" stroke="var(--dg-border, #C1D1D8)" stroke-width="1.5"/>
+  <circle cx="843" cy="169" r="14" fill="none" stroke="var(--dg-accent, #C62C49)" stroke-width="1.5"/>
+  <text x="843" y="174" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="15" font-weight="700" fill="var(--dg-accent, #C62C49)">3</text>
+  <text x="830" y="214" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="21" font-weight="600" fill="var(--dg-text, #10222C)">Anything behind a<tspan x="830" dy="24">login</tspan></text>
+  <line x1="830" y1="258" x2="1128" y2="258" stroke="var(--dg-border, #C1D1D8)" stroke-width="1.5"/>
+  <text x="830" y="288" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" fill="var(--dg-muted, #3F5560)">Your bank, your dashboard,<tspan x="830" dy="24">your mail — all shut to it.</tspan></text>
+  <rect x="822" y="330" width="314" height="62" rx="8" fill="var(--dg-bg, #EEF4F6)"/>
+  <text x="838" y="356" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="15" fill="var(--dg-primary, #0B5A86)">Fix — save the page yourself, then<tspan x="838" dy="22">put the file in the folder.</tspan></text>
+
+  <!-- card 4 -->
+  <rect x="48" y="442" width="346" height="278" rx="12" fill="var(--dg-surface, #FFFFFF)" stroke="var(--dg-border, #C1D1D8)" stroke-width="1.5"/>
+  <circle cx="85" cy="479" r="14" fill="none" stroke="var(--dg-accent, #C62C49)" stroke-width="1.5"/>
+  <text x="85" y="484" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="15" font-weight="700" fill="var(--dg-accent, #C62C49)">4</text>
+  <text x="72" y="524" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="21" font-weight="600" fill="var(--dg-text, #10222C)">A file that is not in<tspan x="72" dy="24">the folder</tspan></text>
+  <line x1="72" y1="568" x2="370" y2="568" stroke="var(--dg-border, #C1D1D8)" stroke-width="1.5"/>
+  <text x="72" y="598" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" fill="var(--dg-muted, #3F5560)">If it sits on your desktop or<tspan x="72" dy="24">in a mail thread, it is not.</tspan></text>
+  <rect x="64" y="640" width="314" height="62" rx="8" fill="var(--dg-bg, #EEF4F6)"/>
+  <text x="80" y="666" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="15" fill="var(--dg-primary, #0B5A86)">Fix — move the file into the<tspan x="80" dy="22">folder. That is the whole fix.</tspan></text>
+
+  <!-- card 5 -->
+  <rect x="427" y="442" width="346" height="278" rx="12" fill="var(--dg-surface, #FFFFFF)" stroke="var(--dg-border, #C1D1D8)" stroke-width="1.5"/>
+  <circle cx="464" cy="479" r="14" fill="none" stroke="var(--dg-accent, #C62C49)" stroke-width="1.5"/>
+  <text x="464" y="484" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="15" font-weight="700" fill="var(--dg-accent, #C62C49)">5</text>
+  <text x="451" y="524" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="21" font-weight="600" fill="var(--dg-text, #10222C)">What you know but<tspan x="451" dy="24">never wrote down</tspan></text>
+  <line x1="451" y1="568" x2="749" y2="568" stroke="var(--dg-border, #C1D1D8)" stroke-width="1.5"/>
+  <text x="451" y="598" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" fill="var(--dg-muted, #3F5560)">The supplier's real terms.<tspan x="451" dy="24">Why that customer left.</tspan></text>
+  <rect x="443" y="640" width="314" height="62" rx="8" fill="var(--dg-bg, #EEF4F6)"/>
+  <text x="459" y="666" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="15" fill="var(--dg-primary, #0B5A86)">Fix — say it out loud and let it<tspan x="459" dy="22">write it down for you.</tspan></text>
+
+  <!-- card 6: the test -->
+  <rect x="806" y="442" width="346" height="278" rx="12" fill="var(--dg-surface, #FFFFFF)" stroke="var(--dg-primary, #0B5A86)" stroke-width="2"/>
+  <circle cx="843" cy="479" r="14" fill="none" stroke="var(--dg-primary, #0B5A86)" stroke-width="1.5"/>
+  <polyline points="836,479 841,485 850,473" fill="none" stroke="var(--dg-primary, #0B5A86)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="830" y="524" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="21" font-weight="600" fill="var(--dg-text, #10222C)">The test for all five<tspan x="830" dy="24">is the same</tspan></text>
+  <line x1="830" y1="568" x2="1128" y2="568" stroke="var(--dg-border, #C1D1D8)" stroke-width="1.5"/>
+  <text x="830" y="598" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" fill="var(--dg-muted, #3F5560)">Ask which files it opened<tspan x="830" dy="24">before you trust the answer.</tspan></text>
+  <rect x="822" y="640" width="314" height="62" rx="8" fill="var(--dg-bg, #EEF4F6)"/>
+  <text x="838" y="666" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="15" fill="var(--dg-primary, #0B5A86)">It will name them. If the answer<tspan x="838" dy="22">has no source, treat it as a guess.</tspan></text>
+</svg>
+</div>
+<h2 id="context-and-cost-in-founder-terms">Context and cost, in founder terms</h2>
+<p>Context is everything the AI is holding in mind for this one question: your instruction, the files it opened, and what it has produced so far. It is finite, and it is what you pay for.</p>
+<p>A token is a fragment of text — usually a word, or a piece of one — and everything the AI reads and everything it writes is counted in tokens.</p>
+<p>Two things follow, and the second matters more than the first.</p>
+<p><strong>Cost.</strong> If every question makes it re-read your whole folder, you pay for your whole folder on every question. That charge grows every time you add a file, which is to say every week.</p>
+<p><strong>Quality.</strong> A context filled with material irrelevant to the question produces vaguer answers. The model is not concentrating on your unit economics; it is holding your brand fonts and your incorporation certificate at the same time.</p>
+<p>The fix is the whole reason this repo is shaped the way it is. Every file carries a one-sentence summary in its front matter. <code>stack/INDEX.md</code> collects those summaries into one short table. The AI reads the index, decides which one or two files are relevant, and opens only those. The base gets cheaper and sharper as it grows, instead of heavier.</p>
+<div class="diagram-wrap"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="100%" height="720" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="idx-title idx-desc">
+  <title id="idx-title">Reading the index instead of reading everything</title>
+  <desc id="idx-desc">The top half shows the route a question takes. A question arrives — what does one unit cost us to make. The AI reads the index, which is one line per file, a small router rather than the whole base. It opens the two sections it needs, in this case money and then operations, and nothing else is opened. It answers with the cost plus a line saying which two files it came from. The bottom half compares how much gets read on every question. A short, thin bar labelled "one index + two sections" sits inside an empty track, and barely grows as the base grows. Below it, a long, thick bar labelled "everything you own, again" fills the whole track, and gets bigger every month. A note at the foot says one line per file in the index is the whole trick, and that the base gets cheaper and sharper as it grows rather than slower.</desc>
+
+  <rect x="0" y="0" width="1200" height="720" rx="16" fill="var(--dg-bg, #EEF4F6)"/>
+
+  <text x="48" y="58" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="30" font-weight="700" fill="var(--dg-text, #10222C)">Read the index, not everything</text>
+  <text x="48" y="90" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" fill="var(--dg-muted, #3F5560)">How the AI decides what to open before it answers.</text>
+
+  <!-- node 1 -->
+  <rect x="48" y="126" width="246" height="170" rx="12" fill="var(--dg-surface, #FFFFFF)" stroke="var(--dg-border, #C1D1D8)" stroke-width="1.5"/>
+  <circle cx="78" cy="156" r="7" fill="var(--dg-secondary, #0C7A63)"/>
+  <text x="68" y="196" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="21" font-weight="600" fill="var(--dg-text, #10222C)">Question</text>
+  <text x="68" y="230" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" fill="var(--dg-muted, #3F5560)">What does one unit<tspan x="68" dy="24">cost us to make?</tspan></text>
+
+  <path d="M 300,211 H 322" stroke="var(--dg-border-strong, #75878F)" stroke-width="2"/>
+  <path d="M 330,211 L 320,205 L 320,217 Z" fill="var(--dg-border-strong, #75878F)"/>
+
+  <!-- node 2 -->
+  <rect x="334" y="126" width="246" height="170" rx="12" fill="var(--dg-surface, #FFFFFF)" stroke="var(--dg-primary, #0B5A86)" stroke-width="2"/>
+  <circle cx="364" cy="156" r="7" fill="var(--dg-primary, #0B5A86)"/>
+  <text x="354" y="196" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="21" font-weight="600" fill="var(--dg-text, #10222C)">Read the index</text>
+  <text x="354" y="230" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" fill="var(--dg-muted, #3F5560)">One line per file.<tspan x="354" dy="24">A small router, not</tspan><tspan x="354" dy="24">the whole base.</tspan></text>
+
+  <path d="M 586,211 H 608" stroke="var(--dg-border-strong, #75878F)" stroke-width="2"/>
+  <path d="M 616,211 L 606,205 L 606,217 Z" fill="var(--dg-border-strong, #75878F)"/>
+
+  <!-- node 3 -->
+  <rect x="620" y="126" width="246" height="170" rx="12" fill="var(--dg-surface, #FFFFFF)" stroke="var(--dg-primary, #0B5A86)" stroke-width="2"/>
+  <circle cx="650" cy="156" r="7" fill="var(--dg-primary, #0B5A86)"/>
+  <text x="640" y="196" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="21" font-weight="600" fill="var(--dg-text, #10222C)">Open two sections</text>
+  <text x="640" y="230" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" fill="var(--dg-muted, #3F5560)">Money, then<tspan x="640" dy="24">operations. Nothing</tspan><tspan x="640" dy="24">else is opened.</tspan></text>
+
+  <path d="M 872,211 H 894" stroke="var(--dg-border-strong, #75878F)" stroke-width="2"/>
+  <path d="M 902,211 L 892,205 L 892,217 Z" fill="var(--dg-border-strong, #75878F)"/>
+
+  <!-- node 4 -->
+  <rect x="906" y="126" width="246" height="170" rx="12" fill="var(--dg-surface, #FFFFFF)" stroke="var(--dg-border, #C1D1D8)" stroke-width="1.5"/>
+  <circle cx="936" cy="156" r="7" fill="var(--dg-secondary, #0C7A63)"/>
+  <text x="926" y="196" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="21" font-weight="600" fill="var(--dg-text, #10222C)">Answer</text>
+  <text x="926" y="230" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" fill="var(--dg-muted, #3F5560)">The cost, plus a line<tspan x="926" dy="24">saying which two files</tspan><tspan x="926" dy="24">it came from.</tspan></text>
+
+  <line x1="48" y1="340" x2="1152" y2="340" stroke="var(--dg-border-strong, #75878F)" stroke-width="1.5"/>
+  <text x="48" y="376" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="21" font-weight="600" fill="var(--dg-text, #10222C)">How much gets read, on every question</text>
+
+  <!-- thin bar -->
+  <rect x="380" y="400" width="772" height="28" rx="8" fill="none" stroke="var(--dg-border, #C1D1D8)" stroke-width="1.5"/>
+  <rect x="380" y="400" width="180" height="28" rx="8" fill="var(--dg-primary, #0B5A86)"/>
+  <text x="48" y="420" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" font-weight="600" fill="var(--dg-text, #10222C)">One index + two sections</text>
+  <text x="380" y="450" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="15" fill="var(--dg-muted, #3F5560)">Barely grows as the base grows.</text>
+
+  <!-- fat bar -->
+  <rect x="380" y="474" width="772" height="72" rx="8" fill="var(--dg-accent, #C62C49)"/>
+  <text x="48" y="516" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" font-weight="600" fill="var(--dg-text, #10222C)">Everything you own, again</text>
+  <text x="380" y="568" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="15" fill="var(--dg-muted, #3F5560)">Every question. Bigger every month.</text>
+
+  <!-- footer -->
+  <rect x="48" y="600" width="1104" height="76" rx="12" fill="var(--dg-surface, #FFFFFF)" stroke="var(--dg-primary, #0B5A86)" stroke-width="2"/>
+  <text x="600" y="632" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" font-weight="600" fill="var(--dg-text, #10222C)">One line per file in the index. That is the whole trick.</text>
+  <text x="600" y="656" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" fill="var(--dg-muted, #3F5560)">The base gets cheaper and sharper as it grows, not slower.</text>
+</svg>
+</div>
+<h2 id="the-one-rule">The one rule</h2>
+<p>A named human owns every output. Never ship unread.</p>
+<p>Before anything leaves the folder — a deck, an investor update, a supplier quote, a page of your website — one person has read every line, opened the source behind every number, and put their name on it. Not skimmed. Read.</p>
+<p><em>The AI did it</em> is not an answer that works with a customer, an investor, a regulator, a co-founder or a court. The output carries your name the moment you send it, and the fact that a model drafted it changes nothing about who is accountable for it.</p>
+<p>This is also the practical test of whether you are working correctly. If you cannot follow what the AI did well enough to check it, the task was too large, the plan step was skipped, or you have automated something you do not yet understand.</p>
+<div class="diagram-wrap"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" width="100%" height="640" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="stay-title stay-desc">
+  <title id="stay-title">Three rules that keep a person accountable for AI-drafted work</title>
+  <desc id="stay-desc">Three numbered panels sit above a strip that reads "the AI drafts, a person decides". Panel one, read it end to end: read the whole draft before it goes anywhere, not the summary of it and not just the top; if you would not say it out loud, it does not go out. Panel two, one named person owns it: put a name against every file and every number, because a file with no owner is nobody's job, and the front matter has an owner field for exactly this. Panel three, open the sources yourself: every figure cites a file and a page, so pick two at random, open them, and check the numbers — a citation nobody opens is just a citation.</desc>
+
+  <rect x="0" y="0" width="1200" height="640" rx="16" fill="var(--dg-bg, #EEF4F6)"/>
+
+  <text x="48" y="58" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="30" font-weight="700" fill="var(--dg-text, #10222C)">Stay in the loop</text>
+  <text x="48" y="90" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" fill="var(--dg-muted, #3F5560)">Three things stay yours, whatever the AI drafted.</text>
+
+  <!-- panel 1 -->
+  <rect x="48" y="150" width="344" height="316" rx="12" fill="var(--dg-surface, #FFFFFF)" stroke="var(--dg-border, #C1D1D8)" stroke-width="1.5"/>
+  <circle cx="96" cy="198" r="22" fill="none" stroke="var(--dg-primary, #0B5A86)" stroke-width="1.5"/>
+  <text x="96" y="206" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="21" font-weight="700" fill="var(--dg-primary, #0B5A86)">1</text>
+  <text x="72" y="254" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="21" font-weight="600" fill="var(--dg-text, #10222C)">Read it end to end</text>
+  <line x1="72" y1="280" x2="368" y2="280" stroke="var(--dg-border, #C1D1D8)" stroke-width="1.5"/>
+  <text x="72" y="312" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" fill="var(--dg-muted, #3F5560)">Read the whole draft before it<tspan x="72" dy="24">goes anywhere. Not the summary</tspan><tspan x="72" dy="24">of it, and not just the top.</tspan></text>
+  <rect x="64" y="380" width="312" height="68" rx="8" fill="var(--dg-bg, #EEF4F6)"/>
+  <text x="80" y="408" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="15" fill="var(--dg-accent, #C62C49)">If you would not say it out loud,<tspan x="80" dy="22">it does not go out.</tspan></text>
+
+  <!-- panel 2 -->
+  <rect x="428" y="150" width="344" height="316" rx="12" fill="var(--dg-surface, #FFFFFF)" stroke="var(--dg-border, #C1D1D8)" stroke-width="1.5"/>
+  <circle cx="476" cy="198" r="22" fill="none" stroke="var(--dg-primary, #0B5A86)" stroke-width="1.5"/>
+  <text x="476" y="206" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="21" font-weight="700" fill="var(--dg-primary, #0B5A86)">2</text>
+  <text x="452" y="254" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="21" font-weight="600" fill="var(--dg-text, #10222C)">One named person owns it</text>
+  <line x1="452" y1="280" x2="748" y2="280" stroke="var(--dg-border, #C1D1D8)" stroke-width="1.5"/>
+  <text x="452" y="312" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" fill="var(--dg-muted, #3F5560)">Put a name against every file<tspan x="452" dy="24">and every number. A file with</tspan><tspan x="452" dy="24">no owner is nobody's job.</tspan></text>
+  <rect x="444" y="380" width="312" height="68" rx="8" fill="var(--dg-bg, #EEF4F6)"/>
+  <text x="460" y="408" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="15" fill="var(--dg-accent, #C62C49)">The front matter has an owner<tspan x="460" dy="22">field. Use it.</tspan></text>
+
+  <!-- panel 3 -->
+  <rect x="808" y="150" width="344" height="316" rx="12" fill="var(--dg-surface, #FFFFFF)" stroke="var(--dg-border, #C1D1D8)" stroke-width="1.5"/>
+  <circle cx="856" cy="198" r="22" fill="none" stroke="var(--dg-primary, #0B5A86)" stroke-width="1.5"/>
+  <text x="856" y="206" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="21" font-weight="700" fill="var(--dg-primary, #0B5A86)">3</text>
+  <text x="832" y="254" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="21" font-weight="600" fill="var(--dg-text, #10222C)">Open the sources yourself</text>
+  <line x1="832" y1="280" x2="1128" y2="280" stroke="var(--dg-border, #C1D1D8)" stroke-width="1.5"/>
+  <text x="832" y="312" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="17" fill="var(--dg-muted, #3F5560)">Every figure cites a file and a<tspan x="832" dy="24">page. Pick two at random, open</tspan><tspan x="832" dy="24">them, and check the numbers.</tspan></text>
+  <rect x="824" y="380" width="312" height="68" rx="8" fill="var(--dg-bg, #EEF4F6)"/>
+  <text x="840" y="408" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="15" fill="var(--dg-accent, #C62C49)">A citation nobody opens is just<tspan x="840" dy="22">a citation.</tspan></text>
+
+  <!-- footer strip -->
+  <rect x="48" y="500" width="1104" height="92" rx="12" fill="var(--dg-surface, #FFFFFF)" stroke="var(--dg-primary, #0B5A86)" stroke-width="2"/>
+  <text x="600" y="558" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="30" font-weight="700" fill="var(--dg-primary, #0B5A86)">The AI drafts. A person decides.</text>
+</svg>
+</div>
+<h2 id="safety-habits">Safety habits</h2>
+<p>Five habits. They cost no time, and they are what separates a bad afternoon from a lost file.</p>
+<ul class="doc-list">
+<li><strong>Scope it to one folder</strong> — your stack, not your Desktop, not your whole drive.</li>
+<li><strong>Keep approval prompts on, and read them.</strong> The dangerous week is the sixth one, when approving has become reflex.</li>
+<li><strong>Keep regulated and personal data out</strong> until you have a clear answer on whether it may be processed at all.</li>
+<li><strong>Treat every draft as wrong until you have checked it.</strong> Confident and correct look identical on the page.</li>
+<li><strong>Keep an undo.</strong> Version history, or a copy of the folder taken before you start. Never point it at the only copy of anything.</li>
+</ul>
+<p>The longer version — including which material should never go in the folder at all, and why your account tier matters — is in <a href="safety.md">safety.md</a>.</p>
+<h2 id="where-it-pays-off-in-an-ordinary-week">Where it pays off in an ordinary week</h2>
+<ul class="doc-list">
+<li><strong>Drafting.</strong> An investor update, a supplier email, a job description — built from material already in the folder rather than from a blank page.</li>
+<li><strong>Summarising.</strong> A forty-message thread, a sixty-page research PDF, a recorded call. Into the shape you need: decisions, owners, dates.</li>
+<li><strong>Organising.</strong> Four years of files with names like <code>final_v3_REAL.docx</code> sorted, renamed and filed against a structure you agreed first.</li>
+<li><strong>First drafts of process.</strong> An SOP for the thing only you know how to do, a monthly report, a checklist — drafted in minutes, then corrected by the person who does the work.</li>
+<li><strong>Research and comparison.</strong> Competitor grids, supplier options, compliance requirements — with the sources named so that you can check them.</li>
+<li><strong>Small internal tools.</strong> A tracker, a calculator for your unit costs, a page that renders your weekly numbers. Small, private, yours.</li>
+</ul>
+<h2 id="two-ways-to-run-these-tools">Two ways to run these tools</h2>
+<p><strong>On your own machine.</strong> You install the tool, point it at a folder, and everything happens on your computer. The files are the ones you already recognise, you can open them in the ordinary way, and you can see exactly what changed.</p>
+<p><strong>In the browser, from a repository.</strong> Your material lives in a repository, the AI works on a copy of it in the browser, and it hands back changes for you to accept or reject. Nothing to install, and you can work from any machine.</p>
+<p>If you are starting out, start on your own machine, with a folder you have copied first. The mental model is simpler — there is one folder, it is on your desk, you can look at it — and everything in the <a href="../QUICKSTART.md">quickstart</a> assumes exactly that. The browser route is worth having later, once your stack is in a repository and you want to work from somewhere else.</p>
+<h2 id="teach-it-once-and-it-repeats">Teach it once, and it repeats</h2>
+<p>The second time you explain a task, stop and write the explanation into a file instead. From then on you run the file.</p>
+<p>That is precisely what <a href="../prompts/INDEX.md"><code>prompts/</code></a> is in this repo: tasks written down once — bootstrap the stack, run the gap scan, write the weekly recap — so they come out the same way every time, in the same shape, under the same rules about what may not be invented. <code>AGENTS.md</code> does the same job for the standing rules that apply to every task.</p>
+<p>The benefit is not only speed. A task you have written down is a task you can correct. When an output comes back wrong in the same way twice, you fix the file, rather than the mood you were in when you asked.</p>
+<h2 id="eight-prompts-for-your-first-week">Eight prompts for your first week</h2>
+<p>A starter set, not a library — the real work is in <a href="../prompts/INDEX.md"><code>prompts/INDEX.md</code></a>.</p>
+<div class="codeblock"><pre class="lang-"><code>Before you change anything, tell me what you are about to do, which files
+you will touch, and what could go wrong. Wait for my go-ahead.</code></pre></div>
+<div class="codeblock"><pre class="lang-"><code>Read this folder and give me a plan as a numbered list. Do not write any
+files yet.</code></pre></div>
+<div class="codeblock"><pre class="lang-"><code>List everything you could not find. Do not fill a gap with a plausible
+answer — write [TBD] and say what would be needed, and where it would
+come from.</code></pre></div>
+<div class="codeblock"><pre class="lang-"><code>For every number, cite the file and page it came from. If there is no
+source, mark it [TBD] rather than estimating.</code></pre></div>
+<div class="codeblock"><pre class="lang-"><code>Read only. Do not create, edit or delete anything in this folder. Answer
+from what is already there.</code></pre></div>
+<div class="codeblock"><pre class="lang-"><code>Summarise what you changed, one line per file, and tell me what you left
+untouched.</code></pre></div>
+<div class="codeblock"><pre class="lang-"><code>Explain what this file is for in plain language, as if I have never seen
+it. I am not a developer.</code></pre></div>
+<div class="codeblock"><pre class="lang-"><code>If you need information that is not in this folder, stop and ask me. Do
+not assume, and do not proceed.</code></pre></div>
+<h2 id="later-not-now">Later, not now</h2>
+<p><strong>Wide research with citations.</strong> You can send an AI to read many sources — sites, filings, reports, a stack of PDFs — and return one synthesis with a citation against each claim. It is genuinely useful for a competitor scan, or a first pass at a regulation you have to comply with. The habit that makes it safe is simple and tedious: open the citations. A confident summary built on a weak source reads exactly like a confident summary built on a good one, and the citation is the only place that difference shows.</p>
+<p><strong>Several agents at once.</strong> You can run multiple agents in parallel — one per section, one per source — with a further agent checking each finding independently against the original material. It is fast and it scales. It is also easy to lose track of, and everything in this method depends on your being able to follow what happened well enough to check it. Come back to this when the four-step loop is second nature, not before.</p>
+<h2 id="the-two-worries">The two worries</h2>
+<p><strong>&quot;I would have to learn to code.&quot;</strong> You would not. You write instructions in English and read results in English. The files in this repo are prose, with a small block of tags at the top. The scarce skill here is judgement about your own business — who the customer is, what a unit costs, which number is wrong — and you already have it. The habit you need to build is checking, not programming.</p>
+<p><strong>&quot;I will break something.&quot;</strong> What you are working on is a copy of your own files, in plain text, in one folder. Keep an undo — version history, or a copy of the folder taken before you start — and the worst outcome is that you throw away an afternoon&#39;s edits and run it again. Point it at a copy, never at the only copy, and there is nothing here to break.</p>
+<h2 id="a-note-on-websites-a-separate-project">A note on websites — a separate project</h2>
+<p>If what you want is a public site rather than a knowledge base, the same four moves apply: compile the material, agree the design, agree the plan, then let the agent build. You review at each step, exactly as you do here. Once it lives in a repository, publishing is automatic — you accept a change, and the host rebuilds the site.</p>
+<p>That is where the similarity ends. A public site is its own project, with its own requirements document, its own approvals, and its own decisions about what may be said in public. It is not a chapter of this one.</p>
+<p>This repo&#39;s job is the knowledge base such a project would read from — the positioning, the numbers, the proof points and the design notes, each tagged with whether it is confirmed and whether it may leave the building. Build that first. A site assembled from an uncorrected stack publishes your guesses at your own domain.</p>
+<h2 id="where-to-go-next">Where to go next</h2>
+<ul class="doc-list">
+<li><a href="../QUICKSTART.md">../QUICKSTART.md</a> — the first hour, honestly, including what not to try to finish today</li>
+<li><a href="method.md">method.md</a> — the six ideas the whole system is built on</li>
+<li><a href="knowledge-base.md">knowledge-base.md</a> — how raw files become a base an AI can read cheaply</li>
+<li><a href="safety.md">safety.md</a> — read this before you give any tool write access to your files</li>
+<li><a href="../prompts/INDEX.md">../prompts/INDEX.md</a> — the task library, and the order to run it in</li>
+</ul>
+  </div>
+</main>
+</div>
+
+<footer class="footer"><div class="footer-inner">
+  <div class="footer-author">
+    <img class="author-avatar" src="assets/aayush.png" alt="Aayush Rajaji" width="36" height="36" loading="lazy">
+    <div class="author-meta">
+      <div class="author-role">Built &amp; curated by</div>
+      <div class="author-name">Aayush Rajaji</div>
+      <div class="author-links">
+        <a href="https://github.com/Aayush-Rajaji" target="_blank" rel="noopener">GitHub</a> ·
+        <a href="https://www.linkedin.com/in/aayushrajaji/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-note">Unified Indian Startup Operating System &amp; Scheme Intelligence Engine. Open knowledge resource under MIT License.</div>
+  <div class="f-links">
+    <a href="about.html">About &amp; Disclaimer</a>
+    <a href="assets/Startup-Schemes-Playbook-June-2026.pdf" download>Source PDF</a>
+    <a href="https://www.startupindia.gov.in/" target="_blank" rel="noopener">startupindia.gov.in ↗</a>
+    <a href="https://github.com/Aayush-Rajaji/startup-india-os" target="_blank" rel="noopener">GitHub ↗</a>
+  </div>
+</div></footer>
+
+<div class="search-modal" id="search-modal" role="dialog" aria-modal="true" aria-label="Search">
+  <div class="backdrop"></div>
+  <div class="search-panel">
+    <div class="search-head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input id="search-input" type="text" placeholder="Search 69 schemes, prompts, worksheets, glossary…" autocomplete="off" aria-label="Search"></div>
+    <div class="sr-only" id="search-status" role="status" aria-live="polite"></div>
+    <div class="results" id="search-results"></div>
+    <div class="search-foot"><span><kbd>↑</kbd><kbd>↓</kbd> navigate</span><span><kbd>↵</kbd> open</span><span><kbd>esc</kbd> close</span></div>
+  </div>
+</div>
+<button class="to-top" id="to-top" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 15-6-6-6 6"/></svg></button>
+<script src="assets/search-index.js" defer></script>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://aayush-rajaji.github.io/startup-india-os/sitemap.xml

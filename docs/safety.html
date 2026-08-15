@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en" data-root="">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Safety — giving an AI access to your files · Startup India OS</title>
+<meta name="description" content="The Unified Operating System &amp; Government Schemes Intelligence Engine for Indian Founders.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#1f3864">
+<meta property="og:title" content="Safety — giving an AI access to your files · Startup India OS">
+<meta property="og:description" content="The Unified Operating System &amp; Government Schemes Intelligence Engine for Indian Founders.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Startup India OS">
+<meta property="og:image" content="https://aayush-rajaji.github.io/startup-india-os/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+<!-- Claude Typography: Newsreader Editorial Display + Plus Jakarta Sans & Inter Body -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..800;1,6..72,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script>(function(){var t;try{t=localStorage.getItem("playbook-theme")}catch(e){}
+if(t!=="light"&&t!=="dark"){t=window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}
+document.documentElement.setAttribute("data-theme",t);
+try{if(localStorage.getItem("rail-collapsed")==="1")document.documentElement.classList.add("rail-collapsed")}catch(e){}})();</script>
+
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/site.css">
+
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span class="hb" aria-hidden="true"><span class="hb-t"></span><span class="hb-m"></span><span class="hb-b"></span></span></button>
+  <a class="brand" href="index.html">
+    <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 64 64" width="20" height="20"><rect x="6" y="14" width="52" height="9" rx="4.5" fill="#e2621b"/><rect x="6" y="27.5" width="52" height="9" rx="4.5" fill="#ffffff"/><rect x="6" y="41" width="52" height="9" rx="4.5" fill="#359a4c"/></svg></span>
+    <span class="brand-name">Startup India <span class="thin">OS</span></span>
+  </a>
+  <span class="topbar-spacer"></span>
+  <button class="searchbtn" data-search-open type="button" aria-label="Search OS">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><span class="searchbtn-label">Search schemes, prompts, stack…</span><kbd>⌘K</kbd>
+  </button>
+  <a class="icon-btn" href="https://github.com/Aayush-Rajaji/startup-india-os" target="_blank" rel="noopener" aria-label="GitHub Repo"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2Z"/></svg></a>
+  <button class="icon-btn theme-toggle" id="theme-toggle" type="button" aria-label="Toggle theme">
+    <span class="sun"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></span><span class="moon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></span>
+  </button>
+</header>
+<div class="scrim" id="scrim"></div>
+
+<div class="layout">
+
+  <nav class="sidebar" id="sidebar" aria-label="Site navigation">
+    
+    <div class="sidebar-group ">
+      <div class="sidebar-title">🏛️ Government Schemes</div>
+      <div class="sidebar-links">
+        <a class="nav-link " href="index.html">Playbook Overview</a>
+<a class="nav-link " href="finder.html">🧭 Scheme Finder (5 Qs)</a>
+<a class="nav-link " href="directory.html">📋 All 69 Central Schemes</a>
+<a class="nav-link " href="compare.html">⚖️ Compare Schemes</a>
+<a class="nav-link " href="walkable-map.html">🗺️ 3D Walkable India Map</a>
+<a class="nav-link " href="state-schemes.html">🏢 320+ State/UT Schemes</a>
+<a class="nav-link " href="incubators.html">🔬 220+ Incubators Map</a>
+<a class="nav-link " href="lifecycle.html">🌱 Lifecycle Map</a>
+<a class="nav-link " href="needs.html">🎯 What Do You Need?</a>
+<a class="nav-link " href="psu.html">🏭 PSU &amp; Regulators</a>
+<a class="nav-link " href="states.html">🌐 State Portals</a>
+<a class="nav-link " href="news.html">📰 Ecosystem News</a>
+<a class="nav-link " href="glossary.html">📖 Glossary &amp; Terms</a>
+<a class="nav-link " href="about.html">ℹ️ About &amp; Method</a>
+      </div>
+    </div>
+
+    <div class="sidebar-group ">
+      <div class="sidebar-title">⚡ Founder Operating Stack</div>
+      <div class="sidebar-links">
+        <a class="nav-link " href="stack.html">Stack Architecture</a>
+<a class="nav-link " href="quickstart.html">🚀 Quickstart (15 Min)</a>
+<a class="nav-link " href="stack/context.html">📄 Company One-Pager</a>
+<a class="nav-link " href="stack/01-company.html">01 · Company</a>
+<a class="nav-link " href="stack/02-customer.html">02 · Customer</a>
+<a class="nav-link " href="stack/03-market.html">03 · Market</a>
+<a class="nav-link " href="stack/04-product.html">04 · Product</a>
+<a class="nav-link " href="stack/05-gtm.html">05 · GTM &amp; Distribution</a>
+<a class="nav-link " href="stack/06-operations.html">06 · Operations</a>
+<a class="nav-link " href="stack/07-money.html">07 · Unit Economics</a>
+<a class="nav-link " href="stack/08-capital.html">08 · Capital &amp; Grants</a>
+<a class="nav-link " href="stack/09-brand.html">09 · Brand &amp; Voice</a>
+<a class="nav-link " href="stack/10-pulse.html">10 · Weekly Pulse</a>
+      </div>
+    </div>
+
+    <div class="sidebar-group ">
+      <div class="sidebar-title">🤖 AI Execution Prompts</div>
+      <div class="sidebar-links">
+        <a class="nav-link " href="prompts/index.html">Prompt Library (19)</a>
+<a class="nav-link " href="prompts/00-bootstrap-the-stack.html">00 · Bootstrap Stack</a>
+<a class="nav-link " href="prompts/02-gap-scan.html">02 · Gap Scan</a>
+<a class="nav-link " href="prompts/03-customer-and-problem.html">03 · Customer &amp; Problem</a>
+<a class="nav-link " href="prompts/05-competitive-intelligence.html">05 · Competitor Intel</a>
+<a class="nav-link " href="prompts/07-unit-economics.html">07 · Unit Econ Stress-Test</a>
+<a class="nav-link " href="prompts/08-list-of-100.html">08 · List of 100</a>
+<a class="nav-link " href="prompts/10-pitch-deck.html">10 · Pitch Deck Drafter</a>
+<a class="nav-link " href="prompts/11-fundraise-readiness.html">11 · Diligence Readiness</a>
+<a class="nav-link " href="prompts/12-weekly-recap.html">12 · Weekly Pulse Recap</a>
+<a class="nav-link " href="prompts/13-mentor-review.html">13 · Investor Red-Team</a>
+      </div>
+    </div>
+
+    <div class="sidebar-group ">
+      <div class="sidebar-title">📝 Worksheets & Tools</div>
+      <div class="sidebar-links">
+        <a class="nav-link " href="worksheets/index.html">All 10 Worksheets</a>
+<a class="nav-link " href="worksheets/startup-prep.html">Startup Prep Worksheet</a>
+<a class="nav-link " href="worksheets/customer-interview.html">Customer Interview Script</a>
+<a class="nav-link " href="worksheets/competitor-profile.html">Competitor Teardown</a>
+<a class="nav-link " href="worksheets/experiment.html">2-Week Experiment</a>
+<a class="nav-link " href="worksheets/one-pager.html">Executive One-Pager</a>
+<a class="nav-link " href="worksheets/weekly-recap.html">Weekly Pulse Template</a>
+      </div>
+    </div>
+
+    <div class="sidebar-group open">
+      <div class="sidebar-title">📚 Guides & Method</div>
+      <div class="sidebar-links">
+        <a class="nav-link " href="method.html">The Method Explained</a>
+<a class="nav-link " href="knowledge-base.html">Building the Knowledge Base</a>
+<a class="nav-link " href="front-matter.html">Front-Matter Schema</a>
+<a class="nav-link " href="ai-basics.html">AI Fundamentals</a>
+<a class="nav-link active" href="safety.html">Safety &amp; Privacy Rules</a>
+<a class="nav-link " href="for-coaches.html">For Startup Coaches</a>
+      </div>
+    </div>
+
+    <div class="sidebar-group ">
+      <div class="sidebar-title">📊 Venture Studio & Resources</div>
+      <div class="sidebar-links">
+        <a class="nav-link " href="rubric.html">1-5 Maturity Rubric</a>
+<a class="nav-link " href="for-portfolios.html">Portfolio Governance</a>
+<a class="nav-link " href="infographics.html">🎨 30 Infographics Gallery</a>
+<a class="nav-link " href="resources.html">📑 650+ Curated Resources</a>
+      </div>
+    </div>
+    <div class="sidebar-group">
+      <div class="sidebar-title">Downloads &amp; Links</div>
+      <a class="nav-link" href="assets/Startup-Schemes-Playbook-June-2026.pdf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4m4-5 5 5 5-5m-5 5V3"/></svg> Playbook PDF (107p)</a>
+      <a class="nav-link" href="https://github.com/Aayush-Rajaji/startup-india-os" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2Z"/></svg> GitHub Repository</a>
+    </div>
+  </nav>
+<main id="main" class="content ">
+
+  <nav class="crumbs"><a href="index.html">Home</a> / <span>Safety — giving an AI access to your files</span></nav>
+  <div class="page-head">
+    <h1>Safety — giving an AI access to your files</h1>
+  </div>
+  <div class="doc-body">
+    <h1 id="safety-giving-an-ai-access-to-your-files">Safety — giving an AI access to your files</h1>
+<p>Handing an AI the keys to your folders is powerful, and it is exactly where things go wrong. Used with a few guardrails it is safe. Used carelessly, a file can be deleted and gone for good.</p>
+<p>Read this before you run the bootstrap prompt.</p>
+<p>!<a href="../web/infographics/private-master-shared-derived.webp">A stack in three sensitivity bands feeding four different outputs, with the restricted band drawn outside the boundary entirely.</a></p>
+<p>---</p>
+<h2 id="the-four-rules">The four rules</h2>
+<h3 id="1-scope-its-access-to-one-folder">1. Scope its access to one folder</h3>
+<p>Point the AI at a single, defined folder — your stack — not your Desktop, not your Documents, not your whole drive. It can only see and touch what you let it into.</p>
+<p>Start narrow and widen only as you build confidence. There is no upside to giving a tool access to your tax returns so that it can write your pitch deck.</p>
+<h3 id="2-watch-what-it-does">2. Watch what it does</h3>
+<p>Especially early on, keep an eye on the actions it takes. These tools ask before big changes when they are configured well — <strong>read those prompts, do not click through blindly.</strong></p>
+<p>The dangerous moment is not week one, when you are attentive. It is week six, when approval has become muscle memory and you approve a batch delete because it was the ninth dialog in five minutes.</p>
+<h3 id="3-set-guardrails-before-you-widen-the-access">3. Set guardrails before you widen the access</h3>
+<p>Most tools can be told what they may never do. Put those limits in place <em>before</em> you grant more freedom, not after something goes wrong:</p>
+<ul class="doc-list">
+<li>Never delete a file without explicit confirmation</li>
+<li>Never touch <code>_inbox/</code> (source material is read-only)</li>
+<li>Never modify past recaps in <code>stack/10-pulse/recaps/</code></li>
+<li>Never write outside the stack folder</li>
+</ul>
+<p><code>AGENTS.md</code> in this repo states these as rules for the model. That is necessary but not sufficient — a rule in a prompt is a strong suggestion, not a permission boundary. Where your tool offers real file permissions or an allow/deny list, use them.</p>
+<h3 id="4-use-git-it-is-the-actual-undo-button">4. Use <code>git</code> — it is the actual undo button</h3>
+<div class="codeblock"><pre class="lang-bash"><code>git init
+git add -A &amp;&amp; git commit -m &quot;Before the AI touched anything&quot;</code></pre></div>
+<p>Commit before every significant AI session. If a run goes badly:</p>
+<div class="codeblock"><pre class="lang-bash"><code>git diff                 # exactly what changed
+git checkout -- .        # throw it all away</code></pre></div>
+<p>This is the single highest-value five minutes in this entire repo. Everything else on this page reduces the chance of a bad outcome; this one makes a bad outcome recoverable. If <code>git</code> is genuinely not for you, at minimum copy the folder before each session, or keep it in a location with real version history.</p>
+<p>---</p>
+<h2 id="what-to-keep-out-of-the-folder-entirely">What to keep out of the folder entirely</h2>
+<p>Some material should not be in an AI-readable folder at all, regardless of how well configured your tools are.</p>
+<div class="table-wrap"><table><thead><tr><th>Keep out</th><th>Why</th></tr></thead><tbody><tr><td>Government ID numbers, passport scans, bank credentials</td><td>No upside; large downside</td></tr><tr><td>Employee personal files, medical information, grievances</td><td>Personal data. In many jurisdictions this carries specific legal duties.</td></tr><tr><td>Customer personal data at scale — full contact databases, patient records, user PII</td><td>If you must work with it, anonymise first. Names become <code>Customer A</code>.</td></tr><tr><td>Signed contracts under a confidentiality obligation</td><td>Read the NDA. Some prohibit processing by third-party services outright.</td></tr><tr><td>Anything a third party gave you in confidence</td><td>Their decision, not yours.</td></tr></tbody></table></div>
+<p>If you need the AI to reason about sensitive material, give it the shape without the substance: <em>&quot;a customer list of 340 names across 3 cities, average order ₹2,400&quot;</em> is enough to plan with and contains nobody&#39;s phone number.</p>
+<h2 id="writing-about-a-named-person">Writing about a named person</h2>
+<p>Skip this if you are a founder working on your own company. It matters to programmes running a portfolio, where the whole point of a coaching note is that it is about a particular person, and the escape hatch above — anonymise, <code>Customer A</code> — is not available.</p>
+<p>The table says to keep employee files and grievances out, and that stands. A coaching record is a narrower thing, and it is legitimate to keep, but only under conditions:</p>
+<p><strong>Write it as though the subject will read it.</strong> In most jurisdictions they can ask to, and increasingly they do. This is not only compliance — a judgement you would not put in front of the person is usually a judgement you have not thought through.</p>
+<p><strong>Separate what happened from what you concluded.</strong> The record of a session is factual and belongs to both sides. Your read of the person is yours, and it is tagged <code>[ASSESSMENT — name, date]</code> so it is never mistaken for fact and never merged with somebody else&#39;s read.</p>
+<p><strong>Name an owner, a retention period and a deletion trigger before the first note exists,</strong> not after. Who answers if someone asks what is held about them. How long it is kept once they leave the programme. What is deleted then, and what is not.</p>
+<p><strong>Keep it proportionate.</strong> Notes on how a founder is progressing against their own goals are ordinary programme business. A running commentary on their personality is not, and it is the thing that will be read aloud back to you one day.</p>
+<p>Whether any of this is lawful where you operate is not a question this page can answer, and the answer differs across the jurisdictions your coaches sit in. Ask before the first note, not after the hundredth.</p>
+<h2 id="the-account-you-use-matters">The account you use matters</h2>
+<p><strong>Business, team and enterprise plans, and API access, carry materially stronger data-handling terms than consumer plans</strong> — on most providers including a contractual commitment not to train on your data.</p>
+<p>A paid consumer subscription is not the same thing. Several major providers use consumer-tier conversations for model improvement by default — on the paid personal tier as well as the free one — unless you turn it off in settings. Upgrading your personal plan buys you capacity, not a data guarantee.</p>
+<p>You are putting your company&#39;s operating reality into this tool. Check which tier you are actually on, read its terms, and find the training toggle.</p>
+<h2 id="data-protection-briefly-and-non-legally">Data protection, briefly and non-legally</h2>
+<p>If you handle personal data — customers, employees, users — most jurisdictions now impose real duties on you: a lawful basis for processing, purpose limitation, retention limits, and often obligations when a processor is involved. India&#39;s DPDP Act, the GDPR, and equivalents elsewhere all bite at surprisingly small scale.</p>
+<p>Two practical implications:</p>
+<p>1. <strong>A knowledge base built by AI-processing customer emails is a processing activity.</strong> It may be entirely lawful. It is not automatically lawful because it was convenient.</p>
+<p>2. <strong>Ask early, not after.</strong> A thirty-minute conversation with a lawyer, before you ingest your CRM export, is far cheaper than the alternative.</p>
+<p>This page is not legal advice and cannot be. It exists so that you ask the question.</p>
+<p>---</p>
+<h2 id="the-caveat-plainly">The caveat, plainly</h2>
+<p>When you give an AI more access, it can act quickly — and a wrong move can erase something for good. That is not a reason to avoid it. It is the reason to start small, keep backups, commit often, and grow the access only as fast as your confidence.</p>
+<p>The founders who get hurt are not the cautious ones or the reckless ones. They are the ones who were cautious for two weeks and then stopped reading the dialogs.</p>
+  </div>
+</main>
+</div>
+
+<footer class="footer"><div class="footer-inner">
+  <div class="footer-author">
+    <img class="author-avatar" src="assets/aayush.png" alt="Aayush Rajaji" width="36" height="36" loading="lazy">
+    <div class="author-meta">
+      <div class="author-role">Built &amp; curated by</div>
+      <div class="author-name">Aayush Rajaji</div>
+      <div class="author-links">
+        <a href="https://github.com/Aayush-Rajaji" target="_blank" rel="noopener">GitHub</a> ·
+        <a href="https://www.linkedin.com/in/aayushrajaji/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-note">Unified Indian Startup Operating System &amp; Scheme Intelligence Engine. Open knowledge resource under MIT License.</div>
+  <div class="f-links">
+    <a href="about.html">About &amp; Disclaimer</a>
+    <a href="assets/Startup-Schemes-Playbook-June-2026.pdf" download>Source PDF</a>
+    <a href="https://www.startupindia.gov.in/" target="_blank" rel="noopener">startupindia.gov.in ↗</a>
+    <a href="https://github.com/Aayush-Rajaji/startup-india-os" target="_blank" rel="noopener">GitHub ↗</a>
+  </div>
+</div></footer>
+
+<div class="search-modal" id="search-modal" role="dialog" aria-modal="true" aria-label="Search">
+  <div class="backdrop"></div>
+  <div class="search-panel">
+    <div class="search-head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input id="search-input" type="text" placeholder="Search 69 schemes, prompts, worksheets, glossary…" autocomplete="off" aria-label="Search"></div>
+    <div class="sr-only" id="search-status" role="status" aria-live="polite"></div>
+    <div class="results" id="search-results"></div>
+    <div class="search-foot"><span><kbd>↑</kbd><kbd>↓</kbd> navigate</span><span><kbd>↵</kbd> open</span><span><kbd>esc</kbd> close</span></div>
+  </div>
+</div>
+<button class="to-top" id="to-top" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 15-6-6-6 6"/></svg></button>
+<script src="assets/search-index.js" defer></script>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

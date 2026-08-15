@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en" data-root="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Go-To-Market — Channels, Pipeline, Marketing Engine, Collateral · Startup India OS</title>
+<meta name="description" content="The Unified Operating System &amp; Government Schemes Intelligence Engine for Indian Founders.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#1f3864">
+<meta property="og:title" content="Go-To-Market — Channels, Pipeline, Marketing Engine, Collateral · Startup India OS">
+<meta property="og:description" content="The Unified Operating System &amp; Government Schemes Intelligence Engine for Indian Founders.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Startup India OS">
+<meta property="og:image" content="https://aayush-rajaji.github.io/startup-india-os/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+
+<!-- Claude Typography: Newsreader Editorial Display + Plus Jakarta Sans & Inter Body -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..800;1,6..72,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script>(function(){var t;try{t=localStorage.getItem("playbook-theme")}catch(e){}
+if(t!=="light"&&t!=="dark"){t=window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}
+document.documentElement.setAttribute("data-theme",t);
+try{if(localStorage.getItem("rail-collapsed")==="1")document.documentElement.classList.add("rail-collapsed")}catch(e){}})();</script>
+
+<link rel="stylesheet" href="../assets/tokens.css">
+<link rel="stylesheet" href="../assets/site.css">
+
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span class="hb" aria-hidden="true"><span class="hb-t"></span><span class="hb-m"></span><span class="hb-b"></span></span></button>
+  <a class="brand" href="../index.html">
+    <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 64 64" width="20" height="20"><rect x="6" y="14" width="52" height="9" rx="4.5" fill="#e2621b"/><rect x="6" y="27.5" width="52" height="9" rx="4.5" fill="#ffffff"/><rect x="6" y="41" width="52" height="9" rx="4.5" fill="#359a4c"/></svg></span>
+    <span class="brand-name">Startup India <span class="thin">OS</span></span>
+  </a>
+  <span class="topbar-spacer"></span>
+  <button class="searchbtn" data-search-open type="button" aria-label="Search OS">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><span class="searchbtn-label">Search schemes, prompts, stack…</span><kbd>⌘K</kbd>
+  </button>
+  <a class="icon-btn" href="https://github.com/Aayush-Rajaji/startup-india-os" target="_blank" rel="noopener" aria-label="GitHub Repo"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2Z"/></svg></a>
+  <button class="icon-btn theme-toggle" id="theme-toggle" type="button" aria-label="Toggle theme">
+    <span class="sun"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></span><span class="moon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></span>
+  </button>
+</header>
+<div class="scrim" id="scrim"></div>
+
+<div class="layout">
+
+  <nav class="sidebar" id="sidebar" aria-label="Site navigation">
+    
+    <div class="sidebar-group ">
+      <div class="sidebar-title">🏛️ Government Schemes</div>
+      <div class="sidebar-links">
+        <a class="nav-link " href="../index.html">Playbook Overview</a>
+<a class="nav-link " href="../finder.html">🧭 Scheme Finder (5 Qs)</a>
+<a class="nav-link " href="../directory.html">📋 All 69 Central Schemes</a>
+<a class="nav-link " href="../compare.html">⚖️ Compare Schemes</a>
+<a class="nav-link " href="../walkable-map.html">🗺️ 3D Walkable India Map</a>
+<a class="nav-link " href="../state-schemes.html">🏢 320+ State/UT Schemes</a>
+<a class="nav-link " href="../incubators.html">🔬 220+ Incubators Map</a>
+<a class="nav-link " href="../lifecycle.html">🌱 Lifecycle Map</a>
+<a class="nav-link " href="../needs.html">🎯 What Do You Need?</a>
+<a class="nav-link " href="../psu.html">🏭 PSU &amp; Regulators</a>
+<a class="nav-link " href="../states.html">🌐 State Portals</a>
+<a class="nav-link " href="../news.html">📰 Ecosystem News</a>
+<a class="nav-link " href="../glossary.html">📖 Glossary &amp; Terms</a>
+<a class="nav-link " href="../about.html">ℹ️ About &amp; Method</a>
+      </div>
+    </div>
+
+    <div class="sidebar-group open">
+      <div class="sidebar-title">⚡ Founder Operating Stack</div>
+      <div class="sidebar-links">
+        <a class="nav-link " href="../stack.html">Stack Architecture</a>
+<a class="nav-link " href="../quickstart.html">🚀 Quickstart (15 Min)</a>
+<a class="nav-link " href="../stack/context.html">📄 Company One-Pager</a>
+<a class="nav-link " href="../stack/01-company.html">01 · Company</a>
+<a class="nav-link " href="../stack/02-customer.html">02 · Customer</a>
+<a class="nav-link " href="../stack/03-market.html">03 · Market</a>
+<a class="nav-link " href="../stack/04-product.html">04 · Product</a>
+<a class="nav-link active" href="../stack/05-gtm.html">05 · GTM &amp; Distribution</a>
+<a class="nav-link " href="../stack/06-operations.html">06 · Operations</a>
+<a class="nav-link " href="../stack/07-money.html">07 · Unit Economics</a>
+<a class="nav-link " href="../stack/08-capital.html">08 · Capital &amp; Grants</a>
+<a class="nav-link " href="../stack/09-brand.html">09 · Brand &amp; Voice</a>
+<a class="nav-link " href="../stack/10-pulse.html">10 · Weekly Pulse</a>
+      </div>
+    </div>
+
+    <div class="sidebar-group ">
+      <div class="sidebar-title">🤖 AI Execution Prompts</div>
+      <div class="sidebar-links">
+        <a class="nav-link " href="../prompts/index.html">Prompt Library (19)</a>
+<a class="nav-link " href="../prompts/00-bootstrap-the-stack.html">00 · Bootstrap Stack</a>
+<a class="nav-link " href="../prompts/02-gap-scan.html">02 · Gap Scan</a>
+<a class="nav-link " href="../prompts/03-customer-and-problem.html">03 · Customer &amp; Problem</a>
+<a class="nav-link " href="../prompts/05-competitive-intelligence.html">05 · Competitor Intel</a>
+<a class="nav-link " href="../prompts/07-unit-economics.html">07 · Unit Econ Stress-Test</a>
+<a class="nav-link " href="../prompts/08-list-of-100.html">08 · List of 100</a>
+<a class="nav-link " href="../prompts/10-pitch-deck.html">10 · Pitch Deck Drafter</a>
+<a class="nav-link " href="../prompts/11-fundraise-readiness.html">11 · Diligence Readiness</a>
+<a class="nav-link " href="../prompts/12-weekly-recap.html">12 · Weekly Pulse Recap</a>
+<a class="nav-link " href="../prompts/13-mentor-review.html">13 · Investor Red-Team</a>
+      </div>
+    </div>
+
+    <div class="sidebar-group ">
+      <div class="sidebar-title">📝 Worksheets & Tools</div>
+      <div class="sidebar-links">
+        <a class="nav-link " href="../worksheets/index.html">All 10 Worksheets</a>
+<a class="nav-link " href="../worksheets/startup-prep.html">Startup Prep Worksheet</a>
+<a class="nav-link " href="../worksheets/customer-interview.html">Customer Interview Script</a>
+<a class="nav-link " href="../worksheets/competitor-profile.html">Competitor Teardown</a>
+<a class="nav-link " href="../worksheets/experiment.html">2-Week Experiment</a>
+<a class="nav-link " href="../worksheets/one-pager.html">Executive One-Pager</a>
+<a class="nav-link " href="../worksheets/weekly-recap.html">Weekly Pulse Template</a>
+      </div>
+    </div>
+
+    <div class="sidebar-group ">
+      <div class="sidebar-title">📚 Guides & Method</div>
+      <div class="sidebar-links">
+        <a class="nav-link " href="../method.html">The Method Explained</a>
+<a class="nav-link " href="../knowledge-base.html">Building the Knowledge Base</a>
+<a class="nav-link " href="../front-matter.html">Front-Matter Schema</a>
+<a class="nav-link " href="../ai-basics.html">AI Fundamentals</a>
+<a class="nav-link " href="../safety.html">Safety &amp; Privacy Rules</a>
+<a class="nav-link " href="../for-coaches.html">For Startup Coaches</a>
+      </div>
+    </div>
+
+    <div class="sidebar-group ">
+      <div class="sidebar-title">📊 Venture Studio & Resources</div>
+      <div class="sidebar-links">
+        <a class="nav-link " href="../rubric.html">1-5 Maturity Rubric</a>
+<a class="nav-link " href="../for-portfolios.html">Portfolio Governance</a>
+<a class="nav-link " href="../infographics.html">🎨 30 Infographics Gallery</a>
+<a class="nav-link " href="../resources.html">📑 650+ Curated Resources</a>
+      </div>
+    </div>
+    <div class="sidebar-group">
+      <div class="sidebar-title">Downloads &amp; Links</div>
+      <a class="nav-link" href="../assets/Startup-Schemes-Playbook-June-2026.pdf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4m4-5 5 5 5-5m-5 5V3"/></svg> Playbook PDF (107p)</a>
+      <a class="nav-link" href="https://github.com/Aayush-Rajaji/startup-india-os" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2Z"/></svg> GitHub Repository</a>
+    </div>
+  </nav>
+<main id="main" class="content ">
+
+    <nav class="crumbs"><a href="../index.html">Home</a> / <a href="../stack.html">Stack</a> / <span>Go-To-Market — Channels, Pipeline, Marketing Engine, Collateral</span></nav>
+    <div class="page-head">
+      <div class="kicker">Stack Section 05</div>
+      <h1>Go-To-Market — Channels, Pipeline, Marketing Engine, Collateral</h1>
+      <p class="lede">Which channels have been tested and with what result, the prospect pipeline and its size, the paid marketing engine and how it is held accountable, the outreach cadence, and the sales collateral that exists.</p>
+    </div>
+    <div class="doc-body">
+      <h1 id="go-to-market">Go-To-Market</h1>
+<blockquote><p>The most common diagnosis in an early-stage session is not a product problem or a positioning problem. It is that <strong>the prospect list has five names on it.</strong></p></blockquote>
+<p>&gt;</p>
+<blockquote><p>Five prospects can easily yield zero. A hundred prospects, worked properly, reliably yields a handful. The instruction is not &quot;refine your pitch.&quot; It is: make the list a hundred, work it, and come back with what you learned.</p></blockquote>
+<p>---</p>
+<h2 id="the-current-state-honestly">The current state, honestly</h2>
+<div class="table-wrap"><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>How every customer to date was acquired</strong></td><td><code>[TBD]</code></td></tr><tr><td><strong>Which channel is repeatable</strong></td><td><code>[TBD — or &quot;none yet&quot;, which is a fine answer at this stage]</code></td></tr><tr><td><strong>Prospects currently on a list</strong></td><td><code>[TBD]</code></td></tr><tr><td><strong>Contacted in the last 30 days</strong></td><td><code>[TBD]</code></td></tr><tr><td><strong>Cost per acquired customer</strong></td><td><code>[TBD]</code> → <a href="../07-money/money.md">07-money</a></td></tr></tbody></table></div>
+<h2 id="channels">Channels</h2>
+<p>Every channel gets a row. Untested channels are marked untested — not filled in with a guess.</p>
+<div class="table-wrap"><table><thead><tr><th>Channel</th><th>Status</th><th>Spend</th><th>Result</th><th>Cost per customer</th><th>Verdict</th></tr></thead><tbody><tr><td>Direct — founder in person</td><td><code>[TBD]</code></td><td></td><td></td><td></td><td></td></tr><tr><td>Retail / stockists</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Distributors / channel partners</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Paid social</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Paid search</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Organic social</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Referral / word of mouth</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Referral / professional (clinicians, consultants, architects, agents)</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Institutional / B2B contracts</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Marketplaces</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>Events and exhibitions</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td><code>[TBD — yours]</code></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table></div>
+<p><strong>Verdict</strong> is one of: <code>working — scale it</code> / <code>promising — test more</code> / <code>dead — stop</code> / <code>untested</code>.</p>
+<p>Killing a channel is a result. A channel that produced nothing after a fair test belongs marked dead, in writing, so you stop half-heartedly returning to it.</p>
+<h2 id="the-founder-does-the-legwork">The founder does the legwork</h2>
+<p><code>[TBD — where are you personally going this month, and how many?]</code></p>
+<blockquote><p>This is the highest-return activity available to an early founder in almost every sector, and it is the one most often delegated to an agency, an intern, or a plan.</p></blockquote>
+<p>&gt;</p>
+<blockquote><p>Go to the shops. Go to the societies. Go to the canteens. Go to the clinics. Walk in, say who you are, ask them to try it. Three things happen that cannot happen any other way: the pitch gets sharp because you watch people&#39;s faces, you hear the objection nobody would put in an email, and you get the photographs and stories that make everything else you publish real.</p></blockquote>
+<p>&gt;</p>
+<blockquote><p>It is also the cheapest market research that exists. Twenty-five doors in a day tells you more than a month of thinking.</p></blockquote>
+<div class="table-wrap"><table><thead><tr><th>Where</th><th>Target visits</th><th>Done</th><th>Placements / wins</th><th>What we heard</th></tr></thead><tbody><tr><td><code>[TBD]</code></td><td></td><td></td><td></td><td></td></tr></tbody></table></div>
+<h2 id="the-list-of-100">The list of 100</h2>
+<p>One per active channel. The full builder is <a href="../../worksheets/list-of-100.md"><code>worksheets/list-of-100.md</code></a>.</p>
+<div class="table-wrap"><table><thead><tr><th>Channel</th><th>Target list size</th><th>Built</th><th>Contacted</th><th>Responded</th><th>Meetings</th><th>Won</th></tr></thead><tbody><tr><td><code>[TBD]</code></td><td>100</td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table></div>
+<p><strong>Where the list lives:</strong> <code>[TBD — one sheet, one row per prospect: name, location, contact, source, last touch, status]</code></p>
+<h3 id="the-cadence">The cadence</h3>
+<p>The follow-up sequence, applied to everyone on the list. Most deals are lost to silence, not rejection.</p>
+<div class="table-wrap"><table><thead><tr><th>Step</th><th>When</th><th>What</th></tr></thead><tbody><tr><td>1</td><td>Day 0</td><td>Email or message. Who you are, what it is, the order form or a link. Make it trivially easy to say yes.</td></tr><tr><td>2</td><td>Day 7</td><td>Follow-up email. Different angle, not a repeat.</td></tr><tr><td>3</td><td>Day 14</td><td>Second follow-up.</td></tr><tr><td>4</td><td>Day 21</td><td>Phone call.</td></tr><tr><td>5</td><td>Day 28</td><td>Visit in person.</td></tr></tbody></table></div>
+<p><strong>Daily outreach target:</strong> <code>[TBD — e.g. 10 emails a day, every working day]</code></p>
+<p>Four follow-ups feels excessive and is not. The vast majority of people who eventually say yes did not reply to the first message. Founders stop at two and conclude the channel does not work.</p>
+<h2 id="paid-marketing">Paid marketing</h2>
+<h3 id="current-state">Current state</h3>
+<div class="table-wrap"><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Running?</strong></td><td><code>[TBD]</code></td></tr><tr><td><strong>Platform(s)</strong></td><td><code>[TBD]</code></td></tr><tr><td><strong>Daily spend</strong></td><td><code>[TBD]</code></td></tr><tr><td><strong>Leads per day</strong></td><td><code>[TBD]</code></td></tr><tr><td><strong>Cost per lead</strong></td><td><code>[TBD]</code></td></tr><tr><td><strong>Lead → customer conversion</strong></td><td><code>[TBD]</code></td></tr><tr><td><strong>Cost per customer</strong></td><td><code>[TBD]</code></td></tr></tbody></table></div>
+<p><strong>Spend something.</strong> A founder running zero paid marketing has no data and no baseline — and an ad account with no history performs badly when you finally do switch it on. Even a small daily budget is a learning cost, not a marketing cost.</p>
+<p><strong>A single early failed test proves nothing.</strong> Spending a small amount on a young account with untested creative and getting few orders is the expected outcome, not a verdict on the channel. Test again with a real setup before you conclude.</p>
+<h3 id="the-step-test">The step test</h3>
+<p>Do not jump the daily budget tenfold in one move. Double, hold, measure — watching two things at once.</p>
+<div class="table-wrap"><table><thead><tr><th>Step</th><th>Daily spend</th><th>Days</th><th>Leads/day</th><th>Cost per lead</th><th>Ops coped?</th><th>Decision</th></tr></thead><tbody><tr><td>Baseline</td><td><code>[TBD]</code></td><td>7</td><td></td><td></td><td></td><td></td></tr><tr><td>2×</td><td></td><td>5</td><td></td><td></td><td></td><td></td></tr><tr><td>4×</td><td></td><td>5</td><td></td><td></td><td></td><td></td></tr><tr><td>8×</td><td></td><td>5</td><td></td><td></td><td></td><td></td></tr></tbody></table></div>
+<p>You are looking for the inflection point where cost per lead stops holding — that is your ceiling on this channel, and it is worth knowing precisely.</p>
+<blockquote><p><strong>The second column matters as much as the first.</strong> If demand doubles and you cannot deliver at the same quality, you have bought yourself bad reviews at a higher cost per lead. Before each step up, check the capacity ceiling in <a href="../06-operations/operations.md">06-operations</a>. Go 8 → 16 → 32 → 64, and hold at each level until you are confident you can serve it — including on the day a technician does not show up.</p></blockquote>
+<h3 id="testing-creative">Testing creative</h3>
+<div class="table-wrap"><table><thead><tr><th>Test</th><th>Variant A</th><th>Variant B</th><th>Winner</th><th>Learning</th></tr></thead><tbody><tr><td><code>[TBD]</code></td><td></td><td></td><td></td><td></td></tr></tbody></table></div>
+<p>Run two versions of every ad, changing one thing: the image, the headline, the call to action, the language. Video usually beats static. Real work usually beats stock. The local language usually beats English in a local market — check, do not assume.</p>
+<h3 id="if-you-use-an-agency">If you use an agency</h3>
+<p>Agencies do the work. They do it much better when someone is holding them accountable.</p>
+<div class="table-wrap"><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Agency</strong></td><td><code>[TBD]</code></td></tr><tr><td><strong>Retainer</strong></td><td><code>[TBD]</code></td></tr><tr><td><strong>Contract term</strong></td><td><code>[TBD]</code></td></tr><tr><td><strong>Review call</strong></td><td><code>[TBD — a fixed day every week]</code></td></tr><tr><td><strong>Who owns the ad accounts?</strong></td><td><code>[TBD — it should be you]</code></td></tr></tbody></table></div>
+<p><strong>Before you sign:</strong> read the deliverables list against the body of the proposal. Proposals routinely describe work — a landing page, A/B testing, a reporting cadence — that never appears in the deliverables. If it is described but not listed, it is not included.</p>
+<p><strong>Every week, ask to be walked through the campaign itself.</strong> Not a summary deck. The account: geography, keywords, audiences, budget split, live creative, what is being tested. An agency that will not screen-share the account is a problem, and you will find out eventually either way.</p>
+<p><strong>Check they exist.</strong> No public presence, no reviews, no verifiable clients, testimonials that appear nowhere but their own proposal — all worth a second look before the retainer starts.</p>
+<h2 id="digital-hygiene">Digital hygiene</h2>
+<p>Unglamorous, cheap, and quietly costing you customers. Work the list.</p>
+<div class="table-wrap"><table><thead><tr><th>Item</th><th>Status</th><th>Notes</th></tr></thead><tbody><tr><td>Domain is your own name, no third party visible in it</td><td>☐</td><td>A stranger&#39;s company name on your server or WHOIS reads as unsafe</td></tr><tr><td>Valid SSL certificate</td><td>☐</td><td></td></tr><tr><td>Business profile on WhatsApp (not personal)</td><td>☐</td><td>Catalogue, quick replies, away message</td></tr><tr><td>Google Business Profile claimed, correct, no duplicates</td><td>☐</td><td></td></tr><tr><td>Services and booking links on the profile</td><td>☐</td><td></td></tr><tr><td>Review drive running after every job</td><td>☐</td><td>Ask at the moment of delivery, not later</td></tr><tr><td>Welcome message automated on signup</td><td>☐</td><td>With a first-order incentive</td></tr><tr><td>Consistent handles across platforms</td><td>☐</td><td></td></tr><tr><td>Analytics installed and someone reads it</td><td>☐</td><td></td></tr></tbody></table></div>
+<blockquote><p><strong>A welcome message on signup is free money and almost nobody does it.</strong> Someone downloads your app or joins your list and hears nothing. Send something within the hour: welcome, here is what to do next, here is a discount on your first order. This is the single cheapest conversion improvement available.</p></blockquote>
+<h2 id="attribution">Attribution</h2>
+<p>If you cannot tell which effort produced which customer, you are optimising blind.</p>
+<div class="table-wrap"><table><thead><tr><th>Method</th><th>In place?</th><th>Covers</th></tr></thead><tbody><tr><td>Unique QR codes per flyer / person / area</td><td>☐</td><td></td></tr><tr><td>Referral codes</td><td>☐</td><td></td></tr><tr><td>&quot;How did you hear about us?&quot; on every order</td><td>☐</td><td></td></tr><tr><td>Campaign tracking links</td><td>☐</td><td></td></tr><tr><td>Dedicated phone number per channel</td><td>☐</td><td></td></tr></tbody></table></div>
+<p><strong>Incentivise the people doing the legwork.</strong> Anyone distributing flyers, canvassing an area or making introductions should have a code and a payment attached to results — a small amount per signup, a larger amount per first order. Someone on a flat salary handing out paper produces a fraction of what the same person on an outcome incentive produces, and without the code you cannot tell the difference.</p>
+<h2 id="sales-collateral">Sales collateral</h2>
+<p><strong>You need two different documents and founders usually have neither.</strong></p>
+<div class="table-wrap"><table><thead><tr><th>Asset</th><th>For</th><th>Contains</th><th>Status</th></tr></thead><tbody><tr><td><strong>Customer flyer</strong></td><td>End customers</td><td>What it is, why it is good, price, where to buy, QR to order. A5, glossy, visual.</td><td><code>[TBD]</code></td></tr><tr><td><strong>Trade / order sheet</strong></td><td>Retailers, distributors, stockists, partners</td><td>Trade price, their margin, minimum order, delivery time, payment terms, WhatsApp order QR</td><td><code>[TBD]</code></td></tr><tr><td>Business card</td><td>Everyone</td><td></td><td><code>[TBD]</code></td></tr><tr><td>One-pager</td><td>Institutional buyers, partners</td><td></td><td><code>[TBD]</code></td></tr><tr><td>Product spec sheet</td><td>Technical or institutional buyers</td><td>Specifications, certifications, warranty</td><td><code>[TBD]</code></td></tr><tr><td>Deck</td><td>Investors — see <a href="../08-capital/capital.md">08-capital</a></td><td></td><td><code>[TBD]</code></td></tr><tr><td>Case studies</td><td>Everyone</td><td></td><td><code>[TBD]</code></td></tr></tbody></table></div>
+<p>A shopkeeper cannot stock you if they do not know their margin, your minimum order, or how long delivery takes. That information on one sheet, with a QR code that opens a WhatsApp order, converts far better than a conversation they have to remember. Template: <a href="../../worksheets/trade-order-sheet.md"><code>worksheets/trade-order-sheet.md</code></a>.</p>
+<h2 id="building-in-public">Building in public</h2>
+<p><code>[TBD]</code></p>
+<blockquote><p>Publish your journey weekly. &quot;This week we did X, here is what we learned, here are the numbers.&quot; It costs nothing, it compounds, and it does three jobs: it builds an audience before you need one, it makes you visible to investors and partners without asking them for anything, and it forces the weekly reflection you should be doing anyway.</p></blockquote>
+<p>&gt;</p>
+<blockquote><p>The format that works is boring and consistent: a founder, on camera or in text, same opening line every time, 45 to 60 seconds, on the <strong>company</strong> account rather than a personal one. Startups are interesting to people right now; founders telling their own story out-perform polished brand content at this stage by a wide margin.</p></blockquote>
+<div class="table-wrap"><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Platform(s)</strong></td><td><code>[TBD]</code></td></tr><tr><td><strong>Cadence</strong></td><td><code>[TBD]</code></td></tr><tr><td><strong>Current following</strong></td><td><code>[TBD]</code></td></tr><tr><td><strong>Goal</strong></td><td><code>[TBD — a number and a date]</code></td></tr></tbody></table></div>
+<h2 id="channel-conflict">Channel conflict</h2>
+<p><code>[TBD]</code></p>
+<p>If you sell both to businesses that make finished goods <em>and</em> your own finished goods, you compete with your own customers. If you sell direct at a lower price than your retailers, you undercut the people stocking you.</p>
+<p>Neither is automatically wrong, but both need a deliberate decision — and your buyers will work it out before you tell them. Write down which you are, or how you will stage it: supplier first, brand later.</p>
+<h2 id="pricing">Pricing</h2>
+<div class="table-wrap"><table><thead><tr><th>SKU</th><th>List</th><th>Trade</th><th>Distributor</th><th>Margin to them</th><th>Notes</th></tr></thead><tbody><tr><td><code>[TBD]</code></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table></div>
+<div class="table-wrap"><table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Minimum order</strong></td><td><code>[TBD]</code></td></tr><tr><td><strong>Payment terms</strong></td><td><code>[TBD]</code></td></tr><tr><td><strong>Delivery time</strong></td><td><code>[TBD]</code></td></tr><tr><td><strong>Returns / unsold stock</strong></td><td><code>[TBD]</code></td></tr></tbody></table></div>
+<p>A trial offer that removes all risk gets you shelf space: <em>leave a small quantity free or on consignment, one flyer, two weeks, then come back for feedback or a reorder.</em> You are buying information as much as a sale.</p>
+    </div>
+</main>
+</div>
+
+<footer class="footer"><div class="footer-inner">
+  <div class="footer-author">
+    <img class="author-avatar" src="../assets/aayush.png" alt="Aayush Rajaji" width="36" height="36" loading="lazy">
+    <div class="author-meta">
+      <div class="author-role">Built &amp; curated by</div>
+      <div class="author-name">Aayush Rajaji</div>
+      <div class="author-links">
+        <a href="https://github.com/Aayush-Rajaji" target="_blank" rel="noopener">GitHub</a> ·
+        <a href="https://www.linkedin.com/in/aayushrajaji/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-note">Unified Indian Startup Operating System &amp; Scheme Intelligence Engine. Open knowledge resource under MIT License.</div>
+  <div class="f-links">
+    <a href="../about.html">About &amp; Disclaimer</a>
+    <a href="../assets/Startup-Schemes-Playbook-June-2026.pdf" download>Source PDF</a>
+    <a href="https://www.startupindia.gov.in/" target="_blank" rel="noopener">startupindia.gov.in ↗</a>
+    <a href="https://github.com/Aayush-Rajaji/startup-india-os" target="_blank" rel="noopener">GitHub ↗</a>
+  </div>
+</div></footer>
+
+<div class="search-modal" id="search-modal" role="dialog" aria-modal="true" aria-label="Search">
+  <div class="backdrop"></div>
+  <div class="search-panel">
+    <div class="search-head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input id="search-input" type="text" placeholder="Search 69 schemes, prompts, worksheets, glossary…" autocomplete="off" aria-label="Search"></div>
+    <div class="sr-only" id="search-status" role="status" aria-live="polite"></div>
+    <div class="results" id="search-results"></div>
+    <div class="search-foot"><span><kbd>↑</kbd><kbd>↓</kbd> navigate</span><span><kbd>↵</kbd> open</span><span><kbd>esc</kbd> close</span></div>
+  </div>
+</div>
+<button class="to-top" id="to-top" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 15-6-6-6 6"/></svg></button>
+<script src="../assets/search-index.js" defer></script>
+<script src="../assets/site.js" defer></script>
+</body>
+</html>

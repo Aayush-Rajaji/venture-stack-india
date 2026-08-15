@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en" data-root="">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Automation — running it on a schedule · Startup India OS</title>
+<meta name="description" content="The Unified Operating System &amp; Government Schemes Intelligence Engine for Indian Founders.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#1f3864">
+<meta property="og:title" content="Automation — running it on a schedule · Startup India OS">
+<meta property="og:description" content="The Unified Operating System &amp; Government Schemes Intelligence Engine for Indian Founders.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Startup India OS">
+<meta property="og:image" content="https://aayush-rajaji.github.io/startup-india-os/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+<!-- Claude Typography: Newsreader Editorial Display + Plus Jakarta Sans & Inter Body -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..800;1,6..72,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script>(function(){var t;try{t=localStorage.getItem("playbook-theme")}catch(e){}
+if(t!=="light"&&t!=="dark"){t=window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}
+document.documentElement.setAttribute("data-theme",t);
+try{if(localStorage.getItem("rail-collapsed")==="1")document.documentElement.classList.add("rail-collapsed")}catch(e){}})();</script>
+
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/site.css">
+
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span class="hb" aria-hidden="true"><span class="hb-t"></span><span class="hb-m"></span><span class="hb-b"></span></span></button>
+  <a class="brand" href="index.html">
+    <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 64 64" width="20" height="20"><rect x="6" y="14" width="52" height="9" rx="4.5" fill="#e2621b"/><rect x="6" y="27.5" width="52" height="9" rx="4.5" fill="#ffffff"/><rect x="6" y="41" width="52" height="9" rx="4.5" fill="#359a4c"/></svg></span>
+    <span class="brand-name">Startup India <span class="thin">OS</span></span>
+  </a>
+  <span class="topbar-spacer"></span>
+  <button class="searchbtn" data-search-open type="button" aria-label="Search OS">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><span class="searchbtn-label">Search schemes, prompts, stack…</span><kbd>⌘K</kbd>
+  </button>
+  <a class="icon-btn" href="https://github.com/Aayush-Rajaji/startup-india-os" target="_blank" rel="noopener" aria-label="GitHub Repo"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2Z"/></svg></a>
+  <button class="icon-btn theme-toggle" id="theme-toggle" type="button" aria-label="Toggle theme">
+    <span class="sun"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg></span><span class="moon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></span>
+  </button>
+</header>
+<div class="scrim" id="scrim"></div>
+
+<div class="layout">
+
+  <nav class="sidebar" id="sidebar" aria-label="Site navigation">
+    
+    <div class="sidebar-group ">
+      <div class="sidebar-title">🏛️ Government Schemes</div>
+      <div class="sidebar-links">
+        <a class="nav-link " href="index.html">Playbook Overview</a>
+<a class="nav-link " href="finder.html">🧭 Scheme Finder (5 Qs)</a>
+<a class="nav-link " href="directory.html">📋 All 69 Central Schemes</a>
+<a class="nav-link " href="compare.html">⚖️ Compare Schemes</a>
+<a class="nav-link " href="walkable-map.html">🗺️ 3D Walkable India Map</a>
+<a class="nav-link " href="state-schemes.html">🏢 320+ State/UT Schemes</a>
+<a class="nav-link " href="incubators.html">🔬 220+ Incubators Map</a>
+<a class="nav-link " href="lifecycle.html">🌱 Lifecycle Map</a>
+<a class="nav-link " href="needs.html">🎯 What Do You Need?</a>
+<a class="nav-link " href="psu.html">🏭 PSU &amp; Regulators</a>
+<a class="nav-link " href="states.html">🌐 State Portals</a>
+<a class="nav-link " href="news.html">📰 Ecosystem News</a>
+<a class="nav-link " href="glossary.html">📖 Glossary &amp; Terms</a>
+<a class="nav-link " href="about.html">ℹ️ About &amp; Method</a>
+      </div>
+    </div>
+
+    <div class="sidebar-group ">
+      <div class="sidebar-title">⚡ Founder Operating Stack</div>
+      <div class="sidebar-links">
+        <a class="nav-link " href="stack.html">Stack Architecture</a>
+<a class="nav-link " href="quickstart.html">🚀 Quickstart (15 Min)</a>
+<a class="nav-link " href="stack/context.html">📄 Company One-Pager</a>
+<a class="nav-link " href="stack/01-company.html">01 · Company</a>
+<a class="nav-link " href="stack/02-customer.html">02 · Customer</a>
+<a class="nav-link " href="stack/03-market.html">03 · Market</a>
+<a class="nav-link " href="stack/04-product.html">04 · Product</a>
+<a class="nav-link " href="stack/05-gtm.html">05 · GTM &amp; Distribution</a>
+<a class="nav-link " href="stack/06-operations.html">06 · Operations</a>
+<a class="nav-link " href="stack/07-money.html">07 · Unit Economics</a>
+<a class="nav-link " href="stack/08-capital.html">08 · Capital &amp; Grants</a>
+<a class="nav-link " href="stack/09-brand.html">09 · Brand &amp; Voice</a>
+<a class="nav-link " href="stack/10-pulse.html">10 · Weekly Pulse</a>
+      </div>
+    </div>
+
+    <div class="sidebar-group ">
+      <div class="sidebar-title">🤖 AI Execution Prompts</div>
+      <div class="sidebar-links">
+        <a class="nav-link " href="prompts/index.html">Prompt Library (19)</a>
+<a class="nav-link " href="prompts/00-bootstrap-the-stack.html">00 · Bootstrap Stack</a>
+<a class="nav-link " href="prompts/02-gap-scan.html">02 · Gap Scan</a>
+<a class="nav-link " href="prompts/03-customer-and-problem.html">03 · Customer &amp; Problem</a>
+<a class="nav-link " href="prompts/05-competitive-intelligence.html">05 · Competitor Intel</a>
+<a class="nav-link " href="prompts/07-unit-economics.html">07 · Unit Econ Stress-Test</a>
+<a class="nav-link " href="prompts/08-list-of-100.html">08 · List of 100</a>
+<a class="nav-link " href="prompts/10-pitch-deck.html">10 · Pitch Deck Drafter</a>
+<a class="nav-link " href="prompts/11-fundraise-readiness.html">11 · Diligence Readiness</a>
+<a class="nav-link " href="prompts/12-weekly-recap.html">12 · Weekly Pulse Recap</a>
+<a class="nav-link " href="prompts/13-mentor-review.html">13 · Investor Red-Team</a>
+      </div>
+    </div>
+
+    <div class="sidebar-group ">
+      <div class="sidebar-title">📝 Worksheets & Tools</div>
+      <div class="sidebar-links">
+        <a class="nav-link " href="worksheets/index.html">All 10 Worksheets</a>
+<a class="nav-link " href="worksheets/startup-prep.html">Startup Prep Worksheet</a>
+<a class="nav-link " href="worksheets/customer-interview.html">Customer Interview Script</a>
+<a class="nav-link " href="worksheets/competitor-profile.html">Competitor Teardown</a>
+<a class="nav-link " href="worksheets/experiment.html">2-Week Experiment</a>
+<a class="nav-link " href="worksheets/one-pager.html">Executive One-Pager</a>
+<a class="nav-link " href="worksheets/weekly-recap.html">Weekly Pulse Template</a>
+      </div>
+    </div>
+
+    <div class="sidebar-group ">
+      <div class="sidebar-title">📚 Guides & Method</div>
+      <div class="sidebar-links">
+        <a class="nav-link " href="method.html">The Method Explained</a>
+<a class="nav-link " href="knowledge-base.html">Building the Knowledge Base</a>
+<a class="nav-link " href="front-matter.html">Front-Matter Schema</a>
+<a class="nav-link " href="ai-basics.html">AI Fundamentals</a>
+<a class="nav-link " href="safety.html">Safety &amp; Privacy Rules</a>
+<a class="nav-link " href="for-coaches.html">For Startup Coaches</a>
+      </div>
+    </div>
+
+    <div class="sidebar-group ">
+      <div class="sidebar-title">📊 Venture Studio & Resources</div>
+      <div class="sidebar-links">
+        <a class="nav-link " href="rubric.html">1-5 Maturity Rubric</a>
+<a class="nav-link " href="for-portfolios.html">Portfolio Governance</a>
+<a class="nav-link " href="infographics.html">🎨 30 Infographics Gallery</a>
+<a class="nav-link " href="resources.html">📑 650+ Curated Resources</a>
+      </div>
+    </div>
+    <div class="sidebar-group">
+      <div class="sidebar-title">Downloads &amp; Links</div>
+      <a class="nav-link" href="assets/Startup-Schemes-Playbook-June-2026.pdf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4m4-5 5 5 5-5m-5 5V3"/></svg> Playbook PDF (107p)</a>
+      <a class="nav-link" href="https://github.com/Aayush-Rajaji/startup-india-os" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2Z"/></svg> GitHub Repository</a>
+    </div>
+  </nav>
+<main id="main" class="content ">
+
+  <nav class="crumbs"><a href="index.html">Home</a> / <span>Automation — running it on a schedule</span></nav>
+  <div class="page-head">
+    <h1>Automation — running it on a schedule</h1>
+  </div>
+  <div class="doc-body">
+    <h1 id="automation-running-it-on-a-schedule">Automation — running it on a schedule</h1>
+<p>How to stop copying and pasting: getting a transcript into a prompt without fetching it, getting new mail and documents into <code>_inbox/</code> without exporting them, and getting a finished record into the right folder without attaching it to anything.</p>
+<p>Written for whichever platform you already run. Nothing here needs a developer, and none of it is required — the method works entirely by hand, which is exactly how it should start.</p>
+<p>!<a href="../web/infographics/putting-the-pull-on-schedule.webp">Connector setup, a weekly pull cycle landing in the inbox folder, the daily versus weekly trade, and the monthly audit.</a></p>
+<p>---</p>
+<h2 id="do-it-by-hand-first">Do it by hand first</h2>
+<p>Run the loop manually until you are bored of it. Ten sessions, or a month of weekly recaps.</p>
+<p>The reason is not caution. It is that automating a workflow freezes it, and a workflow you have run twice is not yet the one you want frozen. Programmes that build the pipeline first end up with a beautifully scheduled flow producing a note their coaches quietly stop reading, and nobody can say when that started.</p>
+<p><strong>The test to pass before you automate anything:</strong> the person who ran it by hand thinks the output is better than what they wrote before. If it is not, a scheduler produces the same output faster, which is not the goal.</p>
+<h2 id="the-two-loops-worth-automating">The two loops worth automating</h2>
+<p>Only two, and they belong to different people.</p>
+<p><strong>The founder&#39;s loop, weekly.</strong> New material out of mail and drive into <code>_inbox/</code>, folded into the stack, recapped, and the carve sent to whoever they report to. Runs on the founder&#39;s own storage, under the founder&#39;s own AI subscription. The programme pays for none of it and sees none of it.</p>
+<div class="codeblock"><pre class="lang-"><code>weekly  →  pull what is new from mail and drive into _inbox/
+        →  prompts/01-refresh-the-stack.md   folds it in without flattening corrections
+        →  prompts/12-weekly-recap.md        the pulse
+        →  Step 7, PROGRAMME preset          into the shared folder</code></pre></div>
+<p><strong>The programme&#39;s loop, per session.</strong> A transcript appears, the coach is asked for their read, the two files get written, the record updates, the founder&#39;s copy goes out.</p>
+<div class="codeblock"><pre class="lang-"><code>session ends  →  transcript lands somewhere
+              →  prompts/16-session-to-record.md
+              →  the coach is asked for their read, and answers
+              →  the coach approves the record
+              →  it copies into &lt;company&gt;/from-programme/</code></pre></div>
+<p>Note where the human is in the second loop. That position is not negotiable, and it is the subject of the second honest note below.</p>
+<h2 id="recipes-by-platform">Recipes by platform</h2>
+<div class="table-wrap"><table><thead><tr><th>Need</th><th>Microsoft 365</th><th>Google Workspace</th><th>Zoom</th><th>Slack</th><th>None of these</th></tr></thead><tbody><tr><td><strong>Shared folder per company</strong></td><td>SharePoint library, or a Teams channel Files tab</td><td>Shared Drive folder</td><td>—</td><td>—</td><td>Any synced folder, or a repo</td></tr><tr><td><strong>Session transcript</strong></td><td>Teams transcription</td><td>Meet transcription</td><td>Zoom cloud transcript</td><td>—</td><td>Export from whatever recorded it</td></tr><tr><td><strong>Notice a new transcript</strong></td><td>Power Automate file-created trigger on the recordings folder; or poll the transcript API</td><td>Apps Script time-driven trigger, or a Drive change watch</td><td>Zoom webhook on recording completed</td><td>—</td><td>Look in the folder</td></tr><tr><td><strong>Run the prompt</strong></td><td>Whichever AI tool holds <code>portfolio/</code></td><td>same</td><td>same</td><td>same</td><td>same</td></tr><tr><td><strong>Ask the coach for their read</strong></td><td>Adaptive card in Teams</td><td>Chat message or mail with a link to the draft</td><td>—</td><td>Message with buttons, via Workflow Builder</td><td>Open the file and type into it</td></tr><tr><td><strong>Approve before anything sends</strong></td><td>The card&#39;s confirm action</td><td>Reply, or a checkbox in the doc</td><td>—</td><td>The message&#39;s button</td><td>Save the file</td></tr><tr><td><strong>Fan out on approval</strong></td><td>Teams post, Outlook mail, file copy</td><td>Chat post, Gmail, file copy</td><td>—</td><td>Channel post</td><td>Email, or copy the file</td></tr><tr><td><strong>Founder&#39;s weekly pull</strong></td><td>A recurring task in the founder&#39;s own AI tool, with mail and drive connectors</td><td>same</td><td>—</td><td>—</td><td>A calendar reminder and ten minutes</td></tr></tbody></table></div>
+<p>Read the columns as alternatives, not as a stack. A programme on Microsoft does the whole thing in the first column; one with nothing but a shared folder and a calendar does it in the last, and gets the same records at the end of the month.</p>
+<p>The connector side — what a connector is, how to authorise one, and what to grant it — is in <a href="getting-material-in.md">getting-material-in.md</a>. Nothing on this page changes those rules.</p>
+<h2 id="the-three-fiddly-parts">The three fiddly parts</h2>
+<p><strong>There is no clean &quot;the meeting ended&quot; trigger anywhere.</strong> Every route is a poll, a webhook, or a file-created event on a recordings folder, and each has a lag that is not documented and not stable. Transcripts also appear some minutes after the recording does, so a flow triggered by the recording will often find no transcript and needs to retry rather than fail. Budget most of your build time here; it is the least interesting part and the one that breaks.</p>
+<p><strong>The approval step is not optional.</strong> It is where the coach&#39;s judgement enters the record. A flow that writes an assessment about a person without a named human confirming it has automated the one thing in this system that must not be automated — and it produces exactly the artifact <a href="safety.md">safety.md</a> exists to prevent: a confident, plausible, unattributable judgement about somebody, in a file, with nobody to ask about it.</p>
+<p>If you build only one guard, build this one: <strong>nothing reaches a founder, and nothing enters <code>reads/</code>, without a person saying yes.</strong></p>
+<p><strong>Recording needs consent, and a founder needs to know what happens to it.</strong> Say at intake that sessions are recorded, what the transcript is used for, where it is kept, and for how long. Platform transcription makes this easy to switch on and easy to forget to mention. <a href="exchange.md">exchange.md</a> covers what to write down; the point of writing it once is that nobody has to improvise it in the first minute of a session.</p>
+<h2 id="the-founder-s-weekly-pull-concretely">The founder&#39;s weekly pull, concretely</h2>
+<p>Most AI tools with connectors can hold a recurring instruction. This is the one worth setting, and the wording matters more than the schedule:</p>
+<div class="codeblock"><pre class="lang-"><code>Every Monday, search my mail and my drive for anything new since last Monday
+that is about the business: customer conversations, supplier quotes and
+invoices, investor correspondence, anything signed, anything with a number in
+it.
+
+Save what you find into _inbox/ as markdown files — one per thread or
+document, named with the date and what it is, each noting where it came from
+and when you pulled it.
+
+Do not copy in anything personal, anything a third party sent in confidence,
+or bulk contact data. If you are unsure, list it and ask me.
+
+Then stop. I will run the refresh prompt myself.</code></pre></div>
+<p>Two constraints in that, both already repo rules and both load-bearing:</p>
+<p><strong>What a connector finds still lands in <code>_inbox/</code> as a file.</strong> A live connection is not a citation. <a href="../AGENTS.md">AGENTS.md</a> requires every fact in the stack to trace to something that can be opened again later, and a search that ran once in a chat window cannot be.</p>
+<p><strong>Scope the pull. Never mirror a mailbox.</strong> This is the highest-risk instruction on this page. An AI-readable folder containing an entire inbox holds other people&#39;s personal data, material sent in confidence, and things that are simply nobody&#39;s business — and it holds them permanently, having been assembled by a schedule nobody was watching. Filter to what matters, and read the section on what stays out of the folder in <a href="safety.md">safety.md</a> before switching anything on.</p>
+<p>Note also where that instruction stops. It gathers; it does not fold anything into the stack. Refreshing the stack changes files a human has corrected, and that stays a decision rather than a schedule.</p>
+<h2 id="what-a-programme-can-ask-for-and-what-it-cannot">What a programme can ask for, and what it cannot</h2>
+<p>A programme cannot compel a founder to maintain anything, and any design that assumes otherwise will be accurate for about three weeks. What it can do is make the setup a condition of membership, at the point where a founder is most willing to agree to things:</p>
+<ul class="doc-list">
+<li>a company email domain and a business drive, rather than personal accounts</li>
+<li>a paid AI subscription with connectors to both — any vendor; nothing in this repo depends on which</li>
+<li>the shared folder accepted, and the first weekly recap sent before the first session</li>
+</ul>
+<p>That is the prerequisite pattern, and it is <a href="for-coaches.md">for-coaches.md</a>&#39;s existing argument moved to onboarding: the leverage a programme has is access, not equity. Specialist time, introductions, a demo-day slot and capital are all things founders want, and a corrected stack is a reasonable price for them.</p>
+<p>What it is not is a way to see more. The founder&#39;s subscription runs on the founder&#39;s data on the founder&#39;s storage. The programme still sees only what is carved into the shared folder — which is the arrangement that makes the honest version of a recap possible at all.</p>
+<h2 id="what-to-check-once-a-month">What to check, once a month</h2>
+<p>Automation fails quietly, and the failure mode is a folder that looks fine.</p>
+<ul class="doc-list">
+<li><strong>Did every session produce two files?</strong> One is a sign the read step is being skipped, which is the whole point going missing.</li>
+<li><strong>Did anything reach a founder without an approval?</strong> Check the shared folder against your approvals for the month.</li>
+<li><strong>Run the leak check.</strong> <code>grep -rl &quot;audience: coach-team&quot; &lt;shared-folder&gt;/*/from-programme/</code> must return nothing. If it ever returns something, the fix is finding out how it got there — a process that leaked once will leak again.</li>
+<li><strong>Is anything in <code>_inbox/</code> that should not be there?</strong> Scheduled pulls widen over time as mail changes shape.</li>
+<li><strong>Is the loop still worth running?</strong> If the coaches have gone back to writing their own notes beside the generated ones, the automation is producing something nobody wants, faster.</li>
+</ul>
+  </div>
+</main>
+</div>
+
+<footer class="footer"><div class="footer-inner">
+  <div class="footer-author">
+    <img class="author-avatar" src="assets/aayush.png" alt="Aayush Rajaji" width="36" height="36" loading="lazy">
+    <div class="author-meta">
+      <div class="author-role">Built &amp; curated by</div>
+      <div class="author-name">Aayush Rajaji</div>
+      <div class="author-links">
+        <a href="https://github.com/Aayush-Rajaji" target="_blank" rel="noopener">GitHub</a> ·
+        <a href="https://www.linkedin.com/in/aayushrajaji/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-note">Unified Indian Startup Operating System &amp; Scheme Intelligence Engine. Open knowledge resource under MIT License.</div>
+  <div class="f-links">
+    <a href="about.html">About &amp; Disclaimer</a>
+    <a href="assets/Startup-Schemes-Playbook-June-2026.pdf" download>Source PDF</a>
+    <a href="https://www.startupindia.gov.in/" target="_blank" rel="noopener">startupindia.gov.in ↗</a>
+    <a href="https://github.com/Aayush-Rajaji/startup-india-os" target="_blank" rel="noopener">GitHub ↗</a>
+  </div>
+</div></footer>
+
+<div class="search-modal" id="search-modal" role="dialog" aria-modal="true" aria-label="Search">
+  <div class="backdrop"></div>
+  <div class="search-panel">
+    <div class="search-head"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input id="search-input" type="text" placeholder="Search 69 schemes, prompts, worksheets, glossary…" autocomplete="off" aria-label="Search"></div>
+    <div class="sr-only" id="search-status" role="status" aria-live="polite"></div>
+    <div class="results" id="search-results"></div>
+    <div class="search-foot"><span><kbd>↑</kbd><kbd>↓</kbd> navigate</span><span><kbd>↵</kbd> open</span><span><kbd>esc</kbd> close</span></div>
+  </div>
+</div>
+<button class="to-top" id="to-top" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 15-6-6-6 6"/></svg></button>
+<script src="assets/search-index.js" defer></script>
+<script src="assets/site.js" defer></script>
+</body>
+</html>
