@@ -224,13 +224,20 @@ function inline(text, ctx) {
 /* Sidebar navigation groups */
 const NAV_SECTIONS = [
   {
+    title: "⚡ Interactive Web Apps",
+    items: [
+      { href: "app.html", label: "💻 Full Web Terminal App" },
+      { href: "calculator.html", label: "🧮 Unit Economics Simulator" },
+      { href: "finder.html", label: "🧭 Scheme Finder (5 Qs)" },
+      { href: "compare.html", label: "⚖️ Scheme Compare Matrix" },
+      { href: "walkable-map.html", label: "🗺️ 3D Walkable India Map" }
+    ]
+  },
+  {
     title: "🏛️ Government Schemes",
     items: [
       { href: "index.html", label: "Playbook Overview" },
-      { href: "finder.html", label: "🧭 Scheme Finder (5 Qs)" },
       { href: "directory.html", label: "📋 All 69 Central Schemes" },
-      { href: "compare.html", label: "⚖️ Compare Schemes" },
-      { href: "walkable-map.html", label: "🗺️ 3D Walkable India Map" },
       { href: "state-schemes.html", label: "🏢 320+ State/UT Schemes" },
       { href: "incubators.html", label: "🔬 220+ Incubators Map" },
       { href: "lifecycle.html", label: "🌱 Lifecycle Map" },
@@ -462,10 +469,11 @@ const write = (rel, html) => {
     <h1>Bharat Startup <span class="thin">OS</span></h1>
     <p class="lede">Every Central Government scheme, state grant, and incubator directory — fused with an AI-native company knowledge stack, 19 execution prompts, and 10 actionable worksheets.</p>
     <div class="hero-actions">
-      <a class="btn btn-primary" href="finder.html">🧭 Run Scheme Finder (5 Qs)</a>
-      <a class="btn btn-secondary" href="walkable-map.html">🗺️ Explore 3D India Map</a>
+      <a class="btn btn-primary" href="app.html">💻 Launch Full Web App</a>
+      <a class="btn btn-secondary" href="calculator.html">🧮 Unit Economics Simulator</a>
+      <a class="btn btn-secondary" href="finder.html">🧭 Scheme Finder (5 Qs)</a>
+      <a class="btn btn-secondary" href="walkable-map.html">🗺️ Explore 3D Map</a>
       <a class="btn btn-secondary" href="stack.html">⚡ Founder Operating Stack</a>
-      <a class="btn btn-secondary" href="prompts/index.html">🤖 AI Prompts</a>
     </div>
     <div class="stats-row">
       <div class="stat-box"><span class="val">69</span><span class="lbl">Central Schemes</span></div>
@@ -478,14 +486,26 @@ const write = (rel, html) => {
 
   const cardsHTML = `
   <div class="section-head">
-    <h2>Explore Core Modules</h2>
-    <p class="muted">Navigate between government funding intelligence and internal execution tools.</p>
+    <h2>Explore Core Modules &amp; Web Apps</h2>
+    <p class="muted">Navigate between government funding intelligence, interactive financial models, and execution tools.</p>
   </div>
   <div class="modules-grid">
+    <a class="module-card" href="app.html">
+      <div class="m-icon">💻</div>
+      <h3>Full Web Terminal App</h3>
+      <p>All-in-one Single Page Application workspace with instant reactive search, scheme comparator, and prompt runner.</p>
+      <span class="m-link">Launch Web Terminal →</span>
+    </a>
+    <a class="module-card" href="calculator.html">
+      <div class="m-icon">🧮</div>
+      <h3>Unit Economics &amp; Runway Simulator</h3>
+      <p>Interactive burn rate &amp; runway stress-tester with 18% GST and 2.36% PG fee friction models.</p>
+      <span class="m-link">Calculate runway →</span>
+    </a>
     <a class="module-card" href="finder.html">
       <div class="m-icon">🧭</div>
       <h3>Scheme Finder Wizard</h3>
-      <p>5-question decision tree matching your stage, sector, and entity type with eligible Central & State funding.</p>
+      <p>5-question decision tree matching your stage, sector, and entity type with eligible Central &amp; State funding.</p>
       <span class="m-link">Find your grant →</span>
     </a>
     <a class="module-card" href="walkable-map.html">
@@ -499,6 +519,12 @@ const write = (rel, html) => {
       <h3>All 69 Central Schemes</h3>
       <p>Searchable, filterable directory with verified eligibility, funding ceilings, and official portal links.</p>
       <span class="m-link">Browse directory →</span>
+    </a>
+    <a class="module-card" href="state-schemes.html">
+      <div class="m-icon">🏢</div>
+      <h3>320+ State/UT Grants</h3>
+      <p>State-specific startup policy seed funds, lease rentals, patent reimbursements, and tax exemptions.</p>
+      <span class="m-link">Explore states →</span>
     </a>
     <a class="module-card" href="stack.html">
       <div class="m-icon">⚡</div>
@@ -986,6 +1012,558 @@ if (existsSync(join(PORTFOLIO, "rubric.md"))) {
   </div>`;
 
   write("resources.html", shell({ root: "", active: "resources.html", title: "Startup Resources", body }));
+}
+
+/* ================= 4B. UNIT ECONOMICS & RUNWAY CALCULATOR ================= */
+{
+  const body = `
+  <nav class="crumbs"><a href="index.html">Home</a> / <span>Unit Economics Simulator</span></nav>
+  <div class="page-head">
+    <div class="kicker">Financial Stress-Tester · India Compliant</div>
+    <h1>Unit Economics &amp; Runway Simulator</h1>
+    <p class="lede">Calculate real net contribution margins, payment gateway friction (2% + 18% GST), break-even MRR, and 3-scenario runway projections.</p>
+  </div>
+
+  <div class="calc-grid">
+    <div class="calc-card">
+      <h2 style="font-size:1.2rem; margin:0 0 10px;">📊 Operating &amp; Revenue Inputs</h2>
+      
+      <div class="calc-group">
+        <div class="calc-label-row">
+          <span>Current Cash in Bank (₹)</span>
+          <span class="calc-val-display" id="val_cash">₹25,00,000</span>
+        </div>
+        <input class="calc-slider" id="in_cash" type="range" min="0" max="20000000" step="50000" value="2500000">
+      </div>
+
+      <div class="calc-group">
+        <div class="calc-label-row">
+          <span>Monthly Operating Burn (₹)</span>
+          <span class="calc-val-display" id="val_burn">₹3,50,000</span>
+        </div>
+        <input class="calc-slider" id="in_burn" type="range" min="20000" max="3000000" step="10000" value="350000">
+      </div>
+
+      <div class="calc-group">
+        <div class="calc-label-row">
+          <span>Monthly Revenue / MRR (₹)</span>
+          <span class="calc-val-display" id="val_rev">₹1,50,000</span>
+        </div>
+        <input class="calc-slider" id="in_rev" type="range" min="0" max="3000000" step="10000" value="150000">
+      </div>
+
+      <div class="calc-group">
+        <div class="calc-label-row">
+          <span>Gross Margin (%)</span>
+          <span class="calc-val-display" id="val_margin">75%</span>
+        </div>
+        <input class="calc-slider" id="in_margin" type="range" min="10" max="100" step="1" value="75">
+      </div>
+
+      <div class="calc-toggle-row">
+        <label for="in_pg">💳 Deduct Payment Gateway Friction (2.36%)</label>
+        <input type="checkbox" id="in_pg" checked style="width:18px;height:18px;cursor:pointer;">
+      </div>
+
+      <div class="calc-toggle-row">
+        <label for="in_gst">🏛️ Apply 18% GST Outflow Friction</label>
+        <input type="checkbox" id="in_gst" checked style="width:18px;height:18px;cursor:pointer;">
+      </div>
+    </div>
+
+    <div class="calc-card">
+      <h2 style="font-size:1.2rem; margin:0 0 10px;">⚡ Real-Time Runway &amp; Health KPIs</h2>
+      
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-title">Runway Projection</div>
+          <div class="kpi-value" id="kpi_runway">10.4 mo</div>
+          <div class="kpi-sub" id="kpi_status">🟡 Warning (&lt; 12 mo)</div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-title">Net Monthly Burn</div>
+          <div class="kpi-value" id="kpi_net_burn">₹2,40,750</div>
+          <div class="kpi-sub">Actual monthly cash drain</div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-title">Break-Even MRR</div>
+          <div class="kpi-value" id="kpi_breakeven">₹4,80,769</div>
+          <div class="kpi-sub">Target for Default Alive</div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-title">Net Margin (Post-Friction)</div>
+          <div class="kpi-value" id="kpi_net_margin">72.6%</div>
+          <div class="kpi-sub">After PG fees &amp; GST</div>
+        </div>
+      </div>
+
+      <div style="background:var(--surface-alt); padding:16px; border-radius:var(--radius-md); border:1px solid var(--border);">
+        <h3 style="font-size:0.95rem; margin-bottom:8px;">🎯 3-Scenario Stress-Test</h3>
+        <table style="width:100%; font-size:0.85rem; border-collapse:collapse;">
+          <tr style="border-bottom:1px solid var(--border);"><th style="padding:6px 0;">Scenario</th><th style="text-align:right;">Net Burn</th><th style="text-align:right;">Runway</th></tr>
+          <tr style="border-bottom:1px solid var(--border);"><td style="padding:6px 0;">🟢 Base Case</td><td id="sc_base_burn" style="text-align:right;">₹2,40,750</td><td id="sc_base_run" style="text-align:right;">10.4 mo</td></tr>
+          <tr style="border-bottom:1px solid var(--border);"><td style="padding:6px 0;">🟡 Bear Case (-30% Rev)</td><td id="sc_bear_burn" style="text-align:right;">₹2,73,525</td><td id="sc_bear_run" style="text-align:right;">9.1 mo</td></tr>
+          <tr><td style="padding:6px 0;">🔴 Zero Revenue (Pure Burn)</td><td id="sc_zero_burn" style="text-align:right;">₹3,50,000</td><td id="sc_zero_run" style="text-align:right;">7.1 mo</td></tr>
+        </table>
+      </div>
+
+      <button class="copy-btn-action" id="btn_copy_calc" style="align-self:flex-start;">📋 Copy Financial Summary</button>
+    </div>
+  </div>
+
+  <script>
+  (function(){
+    const inCash = document.getElementById('in_cash');
+    const inBurn = document.getElementById('in_burn');
+    const inRev = document.getElementById('in_rev');
+    const inMargin = document.getElementById('in_margin');
+    const inPg = document.getElementById('in_pg');
+    const inGst = document.getElementById('in_gst');
+
+    const fmt = (n) => '₹' + Math.round(n).toLocaleString('en-IN');
+
+    function update() {
+      const cash = parseFloat(inCash.value);
+      const burn = parseFloat(inBurn.value);
+      const rev = parseFloat(inRev.value);
+      const marginPct = parseFloat(inMargin.value);
+      const pgActive = inPg.checked;
+      const gstActive = inGst.checked;
+
+      document.getElementById('val_cash').innerText = fmt(cash);
+      document.getElementById('val_burn').innerText = fmt(burn);
+      document.getElementById('val_rev').innerText = fmt(rev);
+      document.getElementById('val_margin').innerText = marginPct + '%';
+
+      let effectiveMargin = (marginPct / 100);
+      if (pgActive) effectiveMargin -= 0.0236; // 2% + 18% GST = 2.36%
+      if (effectiveMargin < 0.05) effectiveMargin = 0.05;
+
+      const netRev = rev * effectiveMargin;
+      const netBurn = burn - netRev;
+
+      document.getElementById('kpi_net_margin').innerText = (effectiveMargin * 100).toFixed(1) + '%';
+      document.getElementById('kpi_breakeven').innerText = fmt(burn / effectiveMargin);
+
+      if (netBurn <= 0) {
+        document.getElementById('kpi_runway').innerText = '∞ Alive';
+        document.getElementById('kpi_runway').className = 'kpi-value healthy';
+        document.getElementById('kpi_status').innerText = '🟢 Default Alive (Profitable)';
+        document.getElementById('kpi_net_burn').innerText = '+ ' + fmt(Math.abs(netBurn));
+      } else {
+        const runwayMonths = cash / netBurn;
+        document.getElementById('kpi_net_burn').innerText = fmt(netBurn);
+        document.getElementById('kpi_runway').innerText = runwayMonths.toFixed(1) + ' mo';
+        if (runwayMonths >= 18) {
+          document.getElementById('kpi_runway').className = 'kpi-value healthy';
+          document.getElementById('kpi_status').innerText = '🟢 Healthy (> 18 mo)';
+        } else if (runwayMonths >= 9) {
+          document.getElementById('kpi_runway').className = 'kpi-value warning';
+          document.getElementById('kpi_status').innerText = '🟡 Moderate (9-18 mo)';
+        } else {
+          document.getElementById('kpi_runway').className = 'kpi-value danger';
+          document.getElementById('kpi_status').innerText = '🔴 Critical (< 9 mo)';
+        }
+      }
+
+      // 3 Scenarios
+      const bearNetBurn = burn - (rev * 0.7 * effectiveMargin);
+      document.getElementById('sc_base_burn').innerText = fmt(Math.max(0, netBurn));
+      document.getElementById('sc_base_run').innerText = netBurn > 0 ? (cash / netBurn).toFixed(1) + ' mo' : '∞ Alive';
+      
+      document.getElementById('sc_bear_burn').innerText = fmt(Math.max(0, bearNetBurn));
+      document.getElementById('sc_bear_run').innerText = bearNetBurn > 0 ? (cash / bearNetBurn).toFixed(1) + ' mo' : '∞ Alive';
+
+      document.getElementById('sc_zero_burn').innerText = fmt(burn);
+      document.getElementById('sc_zero_run').innerText = (cash / burn).toFixed(1) + ' mo';
+    }
+
+    [inCash, inBurn, inRev, inMargin, inPg, inGst].forEach(el => el.addEventListener('input', update));
+    update();
+
+    document.getElementById('btn_copy_calc').addEventListener('click', function(){
+      const text = "=== BHARAT STARTUP OS · RUNWAY SUMMARY ===\\n" +
+        "Cash in Bank: " + document.getElementById('val_cash').innerText + "\\n" +
+        "Monthly Burn: " + document.getElementById('val_burn').innerText + "\\n" +
+        "MRR: " + document.getElementById('val_rev').innerText + "\\n" +
+        "Runway Projection: " + document.getElementById('kpi_runway').innerText + " (" + document.getElementById('kpi_status').innerText + ")\\n" +
+        "Break-Even MRR: " + document.getElementById('kpi_breakeven').innerText + "\\n" +
+        "Net Margin (Post-Friction): " + document.getElementById('kpi_net_margin').innerText;
+      navigator.clipboard.writeText(text).then(()=>{
+        this.innerText = '✓ Copied to Clipboard!';
+        setTimeout(()=> this.innerText = '📋 Copy Financial Summary', 2000);
+      });
+    });
+  })();
+  </script>`;
+
+  write("calculator.html", shell({ root: "", active: "calculator.html", title: "Unit Economics & Runway Simulator", body }));
+}
+
+/* ================= 4C. ALL-IN-ONE WEB TERMINAL APP ================= */
+{
+  const schemesMin = schemes.map(s => ({
+    slug: s.slug, name: s.name, short: s.shortName, ministry: s.ministry,
+    tagline: s.tagline, cap: s.fundingCap, type: s.supportType, cat: s.category,
+    stage: s.stage, sector: s.sector, applyUrl: s.applyUrl
+  }));
+
+  const promptsMin = promptFiles.map(f => {
+    const src = readText(join(PROMPTS, f));
+    const [fm, mdBody] = frontmatter(src);
+    const titleMatch = mdBody.match(/^#\s+(.*)$/m);
+    return {
+      file: f, num: f.slice(0, 2), title: titleMatch ? titleMatch[1] : f,
+      summary: fm.summary || "", content: mdBody
+    };
+  });
+
+  const body = `
+  <div class="app-terminal-wrap">
+    <div class="app-terminal-header">
+      <div class="app-brand-zone">
+        <span style="font-size:1.8rem;">🇮🇳</span>
+        <div>
+          <div class="app-brand-title">Bharat Startup OS · Web Terminal</div>
+          <div style="font-size:0.85rem; color:var(--text-muted);">Unified Operating System &amp; Government Schemes Intelligence Engine</div>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; gap:10px;">
+        <span class="app-spec-badge">⚡ Web Terminal | OLED Pitch Black | [Nodes: 157]</span>
+        <a class="btn btn-secondary" style="font-size:0.82rem; padding:6px 12px;" href="walkable-map.html">🗺️ 3D India Map</a>
+        <a class="btn btn-primary" style="font-size:0.82rem; padding:6px 12px;" href="${REPO_URL}" target="_blank" rel="noopener">GitHub Repo ↗</a>
+      </div>
+    </div>
+
+    <div class="app-tab-nav">
+      <button class="app-tab-btn active" data-tab="tab-schemes">📋 Central Schemes (69)</button>
+      <button class="app-tab-btn" data-tab="tab-finder">🧭 Scheme Finder Wizard</button>
+      <button class="app-tab-btn" data-tab="tab-compare">⚖️ Compare Schemes</button>
+      <button class="app-tab-btn" data-tab="tab-calc">🧮 Unit Economics Simulator</button>
+      <button class="app-tab-btn" data-tab="tab-states">🏢 320+ State Grants</button>
+      <button class="app-tab-btn" data-tab="tab-incubators">🔬 220+ Incubators</button>
+      <button class="app-tab-btn" data-tab="tab-stack">⚡ Knowledge Stack (01-10)</button>
+      <button class="app-tab-btn" data-tab="tab-prompts">🤖 19 AI Prompts</button>
+      <button class="app-tab-btn" data-tab="tab-worksheets">📝 10 Worksheets</button>
+    </div>
+
+    <!-- Tab 1: Schemes Directory -->
+    <div class="tab-pane active" id="tab-schemes">
+      <div style="display:flex; gap:12px; margin-bottom:16px; flex-wrap:wrap;">
+        <input id="app_scheme_search" type="text" placeholder="Search 69 central schemes (e.g. SISFS, BIG, TIDE, PRISM)..." style="flex:1; min-width:240px; padding:10px 14px; border-radius:var(--radius-sm); border:1px solid var(--border); background:var(--surface); color:var(--text);">
+        <select id="app_scheme_cat" style="padding:10px 14px; border-radius:var(--radius-sm); border:1px solid var(--border); background:var(--surface); color:var(--text);">
+          <option value="">All Categories</option>
+          <option value="grant">Grants</option>
+          <option value="equity">Equity</option>
+          <option value="loan-credit">Loans / Credit</option>
+          <option value="incubation">Incubation</option>
+        </select>
+      </div>
+      <div class="modules-grid" id="app_schemes_list"></div>
+    </div>
+
+    <!-- Tab 2: Scheme Finder Wizard -->
+    <div class="tab-pane" id="tab-finder">
+      <div class="calc-card">
+        <h2 style="font-size:1.3rem;">🧭 Interactive 5-Question Scheme Finder</h2>
+        <p class="muted">Answer 5 simple questions to get matched with eligible Government of India grants.</p>
+        
+        <div style="display:flex; flex-direction:column; gap:16px; margin:16px 0;">
+          <div>
+            <strong>1. What is your startup stage?</strong>
+            <div style="display:flex; gap:10px; margin-top:6px; flex-wrap:wrap;">
+              <label><input type="radio" name="w_stage" value="ideation" checked> Ideation / Concept</label>
+              <label><input type="radio" name="w_stage" value="validation"> Validation / PoC</label>
+              <label><input type="radio" name="w_stage" value="seed"> Seed / Early Traction</label>
+              <label><input type="radio" name="w_stage" value="scaling"> Scaling / Growth</label>
+            </div>
+          </div>
+
+          <div>
+            <strong>2. What type of support do you need most?</strong>
+            <div style="display:flex; gap:10px; margin-top:6px; flex-wrap:wrap;">
+              <label><input type="radio" name="w_need" value="grant" checked> Non-Dilutive Grant</label>
+              <label><input type="radio" name="w_need" value="equity"> Seed Equity</label>
+              <label><input type="radio" name="w_need" value="loan-credit"> Collateral-Free Loan</label>
+              <label><input type="radio" name="w_need" value="incubation"> Lab Access &amp; Incubation</label>
+            </div>
+          </div>
+
+          <div>
+            <strong>3. What sector does your product belong to?</strong>
+            <div style="display:flex; gap:10px; margin-top:6px; flex-wrap:wrap;">
+              <label><input type="radio" name="w_sector" value="general" checked> Sector Agnostic / Tech</label>
+              <label><input type="radio" name="w_sector" value="deeptech"> DeepTech / AI / Hardware</label>
+              <label><input type="radio" name="w_sector" value="biotech"> Biotech / MedTech</label>
+              <label><input type="radio" name="w_sector" value="agritech"> AgriTech / Food</label>
+              <label><input type="radio" name="w_sector" value="defence"> Defence / Aerospace</label>
+            </div>
+          </div>
+
+          <div>
+            <strong>4. Is your company DPIIT-Recognized?</strong>
+            <div style="display:flex; gap:10px; margin-top:6px;">
+              <label><input type="radio" name="w_dpiit" value="yes" checked> Yes (DPIIT Recognized)</label>
+              <label><input type="radio" name="w_dpiit" value="no"> No / Individual Innovator</label>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn btn-primary" id="btn_run_wizard" style="align-self:flex-start;">Find Matching Schemes →</button>
+        
+        <div style="margin-top:20px;">
+          <h3 style="font-size:1.1rem; margin-bottom:12px;">Matched Schemes Recommendations</h3>
+          <div class="modules-grid" id="wizard_results"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 3: Scheme Compare -->
+    <div class="tab-pane" id="tab-compare">
+      <div class="calc-card">
+        <h2 style="font-size:1.3rem;">⚖️ Side-by-Side Scheme Compare</h2>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:14px 0;">
+          <select id="cmp_scheme_1" style="padding:10px; border-radius:var(--radius-sm); border:1px solid var(--border); background:var(--surface); color:var(--text);"></select>
+          <select id="cmp_scheme_2" style="padding:10px; border-radius:var(--radius-sm); border:1px solid var(--border); background:var(--surface); color:var(--text);"></select>
+        </div>
+        <div class="table-wrap">
+          <table style="width:100%;">
+            <thead><tr><th>Attribute</th><th id="cmp_head_1">Scheme 1</th><th id="cmp_head_2">Scheme 2</th></tr></thead>
+            <tbody id="cmp_table_body"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 4: Unit Economics Calculator -->
+    <div class="tab-pane" id="tab-calc">
+      <div style="padding:10px 0;">
+        <h2 style="font-size:1.4rem;">🧮 Interactive Unit Economics &amp; Runway Simulator</h2>
+        <p class="muted">Use live range sliders to stress-test your monthly burn, revenue, and runway.</p>
+        <div id="embedded_calc_container"></div>
+      </div>
+    </div>
+
+    <!-- Tab 5: State Schemes -->
+    <div class="tab-pane" id="tab-states">
+      <div class="calc-card">
+        <h2 style="font-size:1.3rem;">🏢 320+ State Startup Policy Grants</h2>
+        <p class="muted">Access state-specific seed capital, lease rentals, patent reimbursements, and electricity duty subsidies.</p>
+        <div style="margin-top:16px;">
+          <a class="btn btn-primary" href="state-schemes.html">Open Full State Schemes Directory →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 6: Incubators -->
+    <div class="tab-pane" id="tab-incubators">
+      <div class="calc-card">
+        <h2 style="font-size:1.3rem;">🔬 220+ Technology Business Incubators &amp; AICs</h2>
+        <p class="muted">Search verified TBIs and Atal Incubation Centres across all major Tier-1, Tier-2, and Tier-3 Indian cities.</p>
+        <div style="margin-top:16px;">
+          <a class="btn btn-primary" href="incubators.html">Open Interactive Incubator Map &amp; Directory →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 7: Knowledge Stack -->
+    <div class="tab-pane" id="tab-stack">
+      <div class="calc-card">
+        <h2 style="font-size:1.3rem;">⚡ Founder Knowledge Stack (01-10)</h2>
+        <p class="muted">10 structured markdown sections establishing single source-of-truth venture context.</p>
+        <div class="stack-sections-grid" style="margin-top:16px;">
+          <a class="stack-card" href="stack/01-company.html"><span class="s-num">01</span><h3>Company</h3><p>Legal entity, cap table, founding thesis.</p></a>
+          <a class="stack-card" href="stack/02-customer.html"><span class="s-num">02</span><h3>Customer</h3><p>ICP persona, quantified pain points.</p></a>
+          <a class="stack-card" href="stack/03-market.html"><span class="s-num">03</span><h3>Market</h3><p>TAM/SAM/SOM, market drivers.</p></a>
+          <a class="stack-card" href="stack/04-product.html"><span class="s-num">04</span><h3>Product</h3><p>Architecture, core roadmap.</p></a>
+          <a class="stack-card" href="stack/05-gtm.html"><span class="s-num">05</span><h3>GTM</h3><p>Distribution channels, CAC payback.</p></a>
+          <a class="stack-card" href="stack/06-operations.html"><span class="s-num">06</span><h3>Operations</h3><p>Team structure, compliance checklist.</p></a>
+          <a class="stack-card" href="stack/07-money.html"><span class="s-num">07</span><h3>Money</h3><p>Unit economics, gross margins, runway.</p></a>
+          <a class="stack-card" href="stack/08-capital.html"><span class="s-num">08</span><h3>Capital</h3><p>Govt schemes, dilution strategy.</p></a>
+          <a class="stack-card" href="stack/09-brand.html"><span class="s-num">09</span><h3>Brand</h3><p>Voice guidelines, positioning pillars.</p></a>
+          <a class="stack-card" href="stack/10-pulse.html"><span class="s-num">10</span><h3>Pulse</h3><p>Weekly metrics cadence, OKRs.</p></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 8: AI Prompts -->
+    <div class="tab-pane" id="tab-prompts">
+      <div style="margin-bottom:14px;">
+        <h2 style="font-size:1.3rem;">🤖 19 Battle-Tested Founder AI Prompts</h2>
+        <p class="muted">Click any prompt to copy its complete markdown system prompt to your clipboard.</p>
+      </div>
+      <div class="prompts-grid" id="app_prompts_list"></div>
+    </div>
+
+    <!-- Tab 9: Worksheets -->
+    <div class="tab-pane" id="tab-worksheets">
+      <div class="calc-card">
+        <h2 style="font-size:1.3rem;">📝 10 Actionable Founder Worksheets</h2>
+        <p class="muted">Structured fill-in templates for customer interviews, competitor teardowns, and sprint recaps.</p>
+        <div style="margin-top:16px;">
+          <a class="btn btn-primary" href="worksheets/index.html">View All 10 Worksheets →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  window.APP_DATA = {
+    schemes: ${JSON.stringify(schemesMin)},
+    prompts: ${JSON.stringify(promptsMin)}
+  };
+
+  (function(){
+    // Tab switching
+    const tabBtns = document.querySelectorAll('.app-tab-btn');
+    const tabPanes = document.querySelectorAll('.tab-pane');
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabBtns.forEach(b => b.classList.remove('active'));
+        tabPanes.forEach(p => p.classList.remove('active'));
+        btn.classList.add('active');
+        const target = btn.getAttribute('data-tab');
+        document.getElementById(target).classList.add('active');
+      });
+    });
+
+    // Render Schemes in Tab 1
+    const schemesList = document.getElementById('app_schemes_list');
+    const searchIn = document.getElementById('app_scheme_search');
+    const catSelect = document.getElementById('app_scheme_cat');
+
+    function renderSchemes() {
+      const q = searchIn.value.toLowerCase();
+      const cat = catSelect.value;
+      const filtered = window.APP_DATA.schemes.filter(s => {
+        const matchQ = s.name.toLowerCase().includes(q) || (s.short && s.short.toLowerCase().includes(q)) || s.tagline.toLowerCase().includes(q);
+        const matchCat = !cat || s.cat === cat;
+        return matchQ && matchCat;
+      });
+
+      schemesList.innerHTML = filtered.map(s => \`
+        <div class="module-card">
+          <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+            <span class="badge b-grant">\${s.type || s.cat}</span>
+            <span style="font-family:var(--font-mono); font-weight:700; color:var(--primary); font-size:0.9rem;">\${s.cap || ''}</span>
+          </div>
+          <h3 style="margin-top:8px;">\${s.name}</h3>
+          <p>\${s.tagline}</p>
+          <div style="display:flex; gap:10px; margin-top:8px;">
+            <a class="btn btn-secondary" style="font-size:0.78rem; padding:4px 8px;" href="schemes/\${s.slug}.html">Full Scheme Page →</a>
+            \${s.applyUrl ? \`<a class="btn btn-primary" style="font-size:0.78rem; padding:4px 8px;" href="\${s.applyUrl}" target="_blank" rel="noopener">Official Apply ↗</a>\` : ''}
+          </div>
+        </div>
+      \`).join('');
+    }
+    searchIn.addEventListener('input', renderSchemes);
+    catSelect.addEventListener('change', renderSchemes);
+    renderSchemes();
+
+    // Scheme Compare in Tab 3
+    const s1 = document.getElementById('cmp_scheme_1');
+    const s2 = document.getElementById('cmp_scheme_2');
+    window.APP_DATA.schemes.forEach((s, i) => {
+      s1.add(new Option(s.short ? s.short + ' - ' + s.name : s.name, i));
+      s2.add(new Option(s.short ? s.short + ' - ' + s.name : s.name, (i + 1) % window.APP_DATA.schemes.length));
+    });
+    s2.selectedIndex = 1;
+
+    function renderCompare() {
+      const a = window.APP_DATA.schemes[s1.value];
+      const b = window.APP_DATA.schemes[s2.value];
+      document.getElementById('cmp_head_1').innerText = a.name;
+      document.getElementById('cmp_head_2').innerText = b.name;
+
+      const rows = [
+        ['Nodal Ministry / Agency', a.ministry, b.ministry],
+        ['Funding Cap / Ceilings', a.cap, b.cap],
+        ['Support Type', a.type || a.cat, b.type || b.cat],
+        ['Eligible Stage', a.stage || 'All Stages', b.stage || 'All Stages'],
+        ['Focus Sector', a.sector || 'Agnostic', b.sector || 'Agnostic'],
+        ['Official Application Portal', \`<a href="\${a.applyUrl || '#'}" target="_blank">Direct Portal ↗</a>\`, \`<a href="\${b.applyUrl || '#'}" target="_blank">Direct Portal ↗</a>\`]
+      ];
+
+      document.getElementById('cmp_table_body').innerHTML = rows.map(r => \`
+        <tr><td style="font-weight:600; width:25%;">\${r[0]}</td><td style="width:37%;">\${r[1]}</td><td style="width:37%;">\${r[2]}</td></tr>
+      \`).join('');
+    }
+    s1.addEventListener('change', renderCompare);
+    s2.addEventListener('change', renderCompare);
+    renderCompare();
+
+    // Prompts in Tab 8
+    const promptsList = document.getElementById('app_prompts_list');
+    promptsList.innerHTML = window.APP_DATA.prompts.map(p => \`
+      <div class="prompt-card">
+        <span class="p-num">Prompt \${p.num}</span>
+        <h3>\${p.title}</h3>
+        <p>\${p.summary}</p>
+        <div style="display:flex; gap:10px; margin-top:10px;">
+          <button class="copy-btn-action" data-prompt-file="\${p.file}">📋 Copy Prompt</button>
+          <a class="btn btn-secondary" style="font-size:0.78rem; padding:4px 8px;" href="prompts/\${p.file.replace('.md', '.html')}">Open Page →</a>
+        </div>
+      </div>
+    \`).join('');
+
+    promptsList.querySelectorAll('.copy-btn-action').forEach(btn => {
+      btn.addEventListener('click', function(){
+        const file = this.getAttribute('data-prompt-file');
+        const item = window.APP_DATA.prompts.find(x => x.file === file);
+        if (item) {
+          navigator.clipboard.writeText(item.content).then(() => {
+            this.innerText = '✓ Copied!';
+            this.style.background = '#10b981';
+            this.style.color = '#fff';
+            setTimeout(() => {
+              this.innerText = '📋 Copy Prompt';
+              this.style.background = '';
+              this.style.color = '';
+            }, 2000);
+          });
+        }
+      });
+    });
+
+    // Scheme Finder Wizard
+    document.getElementById('btn_run_wizard').addEventListener('click', function(){
+      const stage = document.querySelector('input[name="w_stage"]:checked').value;
+      const need = document.querySelector('input[name="w_need"]:checked').value;
+      const sector = document.querySelector('input[name="w_sector"]:checked').value;
+
+      const matches = window.APP_DATA.schemes.filter(s => {
+        let score = 0;
+        if (s.cat === need || s.type === need) score += 2;
+        if (s.stage && (s.stage.includes(stage) || s.stage === 'general')) score += 1;
+        if (s.sector && (s.sector.includes(sector) || s.sector === 'general')) score += 1;
+        return score >= 2;
+      });
+
+      const resList = document.getElementById('wizard_results');
+      if (matches.length === 0) {
+        resList.innerHTML = '<p class="muted">No direct matches found. Try selecting Sector Agnostic or Grants.</p>';
+      } else {
+        resList.innerHTML = matches.slice(0, 6).map(s => \`
+          <div class="module-card">
+            <span class="badge b-grant">\${s.type || s.cat}</span>
+            <h3 style="margin-top:8px;">\${s.name}</h3>
+            <p>\${s.tagline}</p>
+            <div style="display:flex; gap:10px; margin-top:8px;">
+              <a class="btn btn-secondary" style="font-size:0.78rem; padding:4px 8px;" href="schemes/\${s.slug}.html">Details →</a>
+              \${s.applyUrl ? \`<a class="btn btn-primary" style="font-size:0.78rem; padding:4px 8px;" href="\${s.applyUrl}" target="_blank" rel="noopener">Apply ↗</a>\` : ''}
+            </div>
+          </div>
+        \`).join('');
+      }
+    });
+
+  })();
+  </script>`;
+
+  write("app.html", shell({ root: "", active: "app.html", title: "Web Terminal App", body, immersive: false }));
 }
 
 /* ================= 5. UNIFIED SEARCH INDEX ================= */
