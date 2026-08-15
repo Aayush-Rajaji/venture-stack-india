@@ -1,7 +1,7 @@
 {
-  "siteName": "Bharat Startup OS",
+  "siteName": "Bharat Startup OS · Venture Stack India",
   "tagline": "The Unified Operating System & Government Schemes Intelligence Engine for Indian Founders.",
-  "siteBase": "https://aayush-rajaji.github.io/bharat-startup-os/",
-  "pathPrefix": "/bharat-startup-os/",
-  "repo": "https://github.com/Aayush-Rajaji/bharat-startup-os"
+  "siteBase": "https://aayush-rajaji.github.io/venture-stack-india/",
+  "pathPrefix": "/venture-stack-india/",
+  "repo": "https://github.com/Aayush-Rajaji/venture-stack-india"
 }

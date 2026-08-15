@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://aayush-rajaji.github.io/bharat-startup-os/sitemap.xml
+Sitemap: https://aayush-rajaji.github.io/venture-stack-india/sitemap.xml
