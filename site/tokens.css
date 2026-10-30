@@ -14,9 +14,10 @@
   --brand-green: #359a4c;       /* decision-tree "no" branches, success */
   --brand-blue: #2456a6;        /* hyperlink blue */
 
-  /* ---- typography (Claude Design System) ---- */
-  --font-display: "Newsreader", "Tiempos Headline", "Iowan Old Style", "Georgia", serif;
-  --font-body: "Plus Jakarta Sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  /* ---- typography: 3-Family Hierarchy (~70% Plus Jakarta Sans / ~15% Playfair Display / ~15% Outfit) ---- */
+  --font-hero: "Outfit", "Plus Jakarta Sans", -apple-system, sans-serif;
+  --font-display: "Playfair Display", "Georgia", "Tiempos Headline", "Newsreader", serif;
+  --font-body: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
   /* ---- shape ---- */
