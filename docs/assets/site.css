@@ -1243,10 +1243,21 @@ body.dock-minimized {
 
 @media (max-width: 768px) {
   .founder-dock-inner {
-    padding: 5px 12px;
+    padding: 5px 10px;
     gap: 8px;
   }
+  .dock-founder-pill {
+    display: none;
+  }
   .dock-credentials-flow {
+    display: inline-flex;
+    font-size: 0.70rem;
+    align-items: center;
+  }
+  .dock-credentials-flow strong {
+    font-size: 0.72rem;
+  }
+  .dock-action-pill.dock-action-ws {
     display: none;
   }
   .dock-action-pill span {
@@ -1256,7 +1267,7 @@ body.dock-minimized {
     padding: 4px 6px;
   }
   .dock-founder-name {
-    font-size: 0.86rem;
+    font-size: 0.84rem;
   }
 }
 

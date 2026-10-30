@@ -290,7 +290,7 @@ class StartupIndiaApp(ctk.CTk):
 
         credit = ctk.CTkLabel(
             self.footer_frame,
-            text="⚡ Venture Stack India | Aayush Rajaji (Founder: AIGyde · Greston Global · FounderTube · WeScaleo) | MIT License",
+            text="⚡ Venture Stack India | Aayush Rajaji (Co-Founder @ WeScaleo · wescaleo.in) | MIT License",
             font=ctk.CTkFont(size=11),
             text_color=self.colors["text_muted"]
         )
@@ -298,6 +298,13 @@ class StartupIndiaApp(ctk.CTk):
 
         links = ctk.CTkFrame(self.footer_frame, fg_color="transparent")
         links.grid(row=0, column=2, padx=20, pady=6, sticky="e")
+
+        ctk.CTkButton(
+            links, text="wescaleo.in ↗", width=86, height=22,
+            fg_color="#0065C2", text_color="#ffffff",
+            hover_color="#00509E", font=ctk.CTkFont(size=11, weight="bold"),
+            command=lambda: webbrowser.open("https://wescaleo.in/")
+        ).pack(side="left", padx=3)
 
         ctk.CTkButton(
             links, text="GitHub", width=60, height=22,
@@ -311,20 +318,6 @@ class StartupIndiaApp(ctk.CTk):
             fg_color="transparent", text_color=self.colors["primary"],
             hover_color=self.colors["surface_alt"], font=ctk.CTkFont(size=11),
             command=lambda: webbrowser.open("https://www.linkedin.com/in/aayushrajaji/")
-        ).pack(side="left", padx=2)
-
-        ctk.CTkButton(
-            links, text="WeScaleo", width=66, height=22,
-            fg_color="transparent", text_color=self.colors["primary"],
-            hover_color=self.colors["surface_alt"], font=ctk.CTkFont(size=11),
-            command=lambda: webbrowser.open("https://wescaleo.in/")
-        ).pack(side="left", padx=2)
-
-        ctk.CTkButton(
-            links, text="AIGyde", width=56, height=22,
-            fg_color="transparent", text_color=self.colors["primary"],
-            hover_color=self.colors["surface_alt"], font=ctk.CTkFont(size=11),
-            command=lambda: webbrowser.open("https://aigyde.com/")
         ).pack(side="left", padx=2)
 
     def _clear_main(self):

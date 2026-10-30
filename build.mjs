@@ -408,7 +408,7 @@ ${body}
   <div class="founder-dock-inner">
     <!-- Left: Founder Identity & Verified Ventures Line -->
     <div class="dock-identity">
-      <a href="${root}about.html" class="dock-avatar-link" title="Aayush Rajaji — Architect & Maintainer">
+      <a href="${root}about.html" class="dock-avatar-link" title="Aayush Rajaji — Co-Founder @ wescaleo.in">
         <img class="dock-avatar" src="${root}assets/aayush.png" alt="Aayush Rajaji" width="32" height="32" loading="lazy">
         <span class="dock-live-pulse" title="System Online 24/7"></span>
       </a>
@@ -418,13 +418,7 @@ ${body}
           <span class="dock-founder-pill"><span class="badge-dot"></span> Founder</span>
           <span class="dock-credentials-flow">
             <span class="flow-sep">·</span>
-            <a href="https://aigyde.com/" target="_blank" rel="noopener" class="cred-link" title="AIGyde — AI Advisory & Intelligence">Founder &amp; CBO @ <strong>AIGyde</strong></a>
-            <span class="flow-dot">·</span>
-            <span class="cred-static" title="Greston Global — Cross-Border Compliance">Founder @ <strong>Greston Global</strong></span>
-            <span class="flow-dot">·</span>
-            <a href="https://github.com/Aayush-Rajaji" target="_blank" rel="noopener" class="cred-link" title="FounderTube">Co-Founder @ <strong>FounderTube</strong></a>
-            <span class="flow-dot">·</span>
-            <a href="https://wescaleo.in/" target="_blank" rel="noopener" class="cred-link cred-wescaleo" title="WeScaleo — Sovereign FinTech & AI Infrastructure">Co-Founder @ <strong class="brand-ws-text">wescaleo.in</strong></a>
+            <a href="https://wescaleo.in/" target="_blank" rel="noopener" class="cred-link cred-wescaleo" title="WeScaleo — Sovereign Enterprise AI &amp; FinTech Infrastructure">Co-Founder @ <strong class="brand-ws-text">wescaleo.in ↗</strong></a>
           </span>
         </div>
       </div>
@@ -433,6 +427,9 @@ ${body}
     <!-- Right: Verified Connect & Navigation Actions -->
     <div class="dock-actions">
       <div class="dock-connect-pills">
+        <a href="https://wescaleo.in/" target="_blank" rel="noopener" class="dock-action-pill dock-action-ws" title="Visit WeScaleo (wescaleo.in)">
+          <span class="ws-dot"></span> <span>wescaleo.in ↗</span>
+        </a>
         <a href="https://github.com/Aayush-Rajaji" target="_blank" rel="noopener" class="dock-action-pill" title="GitHub (@Aayush-Rajaji)">
           ${ICONS.github} <span>GitHub</span>
         </a>
@@ -453,7 +450,7 @@ ${body}
   <!-- Minimized Floating Capsule -->
   <button class="dock-floating-capsule" id="dock-floating-capsule" type="button" aria-label="Expand Founder Dock">
     <img src="${root}assets/aayush.png" alt="Aayush Rajaji" width="22" height="22" class="capsule-avatar">
-    <span class="capsule-label"><strong>Aayush Rajaji</strong> · Founder Dossier (4 Ventures)</span>
+    <span class="capsule-label"><strong>Aayush Rajaji</strong> · Co-Founder @ wescaleo.in</span>
     <span class="capsule-arrow">⌃</span>
   </button>
 </footer>
@@ -590,22 +587,19 @@ const write = (rel, html) => {
       <div class="home-founder-content">
         <div class="home-founder-heading">
           <h2>Aayush Rajaji</h2>
-          <span class="home-founder-lead">Venture Architect &amp; Sovereign AI Infrastructure Builder</span>
+          <span class="home-founder-lead">Co-Founder @ <a href="https://wescaleo.in/" target="_blank" rel="noopener" class="founder-lead-link">wescaleo.in</a> · Venture Architect &amp; Sovereign AI Systems Builder</span>
         </div>
         <div class="home-founder-tags">
-          <a href="https://aigyde.com/" target="_blank" rel="noopener" class="founder-tag">Founder &amp; CBO @ <strong>AIGyde ↗</strong></a>
-          <span class="founder-tag">Founder @ <strong>Greston Global</strong></span>
-          <a href="https://github.com/Aayush-Rajaji" target="_blank" rel="noopener" class="founder-tag">Co-Founder @ <strong>FounderTube ↗</strong></a>
-          <a href="https://wescaleo.in/" target="_blank" rel="noopener" class="founder-tag founder-tag-wescaleo">Co-Founder @ <strong class="brand-ws-text">wescaleo.in ↗</strong></a>
+          <a href="https://wescaleo.in/" target="_blank" rel="noopener" class="founder-tag founder-tag-wescaleo"><span class="ws-indicator-dot"></span> Co-Founder @ <strong class="brand-ws-text">wescaleo.in ↗</strong></a>
         </div>
         <p class="home-founder-desc">
           Building sovereign enterprise AI infrastructure, deterministic business operating systems, and financial intelligence tools. Venture Stack India synthesizes verified central schemes and venture frameworks into an open, hallucination-resistant knowledge base for Indian founders.
         </p>
         <div class="home-founder-actions">
+          <a href="https://wescaleo.in/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Visit wescaleo.in ↗</a>
           <a href="https://github.com/Aayush-Rajaji" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">${ICONS.github} GitHub (@Aayush-Rajaji)</a>
           <a href="https://www.linkedin.com/in/aayushrajaji/" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">${ICONS.linkedin} Connect on LinkedIn</a>
-          <a href="https://wescaleo.in/" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">Visit wescaleo.in ↗</a>
-          <a href="about.html" class="btn btn-primary btn-sm">Read Full Dossier &amp; Architecture →</a>
+          <a href="about.html" class="btn btn-secondary btn-sm">Read Full Dossier &amp; Architecture →</a>
         </div>
       </div>
     </div>
@@ -864,16 +858,12 @@ write("about.html", shell({
       <div class="spotlight-title-group">
         <h2>Aayush Rajaji</h2>
         <div class="spotlight-roles">
-          <a href="https://aigyde.com/" target="_blank" rel="noopener" class="spotlight-chip">Founder &amp; CBO @ <strong>AIGyde</strong> ↗</a>
-          <span class="spotlight-chip">Founder @ <strong>Greston Global</strong></span>
-          <a href="https://github.com/Aayush-Rajaji" target="_blank" rel="noopener" class="spotlight-chip">Co-Founder @ <strong>FounderTube</strong> ↗</a>
-          <a href="https://wescaleo.in/" target="_blank" rel="noopener" class="spotlight-chip spotlight-chip-wescaleo">Co-Founder @ <strong>wescaleo.in</strong> ↗</a>
+          <a href="https://wescaleo.in/" target="_blank" rel="noopener" class="spotlight-chip spotlight-chip-wescaleo"><span class="ws-indicator-dot"></span> Co-Founder @ <strong>wescaleo.in</strong> ↗</a>
         </div>
         <div class="spotlight-links">
+          <a href="https://wescaleo.in/" target="_blank" rel="noopener" class="spotlight-link-pill spotlight-link-ws">wescaleo.in ↗</a>
           <a href="https://github.com/Aayush-Rajaji" target="_blank" rel="noopener" class="spotlight-link-pill">${ICONS.github} GitHub (@Aayush-Rajaji)</a>
           <a href="https://www.linkedin.com/in/aayushrajaji/" target="_blank" rel="noopener" class="spotlight-link-pill">${ICONS.linkedin} LinkedIn Profile</a>
-          <a href="https://wescaleo.in/" target="_blank" rel="noopener" class="spotlight-link-pill">wescaleo.in ↗</a>
-          <a href="https://aigyde.com/" target="_blank" rel="noopener" class="spotlight-link-pill">aigyde.com ↗</a>
         </div>
       </div>
     </div>
