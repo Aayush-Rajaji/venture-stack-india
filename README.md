@@ -63,12 +63,12 @@ python3 -m http.server -d docs 8000
       <td style="border: none; vertical-align: top;">
         <h3 style="margin: 0 0 4px 0; font-size: 1.25rem;">Aayush Rajaji</h3>
         <p style="margin: 0 0 8px 0; font-weight: 600; color: #4a566b; font-size: 0.95rem;">
-          Co-Founder @ <a href="https://wescaleo.in/" target="_blank" rel="noopener" style="color: #0065C2;"><strong>wescaleo.in</strong></a>
+          Co-Founder @ <a href="https://wescaleo.in/" target="_blank" rel="noopener" style="color: #0065C2;"><strong>wescaleo.in</strong></a> · Venture Architect
         </p>
         <p style="margin: 0; font-size: 0.9rem;">
-          <a href="https://wescaleo.in/"><strong>wescaleo.in ↗</strong></a> · 
           <a href="https://github.com/Aayush-Rajaji"><strong>GitHub (@Aayush-Rajaji)</strong></a> · 
-          <a href="https://www.linkedin.com/in/aayushrajaji/"><strong>LinkedIn</strong></a>
+          <a href="https://www.linkedin.com/in/aayushrajaji/"><strong>LinkedIn</strong></a> · 
+          <a href="https://wescaleo.in/"><strong>WeScaleo Platform ↗</strong></a>
         </p>
       </td>
     </tr>

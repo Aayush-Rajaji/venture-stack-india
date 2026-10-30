@@ -290,7 +290,7 @@ class StartupIndiaApp(ctk.CTk):
 
         credit = ctk.CTkLabel(
             self.footer_frame,
-            text="⚡ Venture Stack India | Aayush Rajaji (Co-Founder @ WeScaleo · wescaleo.in) | MIT License",
+            text="⚡ Venture Stack India | Aayush Rajaji (Co-Founder @ WeScaleo) | MIT License",
             font=ctk.CTkFont(size=11),
             text_color=self.colors["text_muted"]
         )
@@ -300,7 +300,7 @@ class StartupIndiaApp(ctk.CTk):
         links.grid(row=0, column=2, padx=20, pady=6, sticky="e")
 
         ctk.CTkButton(
-            links, text="wescaleo.in ↗", width=86, height=22,
+            links, text="WeScaleo ↗", width=78, height=22,
             fg_color="#0065C2", text_color="#ffffff",
             hover_color="#00509E", font=ctk.CTkFont(size=11, weight="bold"),
             command=lambda: webbrowser.open("https://wescaleo.in/")

@@ -427,9 +427,6 @@ ${body}
     <!-- Right: Verified Connect & Navigation Actions -->
     <div class="dock-actions">
       <div class="dock-connect-pills">
-        <a href="https://wescaleo.in/" target="_blank" rel="noopener" class="dock-action-pill dock-action-ws" title="Visit WeScaleo (wescaleo.in)">
-          <span class="ws-dot"></span> <span>wescaleo.in ↗</span>
-        </a>
         <a href="https://github.com/Aayush-Rajaji" target="_blank" rel="noopener" class="dock-action-pill" title="GitHub (@Aayush-Rajaji)">
           ${ICONS.github} <span>GitHub</span>
         </a>
@@ -496,7 +493,7 @@ const write = (rel, html) => {
   <div class="hero">
     <div class="kicker">Sovereign Startup Intelligence · 2026 Edition</div>
     <h1>Venture Stack India</h1>
-    <div class="hero-subhead">Unified Bharat Startup Operating System &amp; Government Schemes Intelligence Engine 🇮🇳</div>
+    <div class="hero-subhead">Unified Bharat Startup Operating System &amp; Government Schemes Intelligence Engine</div>
     <p class="lede">Every Central Government scheme, state grant, and incubator directory — fused with an AI-native company knowledge stack, 19 execution prompts, and 10 actionable worksheets.</p>
     <div class="hero-actions">
       <a class="btn btn-primary" href="app.html">💻 Launch Full Web App</a>
@@ -587,19 +584,21 @@ const write = (rel, html) => {
       <div class="home-founder-content">
         <div class="home-founder-heading">
           <h2>Aayush Rajaji</h2>
-          <span class="home-founder-lead">Co-Founder @ <a href="https://wescaleo.in/" target="_blank" rel="noopener" class="founder-lead-link">wescaleo.in</a> · Venture Architect &amp; Sovereign AI Systems Builder</span>
+          <span class="home-founder-lead">Venture Architect &amp; Sovereign AI Systems Builder</span>
         </div>
         <div class="home-founder-tags">
           <a href="https://wescaleo.in/" target="_blank" rel="noopener" class="founder-tag founder-tag-wescaleo"><span class="ws-indicator-dot"></span> Co-Founder @ <strong class="brand-ws-text">wescaleo.in ↗</strong></a>
+          <span class="founder-tag">🏛️ Bharat OS &amp; Scheme Intelligence</span>
+          <span class="founder-tag">🛡️ Deterministic Venture Ops</span>
         </div>
         <p class="home-founder-desc">
-          Building sovereign enterprise AI infrastructure, deterministic business operating systems, and financial intelligence tools. Venture Stack India synthesizes verified central schemes and venture frameworks into an open, hallucination-resistant knowledge base for Indian founders.
+          Building sovereign enterprise AI infrastructure, deterministic business operating systems, and financial intelligence tools. Venture Stack India synthesizes 69 verified central schemes, 320+ state grants, and 220+ incubators into an open, hallucination-resistant knowledge base for Indian founders.
         </p>
         <div class="home-founder-actions">
-          <a href="https://wescaleo.in/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Visit wescaleo.in ↗</a>
+          <a href="https://wescaleo.in/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Explore WeScaleo Platform ↗</a>
           <a href="https://github.com/Aayush-Rajaji" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">${ICONS.github} GitHub (@Aayush-Rajaji)</a>
           <a href="https://www.linkedin.com/in/aayushrajaji/" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">${ICONS.linkedin} Connect on LinkedIn</a>
-          <a href="about.html" class="btn btn-secondary btn-sm">Read Full Dossier &amp; Architecture →</a>
+          <a href="about.html" class="btn btn-secondary btn-sm">Read Platform Dossier &amp; Architecture →</a>
         </div>
       </div>
     </div>
@@ -857,11 +856,11 @@ write("about.html", shell({
       </div>
       <div class="spotlight-title-group">
         <h2>Aayush Rajaji</h2>
+        <p class="spotlight-lead">Venture Architect &amp; Sovereign AI Systems Builder</p>
         <div class="spotlight-roles">
-          <a href="https://wescaleo.in/" target="_blank" rel="noopener" class="spotlight-chip spotlight-chip-wescaleo"><span class="ws-indicator-dot"></span> Co-Founder @ <strong>wescaleo.in</strong> ↗</a>
+          <a href="https://wescaleo.in/" target="_blank" rel="noopener" class="spotlight-chip spotlight-chip-wescaleo"><span class="ws-indicator-dot"></span> Co-Founder @ <strong class="brand-ws-text">wescaleo.in ↗</strong></a>
         </div>
         <div class="spotlight-links">
-          <a href="https://wescaleo.in/" target="_blank" rel="noopener" class="spotlight-link-pill spotlight-link-ws">wescaleo.in ↗</a>
           <a href="https://github.com/Aayush-Rajaji" target="_blank" rel="noopener" class="spotlight-link-pill">${ICONS.github} GitHub (@Aayush-Rajaji)</a>
           <a href="https://www.linkedin.com/in/aayushrajaji/" target="_blank" rel="noopener" class="spotlight-link-pill">${ICONS.linkedin} LinkedIn Profile</a>
         </div>
