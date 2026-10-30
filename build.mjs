@@ -29,7 +29,7 @@ const SITE_NAME = CONFIG.siteName || "Bharat Startup OS";
 const TAGLINE = CONFIG.tagline || "The Unified Operating System & Government Schemes Intelligence Engine for Indian Founders.";
 const SITE_BASE = CONFIG.siteBase || "https://aayush-rajaji.github.io/bharat-startup-os/";
 const PATH_PREFIX = CONFIG.pathPrefix ?? "/startup-india-os/";
-const REPO_URL = CONFIG.repo || "https://github.com/Aayush-Rajaji/startup-india-os";
+const REPO_URL = CONFIG.repo || "https://github.com/Aayush-Rajaji/venture-stack-india";
 
 /* utilities */
 const readJSON = (f) => {
@@ -404,27 +404,57 @@ ${sidebar(root, active)}
 ${body}
 </main>
 </div>`}
-${immersive ? "" : `
-<footer class="footer"><div class="footer-inner">
-  <div class="footer-author">
-    <img class="author-avatar" src="${root}assets/aayush.png" alt="Aayush Rajaji" width="36" height="36" loading="lazy">
-    <div class="author-meta">
-      <div class="author-role">Founder &amp; CBO @ AIGyde · Founder @ Greston Global</div>
-      <div class="author-name">Aayush Rajaji</div>
-      <div class="author-links">
-        <a href="https://github.com/Aayush-Rajaji" target="_blank" rel="noopener">GitHub</a> ·
-        <a href="https://www.linkedin.com/in/aayushrajaji/" target="_blank" rel="noopener">LinkedIn</a>
+<footer class="founder-dock" id="founder-dock" role="contentinfo" aria-label="Founder & Platform Dossier">
+  <div class="founder-dock-inner">
+    <!-- Left: Founder Persona & Ventures -->
+    <div class="dock-founder">
+      <a href="https://github.com/Aayush-Rajaji" target="_blank" rel="noopener" class="dock-avatar-frame" title="Aayush Rajaji — Architect & Maintainer">
+        <img class="dock-avatar" src="${root}assets/aayush.png" alt="Aayush Rajaji" width="40" height="40" loading="lazy">
+        <span class="dock-pulse-beacon" title="Live 24/7 Knowledge Engine"></span>
+      </a>
+      <div class="dock-founder-meta">
+        <div class="dock-name-row">
+          <span class="dock-founder-name">Aayush Rajaji</span>
+          <span class="dock-founder-badge"><span class="badge-dot"></span> Founder</span>
+          <span class="dock-os-kicker">· Venture Stack India 🇮🇳</span>
+        </div>
+        <div class="dock-ventures-row">
+          <a href="https://aigyde.com/" target="_blank" rel="noopener" class="v-chip v-chip-aigyde" title="AIGyde — AI Strategy & Architecture">Founder &amp; CBO @ <strong>AIGyde ↗</strong></a>
+          <span class="v-chip v-chip-greston" title="Greston Global — Cross-Border Compliance & Financial Architecture">Founder @ <strong>Greston Global</strong></span>
+          <a href="https://github.com/Aayush-Rajaji" target="_blank" rel="noopener" class="v-chip v-chip-foundertube" title="FounderTube — Tier-2 & Bootstrapped Founder Media">Co-Founder @ <strong>FounderTube ↗</strong></a>
+          <a href="https://wescaleo.in/" target="_blank" rel="noopener" class="v-chip v-chip-wescaleo" title="WeScaleo — Sovereign FinTech & AI Infrastructure">Co-Founder @ <strong class="text-wescaleo">wescaleo.in ↗</strong></a>
+        </div>
       </div>
     </div>
+
+    <!-- Right: Actions, Social & System Links -->
+    <div class="dock-actions">
+      <div class="dock-action-pills">
+        <a href="https://github.com/Aayush-Rajaji" target="_blank" rel="noopener" class="dock-pill-btn dock-pill-gh" title="GitHub (@Aayush-Rajaji)">
+          ${ICONS.github} <span>@Aayush-Rajaji</span>
+        </a>
+        <a href="https://www.linkedin.com/in/aayushrajaji/" target="_blank" rel="noopener" class="dock-pill-btn dock-pill-li" title="Connect with Aayush Rajaji on LinkedIn">
+          ${ICONS.linkedin} <span>LinkedIn</span>
+        </a>
+      </div>
+      <div class="dock-system-links">
+        <a href="${root}about.html">About &amp; Method</a>
+        <a href="${root}assets/${PDF_NAME}" download>Source PDF</a>
+        <a href="https://www.startupindia.gov.in/" target="_blank" rel="noopener">startupindia.gov.in ↗</a>
+      </div>
+      <button class="dock-collapse-toggle" id="dock-collapse-toggle" type="button" aria-label="Toggle Founder Dock view" title="Minimize / expand founder dock">
+        <svg class="dock-icon-caret" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+    </div>
   </div>
-  <div class="footer-note">Unified Bharat Startup Operating System &amp; Scheme Intelligence Engine. Open knowledge resource under MIT License.</div>
-  <div class="f-links">
-    <a href="${root}about.html">About &amp; Disclaimer</a>
-    <a href="${root}assets/${PDF_NAME}" download>Source PDF</a>
-    <a href="https://www.startupindia.gov.in/" target="_blank" rel="noopener">startupindia.gov.in ↗</a>
-    <a href="${REPO_URL}" target="_blank" rel="noopener">GitHub ↗</a>
-  </div>
-</div></footer>`}
+
+  <!-- Minimized Floating Capsule -->
+  <button class="dock-floating-capsule" id="dock-floating-capsule" type="button" aria-label="Expand Founder Dock" title="Click to Expand Founder Dock">
+    <img src="${root}assets/aayush.png" alt="Aayush Rajaji" width="22" height="22" class="capsule-avatar">
+    <span class="capsule-label"><strong>Aayush Rajaji</strong> · Founder Dossier (4 Ventures)</span>
+    <span class="capsule-arrow">⌃</span>
+  </button>
+</footer>
 
 <div class="search-modal" id="search-modal" role="dialog" aria-modal="true" aria-label="Search">
   <div class="backdrop"></div>
@@ -777,7 +807,64 @@ if (existsSync(join(DATA, "needs-index.json"))) {
 write("glossary.html", shell({ root: "", active: "glossary.html", title: "Glossary", body: `<h1>Glossary</h1><div class="glossary-list">${glossary.terms.map((t) => `<div class="glossary-item" id="${slugify(t.term)}"><h3>${esc(t.term)}</h3><p>${esc(t.definition)}</p></div>`).join("")}</div>` }));
 write("psu.html", shell({ root: "", active: "psu.html", title: "PSU & Regulators", body: `<h1>PSU &amp; Regulators</h1><div class="schemes-grid">${psu.programs.map((p) => `<div class="scheme-card"><h3>${esc(p.program)}</h3><div class="ministry">${esc(p.organization)}</div><p>${esc(p.description || "")}</p></div>`).join("")}</div>` }));
 write("states.html", shell({ root: "", active: "states.html", title: "State Portals", body: `<h1>State Startup Portals</h1><div class="schemes-grid">${states.states.map((st) => `<div class="scheme-card"><h3>${esc(st.name)}</h3><p>${esc(st.program || "")}</p>${st.portalUrl ? `<a href="${attr(st.portalUrl)}" target="_blank" rel="noopener">Visit Portal ${ICONS.external}</a>` : ""}</div>`).join("")}</div>` }));
-write("about.html", shell({ root: "", active: "about.html", title: "About & Disclaimer", body: `<h1>About Startup India OS</h1><div class="doc-body"><p>${esc(about.disclaimer || "Open reference playbook.")}</p></div>` }));
+write("about.html", shell({
+  root: "",
+  active: "about.html",
+  title: "About & Disclaimer · Platform Dossier",
+  body: `
+  <nav class="crumbs"><a href="index.html">Home</a> / <span>About &amp; Method</span></nav>
+  <div class="page-head">
+    <div class="kicker">Platform Dossier &amp; Architecture</div>
+    <h1>About Venture Stack India</h1>
+    <p class="lede">The Unified Operating System &amp; Government Schemes Intelligence Engine for Indian Founders.</p>
+  </div>
+
+  <!-- Founder Spotlight Dossier Card -->
+  <div class="founder-spotlight-card">
+    <div class="spotlight-header">
+      <div class="spotlight-avatar-wrap">
+        <img src="assets/aayush.png" alt="Aayush Rajaji" class="spotlight-avatar" width="76" height="76">
+        <span class="spotlight-badge">Founder &amp; Architect</span>
+      </div>
+      <div class="spotlight-title-group">
+        <h2>Aayush Rajaji</h2>
+        <div class="spotlight-roles">
+          <a href="https://aigyde.com/" target="_blank" rel="noopener" class="spotlight-chip">Founder &amp; CBO @ <strong>AIGyde</strong> ↗</a>
+          <span class="spotlight-chip">Founder @ <strong>Greston Global</strong></span>
+          <a href="https://github.com/Aayush-Rajaji" target="_blank" rel="noopener" class="spotlight-chip">Co-Founder @ <strong>FounderTube</strong> ↗</a>
+          <a href="https://wescaleo.in/" target="_blank" rel="noopener" class="spotlight-chip spotlight-chip-wescaleo">Co-Founder @ <strong>wescaleo.in</strong> ↗</a>
+        </div>
+        <div class="spotlight-links">
+          <a href="https://github.com/Aayush-Rajaji" target="_blank" rel="noopener" class="spotlight-link-pill">${ICONS.github} GitHub (@Aayush-Rajaji)</a>
+          <a href="https://www.linkedin.com/in/aayushrajaji/" target="_blank" rel="noopener" class="spotlight-link-pill">${ICONS.linkedin} LinkedIn Profile</a>
+          <a href="https://wescaleo.in/" target="_blank" rel="noopener" class="spotlight-link-pill">wescaleo.in ↗</a>
+          <a href="https://aigyde.com/" target="_blank" rel="noopener" class="spotlight-link-pill">aigyde.com ↗</a>
+        </div>
+      </div>
+    </div>
+    <p class="spotlight-bio">
+      Architecting sovereign enterprise AI systems, venture frameworks, and financial operations. Venture Stack India synthesizes 69 verified Central Government schemes, 320+ state grants, and 220+ incubators into a hallucination-resistant 10-section company operating stack for high-growth Indian startups.
+    </p>
+  </div>
+
+  <div class="doc-body">
+    <h2>🎯 Platform Objective</h2>
+    <p>${esc(about.objective)}</p>
+
+    <h2>👥 Who It Is For</h2>
+    <div class="tags-row" style="display:flex; flex-wrap:wrap; gap:8px; margin: 14px 0 24px;">
+      ${about.whoItIsFor.map(w => `<span class="tag tag-stage" style="padding: 4px 12px; background: var(--surface-alt); border: 1px solid var(--border); border-radius: var(--radius-pill); font-size: 0.82rem; font-weight: 600;">${esc(w)}</span>`).join("")}
+    </div>
+
+    <h2>🧭 How to Navigate</h2>
+    <p>${esc(about.howToUse)}</p>
+
+    <h2>📜 Statutory Disclaimer &amp; Open Knowledge Protocol</h2>
+    <blockquote>
+      ${about.disclaimer.split("\n\n").map(p => `<p>${esc(p)}</p>`).join("")}
+    </blockquote>
+  </div>`
+}));
 write("news.html", shell({ root: "", active: "news.html", title: "Ecosystem News", body: `<h1>Ecosystem News</h1><div class="news-grid">${news.map((n) => `<div class="scheme-card"><h3><a href="${attr(n.url)}" target="_blank" rel="noopener">${esc(n.title)} ${ICONS.external}</a></h3><div class="muted">${esc(n.source)} · ${esc(n.date || "")}</div><p>${esc(n.summary || "")}</p></div>`).join("")}</div>` }));
 
 /* ================= 2. FOUNDER OPERATING STACK ================= */

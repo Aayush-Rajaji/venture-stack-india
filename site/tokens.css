@@ -33,12 +33,25 @@
   /* ---- motion ---- */
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
   --speed: 180ms;
+
+  /* ---- 24*7 persistent founder dock ---- */
+  --dock-h: 70px;
+  --dock-h-mobile: 62px;
+  --brand-wescaleo: #0065C2;
 }
 
 /* ============ LIGHT (default) ============ */
 :root,
 :root[data-theme="light"] {
   color-scheme: light;
+
+  --dock-bg: rgba(253, 253, 252, 0.95);
+  --dock-border: rgba(207, 212, 221, 0.85);
+  --dock-shadow: 0 -8px 28px rgba(16, 24, 40, 0.08);
+  --dock-chip-bg: rgba(16, 24, 40, 0.04);
+  --dock-chip-border: rgba(16, 24, 40, 0.12);
+  --dock-chip-text: #182234;
+  --dock-chip-hover: rgba(16, 24, 40, 0.08);
 
   --bg: #fdfdfc;
   --surface: #ffffff;
@@ -141,6 +154,14 @@
 /* ============ DARK (Full Black OLED) ============ */
 :root[data-theme="dark"] {
   color-scheme: dark;
+
+  --dock-bg: rgba(7, 9, 14, 0.94);
+  --dock-border: rgba(255, 255, 255, 0.12);
+  --dock-shadow: 0 -12px 36px rgba(0, 0, 0, 0.75);
+  --dock-chip-bg: rgba(255, 255, 255, 0.06);
+  --dock-chip-border: rgba(255, 255, 255, 0.14);
+  --dock-chip-text: #f1f5f9;
+  --dock-chip-hover: rgba(255, 255, 255, 0.12);
 
   --bg: #000000;
   --surface: #0a0a0f;

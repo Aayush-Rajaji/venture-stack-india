@@ -3439,27 +3439,57 @@ try{if(localStorage.getItem("rail-collapsed")==="1")document.documentElement.cla
   </div>
 </main>
 </div>
-
-<footer class="footer"><div class="footer-inner">
-  <div class="footer-author">
-    <img class="author-avatar" src="assets/aayush.png" alt="Aayush Rajaji" width="36" height="36" loading="lazy">
-    <div class="author-meta">
-      <div class="author-role">Founder &amp; CBO @ AIGyde · Founder @ Greston Global</div>
-      <div class="author-name">Aayush Rajaji</div>
-      <div class="author-links">
-        <a href="https://github.com/Aayush-Rajaji" target="_blank" rel="noopener">GitHub</a> ·
-        <a href="https://www.linkedin.com/in/aayushrajaji/" target="_blank" rel="noopener">LinkedIn</a>
+<footer class="founder-dock" id="founder-dock" role="contentinfo" aria-label="Founder & Platform Dossier">
+  <div class="founder-dock-inner">
+    <!-- Left: Founder Persona & Ventures -->
+    <div class="dock-founder">
+      <a href="https://github.com/Aayush-Rajaji" target="_blank" rel="noopener" class="dock-avatar-frame" title="Aayush Rajaji — Architect & Maintainer">
+        <img class="dock-avatar" src="assets/aayush.png" alt="Aayush Rajaji" width="40" height="40" loading="lazy">
+        <span class="dock-pulse-beacon" title="Live 24/7 Knowledge Engine"></span>
+      </a>
+      <div class="dock-founder-meta">
+        <div class="dock-name-row">
+          <span class="dock-founder-name">Aayush Rajaji</span>
+          <span class="dock-founder-badge"><span class="badge-dot"></span> Founder</span>
+          <span class="dock-os-kicker">· Venture Stack India 🇮🇳</span>
+        </div>
+        <div class="dock-ventures-row">
+          <a href="https://aigyde.com/" target="_blank" rel="noopener" class="v-chip v-chip-aigyde" title="AIGyde — AI Strategy & Architecture">Founder &amp; CBO @ <strong>AIGyde ↗</strong></a>
+          <span class="v-chip v-chip-greston" title="Greston Global — Cross-Border Compliance & Financial Architecture">Founder @ <strong>Greston Global</strong></span>
+          <a href="https://github.com/Aayush-Rajaji" target="_blank" rel="noopener" class="v-chip v-chip-foundertube" title="FounderTube — Tier-2 & Bootstrapped Founder Media">Co-Founder @ <strong>FounderTube ↗</strong></a>
+          <a href="https://wescaleo.in/" target="_blank" rel="noopener" class="v-chip v-chip-wescaleo" title="WeScaleo — Sovereign FinTech & AI Infrastructure">Co-Founder @ <strong class="text-wescaleo">wescaleo.in ↗</strong></a>
+        </div>
       </div>
     </div>
+
+    <!-- Right: Actions, Social & System Links -->
+    <div class="dock-actions">
+      <div class="dock-action-pills">
+        <a href="https://github.com/Aayush-Rajaji" target="_blank" rel="noopener" class="dock-pill-btn dock-pill-gh" title="GitHub (@Aayush-Rajaji)">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2Z"/></svg> <span>@Aayush-Rajaji</span>
+        </a>
+        <a href="https://www.linkedin.com/in/aayushrajaji/" target="_blank" rel="noopener" class="dock-pill-btn dock-pill-li" title="Connect with Aayush Rajaji on LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.94 5.5a1.94 1.94 0 1 1-3.88 0 1.94 1.94 0 0 1 3.88 0ZM3.3 8.9h3.4V21H3.3V8.9Zm5.53 0h3.26v1.65h.05c.45-.86 1.56-1.77 3.22-1.77 3.44 0 4.08 2.27 4.08 5.22V21h-3.4v-5.32c0-1.27-.02-2.9-1.77-2.9-1.77 0-2.04 1.38-2.04 2.81V21h-3.4V8.9Z"/></svg> <span>LinkedIn</span>
+        </a>
+      </div>
+      <div class="dock-system-links">
+        <a href="about.html">About &amp; Method</a>
+        <a href="assets/Startup-Schemes-Playbook-June-2026.pdf" download>Source PDF</a>
+        <a href="https://www.startupindia.gov.in/" target="_blank" rel="noopener">startupindia.gov.in ↗</a>
+      </div>
+      <button class="dock-collapse-toggle" id="dock-collapse-toggle" type="button" aria-label="Toggle Founder Dock view" title="Minimize / expand founder dock">
+        <svg class="dock-icon-caret" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+    </div>
   </div>
-  <div class="footer-note">Unified Bharat Startup Operating System &amp; Scheme Intelligence Engine. Open knowledge resource under MIT License.</div>
-  <div class="f-links">
-    <a href="about.html">About &amp; Disclaimer</a>
-    <a href="assets/Startup-Schemes-Playbook-June-2026.pdf" download>Source PDF</a>
-    <a href="https://www.startupindia.gov.in/" target="_blank" rel="noopener">startupindia.gov.in ↗</a>
-    <a href="https://github.com/Aayush-Rajaji/venture-stack-india" target="_blank" rel="noopener">GitHub ↗</a>
-  </div>
-</div></footer>
+
+  <!-- Minimized Floating Capsule -->
+  <button class="dock-floating-capsule" id="dock-floating-capsule" type="button" aria-label="Expand Founder Dock" title="Click to Expand Founder Dock">
+    <img src="assets/aayush.png" alt="Aayush Rajaji" width="22" height="22" class="capsule-avatar">
+    <span class="capsule-label"><strong>Aayush Rajaji</strong> · Founder Dossier (4 Ventures)</span>
+    <span class="capsule-arrow">⌃</span>
+  </button>
+</footer>
 
 <div class="search-modal" id="search-modal" role="dialog" aria-modal="true" aria-label="Search">
   <div class="backdrop"></div>

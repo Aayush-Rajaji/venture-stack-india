@@ -811,4 +811,39 @@
     });
     render();
   }
+  /* ---------- 24*7 persistent founder dock controller ---------- */
+  const dock = $("#founder-dock");
+  const dockToggle = $("#dock-collapse-toggle");
+  const dockCapsule = $("#dock-floating-capsule");
+
+  if (dock) {
+    const applyDockState = (collapsed) => {
+      dock.classList.toggle("dock-collapsed", collapsed);
+      document.body.classList.toggle("dock-minimized", collapsed);
+      if (dockToggle) {
+        dockToggle.setAttribute("aria-expanded", String(!collapsed));
+        const caret = dockToggle.querySelector(".dock-icon-caret");
+        if (caret) caret.style.transform = collapsed ? "rotate(180deg)" : "rotate(0deg)";
+      }
+    };
+
+    try {
+      if (localStorage.getItem("founder-dock-min") === "1") {
+        applyDockState(true);
+      }
+    } catch (e) {}
+
+    dockToggle && dockToggle.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const willCollapse = !dock.classList.contains("dock-collapsed");
+      applyDockState(willCollapse);
+      try { localStorage.setItem("founder-dock-min", willCollapse ? "1" : "0"); } catch (err) {}
+    });
+
+    dockCapsule && dockCapsule.addEventListener("click", (e) => {
+      e.stopPropagation();
+      applyDockState(false);
+      try { localStorage.setItem("founder-dock-min", "0"); } catch (err) {}
+    });
+  }
 })();

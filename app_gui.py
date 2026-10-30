@@ -290,7 +290,7 @@ class StartupIndiaApp(ctk.CTk):
 
         credit = ctk.CTkLabel(
             self.footer_frame,
-            text="🌐 Greston Global Financial Intelligence Desk | Built & Maintained by Aayush Rajaji | MIT License",
+            text="⚡ Venture Stack India | Aayush Rajaji (Founder: AIGyde · Greston Global · FounderTube · WeScaleo) | MIT License",
             font=ctk.CTkFont(size=11),
             text_color=self.colors["text_muted"]
         )
@@ -311,6 +311,20 @@ class StartupIndiaApp(ctk.CTk):
             fg_color="transparent", text_color=self.colors["primary"],
             hover_color=self.colors["surface_alt"], font=ctk.CTkFont(size=11),
             command=lambda: webbrowser.open("https://www.linkedin.com/in/aayushrajaji/")
+        ).pack(side="left", padx=2)
+
+        ctk.CTkButton(
+            links, text="WeScaleo", width=66, height=22,
+            fg_color="transparent", text_color=self.colors["primary"],
+            hover_color=self.colors["surface_alt"], font=ctk.CTkFont(size=11),
+            command=lambda: webbrowser.open("https://wescaleo.in/")
+        ).pack(side="left", padx=2)
+
+        ctk.CTkButton(
+            links, text="AIGyde", width=56, height=22,
+            fg_color="transparent", text_color=self.colors["primary"],
+            hover_color=self.colors["surface_alt"], font=ctk.CTkFont(size=11),
+            command=lambda: webbrowser.open("https://aigyde.com/")
         ).pack(side="left", padx=2)
 
     def _clear_main(self):

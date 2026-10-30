@@ -50,18 +50,33 @@ python3 -m http.server -d docs 8000
 
 ---
 
-## 👤 Maintainer & Author
+## 👤 Maintainer & Founder
 
 <div align="left">
-  <a href="https://github.com/Aayush-Rajaji">
-    <img src="https://github.com/Aayush-Rajaji.png" width="72" height="72" style="border-radius: 50%;" alt="Aayush Rajaji">
-  </a>
-  <br>
-  <strong>Aayush Rajaji</strong>
-  <br>
-  Founder &amp; CBO @ <a href="https://aigyde.com">AIGyde</a> · Founder @ <strong>Greston Global</strong> · Co-Founder @ <a href="https://github.com/Aayush-Rajaji">FounderTube</a>
-  <br>
-  <a href="https://github.com/Aayush-Rajaji">GitHub (@Aayush-Rajaji)</a> · <a href="https://www.linkedin.com/in/aayushrajaji/">LinkedIn</a>
+  <table style="border: none; background: transparent;">
+    <tr style="border: none; background: transparent;">
+      <td style="border: none; padding-right: 20px; vertical-align: top;">
+        <a href="https://github.com/Aayush-Rajaji">
+          <img src="https://github.com/Aayush-Rajaji.png" width="80" height="80" style="border-radius: 50%; border: 3px solid #e2621b; box-shadow: 0 0 16px rgba(226,98,27,0.35);" alt="Aayush Rajaji">
+        </a>
+      </td>
+      <td style="border: none; vertical-align: top;">
+        <h3 style="margin: 0 0 4px 0; font-size: 1.25rem;">Aayush Rajaji</h3>
+        <p style="margin: 0 0 8px 0; font-weight: 600; color: #4a566b; font-size: 0.95rem;">
+          Founder &amp; CBO @ <a href="https://aigyde.com/" target="_blank" rel="noopener"><strong>AIGyde</strong></a> · 
+          Founder @ <strong>Greston Global</strong> · 
+          Co-Founder @ <a href="https://github.com/Aayush-Rajaji" target="_blank" rel="noopener"><strong>FounderTube</strong></a> · 
+          Co-Founder @ <a href="https://wescaleo.in/" target="_blank" rel="noopener"><strong>wescaleo.in</strong></a>
+        </p>
+        <p style="margin: 0; font-size: 0.9rem;">
+          <a href="https://github.com/Aayush-Rajaji"><strong>GitHub (@Aayush-Rajaji)</strong></a> · 
+          <a href="https://www.linkedin.com/in/aayushrajaji/"><strong>LinkedIn</strong></a> · 
+          <a href="https://wescaleo.in/"><strong>wescaleo.in ↗</strong></a> · 
+          <a href="https://aigyde.com/"><strong>aigyde.com ↗</strong></a>
+        </p>
+      </td>
+    </tr>
+  </table>
 </div>
 
 ---
