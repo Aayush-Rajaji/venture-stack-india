@@ -35,8 +35,8 @@
   --speed: 180ms;
 
   /* ---- 24*7 persistent founder dock ---- */
-  --dock-h: 70px;
-  --dock-h-mobile: 62px;
+  --dock-h: 54px;
+  --dock-h-mobile: 50px;
   --brand-wescaleo: #0065C2;
 }
 

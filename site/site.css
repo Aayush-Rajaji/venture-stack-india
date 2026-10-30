@@ -22,7 +22,7 @@ body {
   background: var(--bg);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  padding-bottom: var(--dock-h, 70px);
+  padding-bottom: var(--dock-h, 54px);
 }
 img, svg { display: block; max-width: 100%; }
 button { font: inherit; color: inherit; background: none; border: none; cursor: pointer; }
@@ -78,7 +78,14 @@ kbd {
   box-shadow: inset 0 0 0 1.5px rgb(255 255 255 / 0.18);
 }
 .brand-mark svg { display: block; }
-.brand-name { font-family: var(--font-display); font-size: 0.98rem; letter-spacing: -0.01em; overflow: hidden; text-overflow: ellipsis; }
+.brand-name {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  white-space: nowrap;
+}
 .brand-name .thin { color: var(--text-faint); font-weight: 500; }
 .topbar-spacer { flex: 1; }
 .searchbtn {
@@ -146,7 +153,7 @@ kbd {
 
 /* ---------- sidebar ---------- */
 .sidebar {
-  position: sticky; top: 58px; height: calc(100dvh - 58px - var(--dock-h, 70px));
+  position: sticky; top: 58px; height: calc(100dvh - 58px - var(--dock-h, 54px));
   overflow-y: auto; overscroll-behavior: contain;
   background: var(--sidebar-bg);
   border-right: 1px solid var(--border);
@@ -876,7 +883,7 @@ a.org-card:hover { text-decoration: none; border-color: var(--border-strong); bo
 .org-card .o-link .host { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .org-card .o-link svg { width: 12px; height: 12px; flex: none; }
 
-/* ---------- 24*7 Persistent Founder Dock ---------- */
+/* ---------- 24*7 Persistent Founder Dock (Uniform Elite UI) ---------- */
 .founder-dock {
   position: fixed;
   bottom: 0;
@@ -888,228 +895,187 @@ a.org-card:hover { text-decoration: none; border-color: var(--border-strong); bo
   box-shadow: var(--dock-shadow);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
-  transition: transform 280ms var(--ease), opacity 240ms ease;
+  transition: transform 260ms var(--ease), opacity 220ms ease;
 }
 
 .founder-dock-inner {
-  max-width: 100%;
-  padding: 8px clamp(12px, 2vw, 28px);
+  max-width: 1560px;
+  margin: 0 auto;
+  padding: 6px clamp(12px, 2.5vw, 28px);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
-  position: relative;
+  gap: 16px;
+  min-height: 48px;
 }
 
-/* Left: Founder profile & ventures */
-.dock-founder {
+/* Left: Identity & Inline Credentials Trail */
+.dock-identity {
   display: flex;
   align-items: center;
-  gap: 12px;
-  flex: 0 1 auto;
+  gap: 11px;
   min-width: 0;
+  flex: 1 1 auto;
 }
 
-.dock-avatar-frame {
+.dock-avatar-link {
   position: relative;
-  flex: none;
-  width: 38px;
-  height: 38px;
   display: block;
+  flex: none;
+  width: 32px;
+  height: 32px;
 }
 
 .dock-avatar {
-  width: 38px;
-  height: 38px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid var(--accent);
+  border: 1.5px solid var(--accent);
   box-shadow: 0 0 10px rgba(226, 98, 27, 0.35);
-  transition: transform 180ms ease, box-shadow 180ms ease;
+  transition: transform 160ms ease, box-shadow 160ms ease;
 }
 
-.dock-avatar-frame:hover .dock-avatar {
-  transform: scale(1.06);
+.dock-avatar-link:hover .dock-avatar {
+  transform: scale(1.1);
   box-shadow: 0 0 14px rgba(226, 98, 27, 0.55);
 }
 
-.dock-pulse-beacon {
+.dock-live-pulse {
   position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 10px;
-  height: 10px;
+  bottom: -1px;
+  right: -1px;
+  width: 8.5px;
+  height: 8.5px;
   border-radius: 50%;
   background: var(--success);
-  border: 2px solid var(--bg);
+  border: 1.5px solid var(--bg);
   box-shadow: 0 0 6px var(--success);
 }
 
-.dock-founder-meta {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
+.dock-founder-text {
   min-width: 0;
-}
-
-.dock-name-row {
   display: flex;
   align-items: center;
-  gap: 8px;
 }
 
-.dock-founder-name {
-  font-family: var(--font-body);
-  font-size: 0.94rem;
-  font-weight: 800;
-  color: var(--text);
-  letter-spacing: -0.01em;
-  white-space: nowrap;
-}
-
-.dock-founder-badge {
-  font-size: 0.62rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  padding: 1px 7px;
-  border-radius: var(--radius-pill);
-  background: var(--accent-tint);
-  color: var(--accent);
-  border: 1px solid rgba(226, 98, 27, 0.3);
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  white-space: nowrap;
-}
-
-.dock-os-kicker {
-  font-size: 0.74rem;
-  color: var(--text-muted);
-  font-weight: 600;
-  white-space: nowrap;
-}
-
-.dock-founder-badge .badge-dot {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--accent);
-}
-
-.dock-ventures-row {
+.dock-brand-flow {
   display: flex;
   align-items: center;
   gap: 6px;
   flex-wrap: nowrap;
-  overflow-x: auto;
   white-space: nowrap;
-  scrollbar-width: none;
-  -webkit-overflow-scrolling: touch;
 }
 
-.dock-ventures-row::-webkit-scrollbar {
-  display: none;
-}
-
-.v-chip {
-  font-size: 0.71rem;
-  font-weight: 600;
-  padding: 2px 7px;
-  border-radius: 5px;
-  background: var(--dock-chip-bg);
-  border: 1px solid var(--dock-chip-border);
-  color: var(--dock-chip-text);
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 3px;
-  transition: all 160ms ease;
-  white-space: nowrap;
+.dock-founder-name {
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: 0.92rem;
+  color: var(--text);
+  letter-spacing: -0.01em;
   flex: none;
 }
 
-.v-chip:hover {
-  background: var(--dock-chip-hover);
-  border-color: var(--accent);
-  color: var(--text);
-  text-decoration: none;
-  transform: translateY(-1px);
-}
-
-.v-chip strong {
+.dock-founder-pill {
+  font-size: 0.60rem;
   font-weight: 700;
-  color: var(--text);
-}
-
-.v-chip-wescaleo {
-  border-color: rgba(0, 101, 194, 0.35);
-  background: rgba(0, 101, 194, 0.08);
-}
-
-.v-chip-wescaleo:hover {
-  border-color: var(--brand-wescaleo);
-  background: rgba(0, 101, 194, 0.16);
-  box-shadow: 0 0 10px rgba(0, 101, 194, 0.25);
-}
-
-.v-chip-wescaleo strong.text-wescaleo {
-  color: #0065C2;
-}
-
-:root[data-theme="dark"] .v-chip-wescaleo strong.text-wescaleo {
-  color: #38bdf8;
-}
-
-/* Center: Platform mission tagline */
-.dock-center {
-  display: flex;
-  flex-direction: column;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 1.5px 7px;
+  border-radius: var(--radius-pill);
+  background: var(--accent-tint);
+  color: var(--accent);
+  border: 1px solid rgba(226, 98, 27, 0.25);
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 1px;
-  text-align: center;
-  flex: 1 1 auto;
-  max-width: 440px;
-  min-width: 0;
+  gap: 4px;
+  flex: none;
 }
 
-.dock-mission-title {
-  font-size: 0.74rem;
-  font-weight: 600;
-  color: var(--text);
+.dock-founder-pill .badge-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.dock-credentials-flow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-muted);
+  font-size: 0.72rem;
   letter-spacing: -0.01em;
   white-space: nowrap;
 }
 
-.dock-mission-title strong {
-  font-weight: 700;
+.dock-credentials-flow .flow-sep,
+.dock-credentials-flow .flow-dot {
+  color: var(--text-faint);
+  opacity: 0.55;
+  font-weight: 400;
 }
 
-.dock-mission-sub {
-  font-size: 0.67rem;
+.dock-credentials-flow .cred-link {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 150ms ease;
+  white-space: nowrap;
+}
+
+.dock-credentials-flow .cred-link strong {
+  font-weight: 700;
+  color: var(--text);
+  transition: color 150ms ease;
+}
+
+.dock-credentials-flow .cred-link:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.dock-credentials-flow .cred-link:hover strong {
+  color: var(--accent);
+}
+
+.dock-credentials-flow .cred-static {
   color: var(--text-muted);
   white-space: nowrap;
 }
 
-/* Right: Actions, Social, System Links, and Minimize */
+.dock-credentials-flow .cred-static strong {
+  font-weight: 700;
+  color: var(--text);
+}
+
+.dock-credentials-flow .cred-wescaleo:hover strong,
+.dock-credentials-flow strong.brand-ws-text {
+  color: #0065C2;
+}
+
+:root[data-theme="dark"] .dock-credentials-flow strong.brand-ws-text,
+:root[data-theme="dark"] .dock-credentials-flow .cred-wescaleo:hover strong {
+  color: #38bdf8;
+}
+
+/* Right: Action Pills & System Links */
 .dock-actions {
   display: flex;
   align-items: center;
-  gap: 10px;
-  flex: 0 0 auto;
+  gap: 12px;
+  flex: none;
 }
 
-.dock-action-pills {
+.dock-connect-pills {
   display: flex;
   align-items: center;
   gap: 6px;
 }
 
-.dock-pill-btn {
+.dock-action-pill {
   font-size: 0.72rem;
   font-weight: 600;
-  padding: 4px 10px;
+  padding: 3px 9px;
   border-radius: var(--radius-pill);
   background: var(--dock-chip-bg);
   border: 1px solid var(--dock-chip-border);
@@ -1118,17 +1084,17 @@ a.org-card:hover { text-decoration: none; border-color: var(--border-strong); bo
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  transition: all 160ms ease;
+  transition: all 150ms ease;
   white-space: nowrap;
 }
 
-.dock-pill-btn svg {
+.dock-action-pill svg {
   width: 12px;
   height: 12px;
   flex: none;
 }
 
-.dock-pill-btn:hover {
+.dock-action-pill:hover {
   background: var(--dock-chip-hover);
   border-color: var(--border-strong);
   color: var(--text);
@@ -1136,56 +1102,56 @@ a.org-card:hover { text-decoration: none; border-color: var(--border-strong); bo
   transform: translateY(-1px);
 }
 
-.dock-pill-li {
+.dock-action-pill.dock-action-linkedin {
   color: var(--link);
 }
 
-.dock-pill-li:hover {
+.dock-action-pill.dock-action-linkedin:hover {
   border-color: var(--link);
 }
 
-.dock-pill-ws {
+.dock-action-pill.dock-action-ws {
   border-color: rgba(0, 101, 194, 0.35);
   color: #0065C2;
 }
 
-:root[data-theme="dark"] .dock-pill-ws {
+:root[data-theme="dark"] .dock-action-pill.dock-action-ws {
   color: #38bdf8;
 }
 
-.dock-pill-ws .ws-dot {
-  width: 6px;
-  height: 6px;
+.dock-action-pill.dock-action-ws .ws-dot {
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
   background: #0065C2;
 }
 
-:root[data-theme="dark"] .dock-pill-ws .ws-dot {
+:root[data-theme="dark"] .dock-action-pill.dock-action-ws .ws-dot {
   background: #38bdf8;
 }
 
-.dock-system-links {
+.dock-nav-links {
   display: flex;
   align-items: center;
   gap: 10px;
   font-size: 0.72rem;
 }
 
-.dock-system-links a {
+.dock-text-nav {
   color: var(--text-muted);
   text-decoration: none;
   transition: color 150ms ease;
   white-space: nowrap;
 }
 
-.dock-system-links a:hover {
+.dock-text-nav:hover {
   color: var(--text);
   text-decoration: underline;
 }
 
 .dock-collapse-toggle {
-  width: 26px;
-  height: 26px;
+  width: 24px;
+  height: 24px;
   border-radius: var(--radius-pill);
   display: grid;
   place-items: center;
@@ -1193,7 +1159,7 @@ a.org-card:hover { text-decoration: none; border-color: var(--border-strong); bo
   border: 1px solid var(--dock-chip-border);
   color: var(--text-muted);
   cursor: pointer;
-  transition: all 160ms ease;
+  transition: all 150ms ease;
   flex: none;
 }
 
@@ -1202,16 +1168,12 @@ a.org-card:hover { text-decoration: none; border-color: var(--border-strong); bo
   color: var(--text);
 }
 
-.dock-icon-caret {
-  transition: transform 220ms ease;
-}
-
-/* Floating Capsule (when dock is minimized) */
+/* Floating capsule when collapsed */
 .dock-floating-capsule {
   display: none;
   position: fixed;
-  bottom: 14px;
-  right: 18px;
+  bottom: 12px;
+  right: 16px;
   z-index: 86;
   background: var(--dock-bg);
   border: 1px solid var(--dock-border);
@@ -1223,7 +1185,7 @@ a.org-card:hover { text-decoration: none; border-color: var(--border-strong); bo
   align-items: center;
   gap: 8px;
   cursor: pointer;
-  transition: transform 200ms ease, box-shadow 200ms ease;
+  transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
 .dock-floating-capsule:hover {
@@ -1245,12 +1207,11 @@ a.org-card:hover { text-decoration: none; border-color: var(--border-strong); bo
 }
 
 .capsule-arrow {
-  font-size: 0.76rem;
+  font-size: 0.74rem;
   color: var(--text-muted);
   font-weight: 700;
 }
 
-/* Minimized State */
 .founder-dock.dock-collapsed .founder-dock-inner {
   transform: translateY(100%);
   opacity: 0;
@@ -1274,31 +1235,28 @@ body.dock-minimized {
 }
 
 /* Responsive Adaptations */
-@media (max-width: 1080px) {
-  .dock-center {
+@media (max-width: 1024px) {
+  .dock-nav-links {
     display: none;
   }
 }
 
 @media (max-width: 768px) {
   .founder-dock-inner {
-    padding: 6px 12px;
-    gap: 10px;
+    padding: 5px 12px;
+    gap: 8px;
   }
-  .dock-system-links {
+  .dock-credentials-flow {
     display: none;
   }
-  .dock-pill-btn span {
+  .dock-action-pill span {
     display: none;
   }
-  .dock-pill-btn {
-    padding: 5px 7px;
+  .dock-action-pill {
+    padding: 4px 6px;
   }
   .dock-founder-name {
-    font-size: 0.88rem;
-  }
-  .dock-ventures-row {
-    max-width: calc(100vw - 160px);
+    font-size: 0.86rem;
   }
 }
 
@@ -1485,7 +1443,7 @@ hr.rule { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
 
 /* back-to-top */
 .to-top {
-  position: fixed; right: 18px; bottom: calc(var(--dock-h, 70px) + 14px); z-index: 50;
+  position: fixed; right: 18px; bottom: calc(var(--dock-h, 54px) + 14px); z-index: 50;
   width: 42px; height: 42px; border-radius: 50%;
   background: var(--surface); border: 1px solid var(--border-strong);
   box-shadow: var(--shadow-2); color: var(--text-muted);
@@ -2518,3 +2476,167 @@ hr.rule { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
   font-size: 0.82rem; font-weight: 600; color: var(--text); cursor: pointer; transition: all 0.2s ease;
 }
 .copy-btn-action:hover { background: var(--primary); color: #000; border-color: var(--primary); }
+
+/* ---------- brand edition pill in topbar ---------- */
+.brand-edition-pill {
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 1.5px 7px;
+  border-radius: var(--radius-pill);
+  background: var(--accent-tint);
+  color: var(--accent);
+  border: 1px solid rgba(226, 98, 27, 0.25);
+  margin-left: 6px;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* ---------- hero subhead ---------- */
+.hero-subhead {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-top: -6px;
+  margin-bottom: 14px;
+  letter-spacing: -0.01em;
+}
+
+/* ---------- home founder dossier bento card ---------- */
+.home-founder-card {
+  margin: 48px 0 24px;
+  padding: clamp(22px, 4vw, 36px);
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-2);
+  position: relative;
+  overflow: hidden;
+}
+
+.home-founder-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--brand-saffron), var(--brand-wescaleo), var(--brand-green));
+}
+
+.home-founder-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.home-founder-avatar-wrap {
+  position: relative;
+  flex: none;
+}
+
+.home-founder-avatar {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent);
+  box-shadow: 0 0 16px rgba(226, 98, 27, 0.35);
+}
+
+.home-founder-badge {
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary);
+  color: #fff;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+  white-space: nowrap;
+}
+
+.home-founder-content {
+  flex: 1 1 320px;
+}
+
+.home-founder-heading h2 {
+  font-family: var(--font-display);
+  font-size: 1.65rem;
+  font-weight: 700;
+  margin: 0 0 4px 0;
+  color: var(--text);
+}
+
+.home-founder-lead {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 12px;
+}
+
+.home-founder-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.founder-tag {
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 3.5px 10px;
+  border-radius: 6px;
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  color: var(--text);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 160ms ease;
+}
+
+.founder-tag:hover {
+  border-color: var(--accent);
+  color: var(--text);
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.founder-tag-wescaleo {
+  border-color: rgba(0, 101, 194, 0.4);
+  background: rgba(0, 101, 194, 0.08);
+  color: #0065C2;
+}
+
+:root[data-theme="dark"] .founder-tag-wescaleo {
+  color: #38bdf8;
+  background: rgba(0, 101, 194, 0.2);
+}
+
+.home-founder-desc {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+  margin: 0 0 16px 0;
+}
+
+.home-founder-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.btn-sm {
+  padding: 6px 14px;
+  font-size: 0.82rem;
+  border-radius: var(--radius-pill);
+}

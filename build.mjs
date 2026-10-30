@@ -382,7 +382,7 @@ ${extraHead}
   <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span class="hb" aria-hidden="true"><span class="hb-t"></span><span class="hb-m"></span><span class="hb-b"></span></span></button>
   <a class="brand" href="${root}index.html">
     <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 64 64" width="20" height="20"><rect x="6" y="14" width="52" height="9" rx="4.5" fill="#e2621b"/><rect x="6" y="27.5" width="52" height="9" rx="4.5" fill="#ffffff"/><rect x="6" y="41" width="52" height="9" rx="4.5" fill="#359a4c"/></svg></span>
-    <span class="brand-name">Bharat Startup <span class="thin">OS</span></span>
+    <span class="brand-name">Venture Stack <span class="thin">India</span></span><span class="brand-edition-pill">Bharat OS</span>
   </a>
   <span class="topbar-spacer"></span>
   <button class="searchbtn" data-search-open type="button" aria-label="Search OS">
@@ -406,50 +406,52 @@ ${body}
 </div>`}
 <footer class="founder-dock" id="founder-dock" role="contentinfo" aria-label="Founder & Platform Dossier">
   <div class="founder-dock-inner">
-    <!-- Left: Founder Persona & Ventures -->
-    <div class="dock-founder">
-      <a href="https://github.com/Aayush-Rajaji" target="_blank" rel="noopener" class="dock-avatar-frame" title="Aayush Rajaji — Architect & Maintainer">
-        <img class="dock-avatar" src="${root}assets/aayush.png" alt="Aayush Rajaji" width="40" height="40" loading="lazy">
-        <span class="dock-pulse-beacon" title="Live 24/7 Knowledge Engine"></span>
+    <!-- Left: Founder Identity & Verified Ventures Line -->
+    <div class="dock-identity">
+      <a href="${root}about.html" class="dock-avatar-link" title="Aayush Rajaji — Architect & Maintainer">
+        <img class="dock-avatar" src="${root}assets/aayush.png" alt="Aayush Rajaji" width="32" height="32" loading="lazy">
+        <span class="dock-live-pulse" title="System Online 24/7"></span>
       </a>
-      <div class="dock-founder-meta">
-        <div class="dock-name-row">
+      <div class="dock-founder-text">
+        <div class="dock-brand-flow">
           <span class="dock-founder-name">Aayush Rajaji</span>
-          <span class="dock-founder-badge"><span class="badge-dot"></span> Founder</span>
-          <span class="dock-os-kicker">· Venture Stack India 🇮🇳</span>
-        </div>
-        <div class="dock-ventures-row">
-          <a href="https://aigyde.com/" target="_blank" rel="noopener" class="v-chip v-chip-aigyde" title="AIGyde — AI Strategy & Architecture">Founder &amp; CBO @ <strong>AIGyde ↗</strong></a>
-          <span class="v-chip v-chip-greston" title="Greston Global — Cross-Border Compliance & Financial Architecture">Founder @ <strong>Greston Global</strong></span>
-          <a href="https://github.com/Aayush-Rajaji" target="_blank" rel="noopener" class="v-chip v-chip-foundertube" title="FounderTube — Tier-2 & Bootstrapped Founder Media">Co-Founder @ <strong>FounderTube ↗</strong></a>
-          <a href="https://wescaleo.in/" target="_blank" rel="noopener" class="v-chip v-chip-wescaleo" title="WeScaleo — Sovereign FinTech & AI Infrastructure">Co-Founder @ <strong class="text-wescaleo">wescaleo.in ↗</strong></a>
+          <span class="dock-founder-pill"><span class="badge-dot"></span> Founder</span>
+          <span class="dock-credentials-flow">
+            <span class="flow-sep">·</span>
+            <a href="https://aigyde.com/" target="_blank" rel="noopener" class="cred-link" title="AIGyde — AI Advisory & Intelligence">Founder &amp; CBO @ <strong>AIGyde</strong></a>
+            <span class="flow-dot">·</span>
+            <span class="cred-static" title="Greston Global — Cross-Border Compliance">Founder @ <strong>Greston Global</strong></span>
+            <span class="flow-dot">·</span>
+            <a href="https://github.com/Aayush-Rajaji" target="_blank" rel="noopener" class="cred-link" title="FounderTube">Co-Founder @ <strong>FounderTube</strong></a>
+            <span class="flow-dot">·</span>
+            <a href="https://wescaleo.in/" target="_blank" rel="noopener" class="cred-link cred-wescaleo" title="WeScaleo — Sovereign FinTech & AI Infrastructure">Co-Founder @ <strong class="brand-ws-text">wescaleo.in</strong></a>
+          </span>
         </div>
       </div>
     </div>
 
-    <!-- Right: Actions, Social & System Links -->
+    <!-- Right: Verified Connect & Navigation Actions -->
     <div class="dock-actions">
-      <div class="dock-action-pills">
-        <a href="https://github.com/Aayush-Rajaji" target="_blank" rel="noopener" class="dock-pill-btn dock-pill-gh" title="GitHub (@Aayush-Rajaji)">
-          ${ICONS.github} <span>@Aayush-Rajaji</span>
+      <div class="dock-connect-pills">
+        <a href="https://github.com/Aayush-Rajaji" target="_blank" rel="noopener" class="dock-action-pill" title="GitHub (@Aayush-Rajaji)">
+          ${ICONS.github} <span>GitHub</span>
         </a>
-        <a href="https://www.linkedin.com/in/aayushrajaji/" target="_blank" rel="noopener" class="dock-pill-btn dock-pill-li" title="Connect with Aayush Rajaji on LinkedIn">
+        <a href="https://www.linkedin.com/in/aayushrajaji/" target="_blank" rel="noopener" class="dock-action-pill dock-action-linkedin" title="Connect on LinkedIn">
           ${ICONS.linkedin} <span>LinkedIn</span>
         </a>
       </div>
-      <div class="dock-system-links">
-        <a href="${root}about.html">About &amp; Method</a>
-        <a href="${root}assets/${PDF_NAME}" download>Source PDF</a>
-        <a href="https://www.startupindia.gov.in/" target="_blank" rel="noopener">startupindia.gov.in ↗</a>
+      <div class="dock-nav-links">
+        <a href="${root}about.html" class="dock-text-nav">About &amp; Dossier</a>
+        <a href="${root}assets/${PDF_NAME}" download class="dock-text-nav">PDF</a>
       </div>
       <button class="dock-collapse-toggle" id="dock-collapse-toggle" type="button" aria-label="Toggle Founder Dock view" title="Minimize / expand founder dock">
-        <svg class="dock-icon-caret" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+        <svg class="dock-icon-caret" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
       </button>
     </div>
   </div>
 
   <!-- Minimized Floating Capsule -->
-  <button class="dock-floating-capsule" id="dock-floating-capsule" type="button" aria-label="Expand Founder Dock" title="Click to Expand Founder Dock">
+  <button class="dock-floating-capsule" id="dock-floating-capsule" type="button" aria-label="Expand Founder Dock">
     <img src="${root}assets/aayush.png" alt="Aayush Rajaji" width="22" height="22" class="capsule-avatar">
     <span class="capsule-label"><strong>Aayush Rajaji</strong> · Founder Dossier (4 Ventures)</span>
     <span class="capsule-arrow">⌃</span>
@@ -495,8 +497,9 @@ const write = (rel, html) => {
 {
   const heroHTML = `
   <div class="hero">
-    <div class="kicker">Unified Operating System · 2026 Edition</div>
-    <h1>Bharat Startup <span class="thin">OS</span></h1>
+    <div class="kicker">Sovereign Startup Intelligence · 2026 Edition</div>
+    <h1>Venture Stack India</h1>
+    <div class="hero-subhead">Unified Bharat Startup Operating System &amp; Government Schemes Intelligence Engine 🇮🇳</div>
     <p class="lede">Every Central Government scheme, state grant, and incubator directory — fused with an AI-native company knowledge stack, 19 execution prompts, and 10 actionable worksheets.</p>
     <div class="hero-actions">
       <a class="btn btn-primary" href="app.html">💻 Launch Full Web App</a>
@@ -576,7 +579,39 @@ const write = (rel, html) => {
     </a>
   </div>`;
 
-  write("index.html", shell({ root: "", active: "index.html", title: "Home", body: heroHTML + cardsHTML }));
+    const founderCardHTML = `
+  <!-- Founder & Architect Dossier Spotlight -->
+  <div class="home-founder-card">
+    <div class="home-founder-inner">
+      <div class="home-founder-avatar-wrap">
+        <img src="assets/aayush.png" alt="Aayush Rajaji" class="home-founder-avatar" width="84" height="84" loading="lazy">
+        <span class="home-founder-badge">Founder &amp; Architect</span>
+      </div>
+      <div class="home-founder-content">
+        <div class="home-founder-heading">
+          <h2>Aayush Rajaji</h2>
+          <span class="home-founder-lead">Venture Architect &amp; Sovereign AI Infrastructure Builder</span>
+        </div>
+        <div class="home-founder-tags">
+          <a href="https://aigyde.com/" target="_blank" rel="noopener" class="founder-tag">Founder &amp; CBO @ <strong>AIGyde ↗</strong></a>
+          <span class="founder-tag">Founder @ <strong>Greston Global</strong></span>
+          <a href="https://github.com/Aayush-Rajaji" target="_blank" rel="noopener" class="founder-tag">Co-Founder @ <strong>FounderTube ↗</strong></a>
+          <a href="https://wescaleo.in/" target="_blank" rel="noopener" class="founder-tag founder-tag-wescaleo">Co-Founder @ <strong class="brand-ws-text">wescaleo.in ↗</strong></a>
+        </div>
+        <p class="home-founder-desc">
+          Building sovereign enterprise AI infrastructure, deterministic business operating systems, and financial intelligence tools. Venture Stack India synthesizes verified central schemes and venture frameworks into an open, hallucination-resistant knowledge base for Indian founders.
+        </p>
+        <div class="home-founder-actions">
+          <a href="https://github.com/Aayush-Rajaji" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">${ICONS.github} GitHub (@Aayush-Rajaji)</a>
+          <a href="https://www.linkedin.com/in/aayushrajaji/" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">${ICONS.linkedin} Connect on LinkedIn</a>
+          <a href="https://wescaleo.in/" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">Visit wescaleo.in ↗</a>
+          <a href="about.html" class="btn btn-primary btn-sm">Read Full Dossier &amp; Architecture →</a>
+        </div>
+      </div>
+    </div>
+  </div>`;
+
+  write("index.html", shell({ root: "", active: "index.html", title: "Home", body: heroHTML + cardsHTML + founderCardHTML }));
 }
 
 /* Schemes one-pagers */
